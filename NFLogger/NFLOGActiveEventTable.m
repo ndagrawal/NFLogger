@@ -42,12 +42,18 @@
                            NFLOG_ACTIVE_TIME_EVENT_END_TIME_COL];
     
     NFLOGActiveEventTableRow *eventRow = [[NFLOGActiveEventTableRow alloc] initWithEvent:event];
-    return [sqlite executeUpdateWithSql:insertSql withParam:@[[eventRow eventNameParam],[eventRow eventType],[eventRow eventParametersParam],[eventRow eventStartTimeStampParam],[eventRow eventEndTimeStampParam]]];
+    return [sqlite executeUpdateWithSql:insertSql withParam:@[[eventRow eventNameParam],[eventRow eventTypeParam],[eventRow eventParametersParam],[eventRow eventStartTimeStampParam],[eventRow eventEndTimeStampParam]]];
 }
 
 -(BOOL)updateEventRow:(NFLOGEvent *)event withSqlite:(NFLOGSqlite *)sqlite{
-    return NO;
+    NSString *updateSql = [NSString stringWithFormat:@"update %@ set %@  = ? where %@ = ?",
+                           NFLOG_ACTIVE_EVENT_TABLE_NAME,
+                           NFLOG_ACTIVE_TIME_EVENT_NAME_COL,
+                           NFLOG_ACTIVE_TIME_EVENT_END_TIME_COL];
+    NFLOGActiveEventTableRow *eventRow = [[NFLOGActiveEventTableRow alloc] initWithEvent:event];
+    return [sqlite executeUpdateWithSql:updateSql withParam:@[[eventRow eventNameParam],[eventRow eventEndTimeStampParam]]];
 }
+
 
 -(NSMutableArray<id<NFLOGEventTableRow>> *)selectAllEventswithSqlite:(NFLOGSqlite *)sqlite{
     NSString *selectSql = [NSString stringWithFormat:@"select * from %@ where %@!=0",NFLOG_ACTIVE_EVENT_TABLE_NAME,NFLOG_ACTIVE_TIME_EVENT_END_TIME_COL];
@@ -62,7 +68,7 @@
 }
 
 -(BOOL)deleteEvent:(id<NFLOGEventTableRow>)eventRow withSqlite:(NFLOGSqlite *)sqlite{
-    NSString* deleteSql = [NSString stringWithFormat:@"delete from %@ where %@ = ?",NFLOG_SPECIFIC_TIME_EVENT_TABLE_NAME,NFLOG_SPECIFIC_TIME_EVENT_ROW_ID_COL];
+    NSString* deleteSql = [NSString stringWithFormat:@"delete from %@ where %@ = ?",NFLOG_ACTIVE_EVENT_TABLE_NAME,NFLOG_ACTIVE_TIME_EVENT_ROW_ID_COL];
     //Downcasting to specific type.
     NFLOGActiveEventTableRow * activeEventRow = (NFLOGActiveEventTableRow *)eventRow;
     return [sqlite executeUpdateWithSql:deleteSql withIntParam:(int)[activeEventRow rowId]];

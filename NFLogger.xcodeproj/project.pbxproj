@@ -53,7 +53,6 @@
 		C40175111E3C3CAE005BF015 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C401750F1E3C3CAE005BF015 /* Main.storyboard */; };
 		C40175131E3C3CAE005BF015 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C40175121E3C3CAE005BF015 /* Assets.xcassets */; };
 		C40175161E3C3CAE005BF015 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C40175141E3C3CAE005BF015 /* LaunchScreen.storyboard */; };
-		C40175211E3C3CAE005BF015 /* NFLoggerDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C40175201E3C3CAE005BF015 /* NFLoggerDemoTests.m */; };
 		C401752C1E3C3CAE005BF015 /* NFLoggerDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = C401752B1E3C3CAE005BF015 /* NFLoggerDemoUITests.m */; };
 		C40175371E3C3CD2005BF015 /* NFLog.m in Sources */ = {isa = PBXBuildFile; fileRef = C40174641E3998C0005BF015 /* NFLog.m */; };
 		C40175381E3C3CD2005BF015 /* NFLOGRequestManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C40174A61E3A60ED005BF015 /* NFLOGRequestManager.m */; };
@@ -74,6 +73,11 @@
 		C40175471E3C3CD2005BF015 /* NFLOGAutoBehaviour.m in Sources */ = {isa = PBXBuildFile; fileRef = C40174DA1E3C16FF005BF015 /* NFLOGAutoBehaviour.m */; };
 		C40175481E3C3CD2005BF015 /* NFLOGManualBehaviour.m in Sources */ = {isa = PBXBuildFile; fileRef = C40174DE1E3C1712005BF015 /* NFLOGManualBehaviour.m */; };
 		C40175491E3C3DC4005BF015 /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = C401749F1E39D007005BF015 /* libsqlite3.0.tbd */; };
+		C43DA7DB1E3DA45F00396C7E /* NFSpecificEventTableTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C43DA7DA1E3DA45F00396C7E /* NFSpecificEventTableTests.m */; };
+		C43DA7DD1E3DB69400396C7E /* NFActiveEventTableTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C43DA7DC1E3DB69400396C7E /* NFActiveEventTableTests.m */; };
+		C43DA7E11E3DBE3200396C7E /* NFLOGAutomaticModeTest.m in Sources */ = {isa = PBXBuildFile; fileRef = C43DA7E01E3DBE3200396C7E /* NFLOGAutomaticModeTest.m */; };
+		C43DA7E31E3DBE3E00396C7E /* NFLOGManualModeTest.m in Sources */ = {isa = PBXBuildFile; fileRef = C43DA7E21E3DBE3E00396C7E /* NFLOGManualModeTest.m */; };
+		C43DA7E51E3DCA6C00396C7E /* NFLOGDisabledBehaviourTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C43DA7E41E3DCA6C00396C7E /* NFLOGDisabledBehaviourTests.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -147,11 +151,15 @@
 		C40175151E3C3CAE005BF015 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C40175171E3C3CAE005BF015 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C401751C1E3C3CAE005BF015 /* NFLoggerDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NFLoggerDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		C40175201E3C3CAE005BF015 /* NFLoggerDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NFLoggerDemoTests.m; sourceTree = "<group>"; };
 		C40175221E3C3CAE005BF015 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C40175271E3C3CAE005BF015 /* NFLoggerDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NFLoggerDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C401752B1E3C3CAE005BF015 /* NFLoggerDemoUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NFLoggerDemoUITests.m; sourceTree = "<group>"; };
 		C401752D1E3C3CAE005BF015 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C43DA7DA1E3DA45F00396C7E /* NFSpecificEventTableTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NFSpecificEventTableTests.m; sourceTree = "<group>"; };
+		C43DA7DC1E3DB69400396C7E /* NFActiveEventTableTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NFActiveEventTableTests.m; sourceTree = "<group>"; };
+		C43DA7E01E3DBE3200396C7E /* NFLOGAutomaticModeTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NFLOGAutomaticModeTest.m; sourceTree = "<group>"; };
+		C43DA7E21E3DBE3E00396C7E /* NFLOGManualModeTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NFLOGManualModeTest.m; sourceTree = "<group>"; };
+		C43DA7E41E3DCA6C00396C7E /* NFLOGDisabledBehaviourTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NFLOGDisabledBehaviourTests.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -347,8 +355,12 @@
 		C401751F1E3C3CAE005BF015 /* NFLoggerDemoTests */ = {
 			isa = PBXGroup;
 			children = (
-				C40175201E3C3CAE005BF015 /* NFLoggerDemoTests.m */,
 				C40175221E3C3CAE005BF015 /* Info.plist */,
+				C43DA7DA1E3DA45F00396C7E /* NFSpecificEventTableTests.m */,
+				C43DA7DC1E3DB69400396C7E /* NFActiveEventTableTests.m */,
+				C43DA7E01E3DBE3200396C7E /* NFLOGAutomaticModeTest.m */,
+				C43DA7E21E3DBE3E00396C7E /* NFLOGManualModeTest.m */,
+				C43DA7E41E3DCA6C00396C7E /* NFLOGDisabledBehaviourTests.m */,
 			);
 			path = NFLoggerDemoTests;
 			sourceTree = "<group>";
@@ -627,7 +639,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C40175211E3C3CAE005BF015 /* NFLoggerDemoTests.m in Sources */,
+				C43DA7E11E3DBE3200396C7E /* NFLOGAutomaticModeTest.m in Sources */,
+				C43DA7E51E3DCA6C00396C7E /* NFLOGDisabledBehaviourTests.m in Sources */,
+				C43DA7E31E3DBE3E00396C7E /* NFLOGManualModeTest.m in Sources */,
+				C43DA7DB1E3DA45F00396C7E /* NFSpecificEventTableTests.m in Sources */,
+				C43DA7DD1E3DB69400396C7E /* NFActiveEventTableTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

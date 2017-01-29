@@ -82,36 +82,71 @@ static NFLog * sharedLog;
 }
 
 +(void)logEvent:(NSString *)eventName{
+    if(eventName == nil || allTrim(eventName)){
+        NFLogDebug(@"event name is nil so failed to log event");
+        return;
+    }
     [[[self sharedInstance] logBehaviour] logEvent:eventName withParameters:nil completionBlock:nil];
 }
 
 
 +(void)logEvent:(NSString *)eventName withParameters:(NSDictionary *)parameters{
+    if(eventName == nil || allTrim(eventName)){
+        NFLogDebug(@"event name is nil so failed to log event");
+        return;
+    }
     [[[self sharedInstance] logBehaviour] logEvent:eventName withParameters:parameters completionBlock:nil];
 }
 
 
 +(void)logEvent:(NSString *)eventName withParameters:(NSDictionary *)parameters completionBlock:(void (^)(NFLOGRecordStatus recordStatus))completionBlock{
+    if(eventName == nil || allTrim(eventName)){
+        NFLogDebug(@"event name is nil so failed to log event");
+        completionBlock(NFLOGEventRecordFailed);
+        return;
+    }
     [[[self sharedInstance] logBehaviour] logEvent:eventName withParameters:parameters completionBlock:completionBlock];
 }
 
 +(void)startActiveEvent:(NSString *)eventName{
+    if(eventName == nil || allTrim(eventName)){
+        NFLogDebug(@"event name is nil so failed to log event");
+        return;
+    }
     [[[self sharedInstance] logBehaviour] startActiveEvent:eventName withParameters:nil completionBlock:nil];
 }
 
 +(void)startActiveEvent:(NSString *)eventName withParameters:(NSDictionary *)paramters{
+    if(eventName == nil || allTrim(eventName)){
+        NFLogDebug(@"event name is nil so failed to log event");
+        return;
+    }
     [[[self sharedInstance] logBehaviour] startActiveEvent:eventName withParameters:paramters completionBlock:nil];
 }
 
 +(void)startActiveEvent:(NSString *)eventName withParameters:(NSDictionary *)paramters completionBlock:(void (^)(NFLOGRecordStatus recordStatus)) completionBlock{
+    if(eventName == nil || allTrim(eventName)){
+        NFLogDebug(@"event name is nil so failed to log event");
+        completionBlock(NFLOGEventRecordFailed);
+        return;
+    }
     [[[self sharedInstance] logBehaviour] startActiveEvent:eventName withParameters:paramters completionBlock:completionBlock];
 }
 
 +(void)endActiveEvent:(NSString *)eventName{
+    if(eventName == nil || allTrim(eventName)){
+        NFLogDebug(@"event name is nil so failed to log event");
+        return;
+    }
     [[[self sharedInstance] logBehaviour] endActiveEvent:eventName completionBlock:nil];
 }
 
 +(void)endActiveEvent:(NSString *)eventName completionBlock:(void (^)(NFLOGRecordStatus recordStatus))completionBlock{
+    if(eventName == nil || allTrim(eventName)){
+        NFLogDebug(@"event name is nil so failed to log event");
+        completionBlock(NFLOGEventRecordFailed);
+        return;
+    }
     [[[self sharedInstance] logBehaviour] endActiveEvent:eventName completionBlock:completionBlock];
 }
 

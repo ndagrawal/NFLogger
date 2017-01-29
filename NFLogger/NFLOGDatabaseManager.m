@@ -58,13 +58,13 @@ static NFLOGDatabaseManager* dbManager;
 }
 
 -(BOOL)insertEvent:(NFLOGEvent *)event{
-    if (self.dbFilePath == nil){
-        return nil;
+    
+    if (event == nil || self.dbFilePath == nil){
+        return NO;
     }
     NFLOGSqlite* sqlite = [[NFLOGSqlite alloc] init];
-    if(![sqlite openWithFileName:self.dbFilePath])
-    {
-        return nil;
+    if(![sqlite openWithFileName:self.dbFilePath]){
+        return NO;
     }
     BOOL ret = [_eventTable insertEvent:event withSqlite:sqlite];
     [sqlite close];
@@ -72,17 +72,15 @@ static NFLOGDatabaseManager* dbManager;
 }
 
 -(BOOL)updateEvent:(NFLOGEvent *)event{
-    if (self.dbFilePath == nil)
-    {
-        return nil;
+    if (event || self.dbFilePath == nil){
+        return NO;
     }
     NFLOGSqlite* sqlite = [[NFLOGSqlite alloc] init];
-    if(![sqlite openWithFileName:self.dbFilePath])
-    {
-        return nil;
+    if(![sqlite openWithFileName:self.dbFilePath]){
+        return NO;
     }
     if(sqlite == nil){
-        return nil;
+        return NO;
     }
     BOOL ret = [_eventTable updateEventRow:event withSqlite:sqlite];
     [sqlite close];
@@ -90,15 +88,15 @@ static NFLOGDatabaseManager* dbManager;
 }
 
 -(BOOL)deleteEvent:(id<NFLOGEventTableRow>)event{
-    if (self.dbFilePath == nil){
-        return nil;
+    if (event == nil|| self.dbFilePath == nil){
+        return NO;
     }
     NFLOGSqlite* sqlite = [[NFLOGSqlite alloc] init];
     if(![sqlite openWithFileName:self.dbFilePath]){
-        return nil;
+        return NO;
     }
     if(sqlite == nil){
-        return nil;
+        return NO;
     }
     BOOL ret = [_eventTable deleteEvent:event withSqlite:sqlite];
     [sqlite close];

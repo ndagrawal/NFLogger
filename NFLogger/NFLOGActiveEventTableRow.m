@@ -28,7 +28,7 @@
         self.eventType = [event eventType];
         self.eventParameters = [NFLOGUtility convertToString:[event eventParameters]];
         self.startTimeStamp = [event timeStamp];
-        self.endTimeStamp = 0;
+        self.endTimeStamp = 0.0;
     }
     return self;
 }

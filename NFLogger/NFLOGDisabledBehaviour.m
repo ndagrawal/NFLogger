@@ -14,7 +14,6 @@
 }
 
 -(void)logEvent:(NSString *)eventName withParameters:(NSDictionary *)parameters completionBlock:(void (^)(NFLOGRecordStatus recordStatus))completionBlock{
-    
     if(completionBlock){
         completionBlock(NFLOGDisabled);
     }
