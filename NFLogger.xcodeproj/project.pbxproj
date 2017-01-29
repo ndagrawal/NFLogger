@@ -880,6 +880,8 @@
 		C40175351E3C3CAE005BF015 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer: Nilesh Agrawal (EVMFE482S6)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Nilesh Agrawal (EVMFE482S6)";
 				DEVELOPMENT_TEAM = K5XW29FQZ5;
 				INFOPLIST_FILE = NFLoggerDemoUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -892,6 +894,8 @@
 		C40175361E3C3CAE005BF015 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer: Nilesh Agrawal (EVMFE482S6)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Nilesh Agrawal (EVMFE482S6)";
 				DEVELOPMENT_TEAM = K5XW29FQZ5;
 				INFOPLIST_FILE = NFLoggerDemoUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
