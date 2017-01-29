@@ -2,5 +2,5 @@ language: objective-c
 xcode_project: NFLogger.xcodeproj # path to your xcodeproj folder
 xcode_scheme: NFLoggerDemoTests
 script:
-- xcodebuild [DEFAULT_OPTIONS] CODE_SIGNING_REQUIRED=NO
+ CODE_SIGNING_REQUIRED=NO
 
