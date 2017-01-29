@@ -1,5 +1,14 @@
 \hypertarget{interface_n_f_l_o_g_event}{}\section{N\+F\+L\+O\+G\+Event Class Reference}
 \label{interface_n_f_l_o_g_event}\index{N\+F\+L\+O\+G\+Event@{N\+F\+L\+O\+G\+Event}}
+
+
+Class of Event Object.  
+
+
+
+
+{\ttfamily \#import $<$N\+F\+L\+O\+G\+Event.\+h$>$}
+
 Inheritance diagram for N\+F\+L\+O\+G\+Event\+:\begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -10,11 +19,11 @@ Inheritance diagram for N\+F\+L\+O\+G\+Event\+:\begin{figure}[H]
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\Hypertarget{interface_n_f_l_o_g_event_ad1ab207aca486a4b31fe8e74c7559ac0}\label{interface_n_f_l_o_g_event_ad1ab207aca486a4b31fe8e74c7559ac0}} 
-(id) -\/ {\bfseries init\+With\+Event\+Name\+:event\+Type\+:event\+Parameters\+:time\+Stamp\+:}
-\item 
+(id) -\/ \hyperlink{interface_n_f_l_o_g_event_ad1ab207aca486a4b31fe8e74c7559ac0}{init\+With\+Event\+Name\+:event\+Type\+:event\+Parameters\+:time\+Stamp\+:}
+\begin{DoxyCompactList}\small\item\em Initializer to create event object For start\+Active\+Event the timestamp will be used as start time. For end\+Time, the timestamp will be used as end time, difference is calculated at the last while creating the J\+S\+ON. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{interface_n_f_l_o_g_event_a466729f93dbef38aa5f2f81c07df29fe}\label{interface_n_f_l_o_g_event_a466729f93dbef38aa5f2f81c07df29fe}} 
-(N\+S\+String $\ast$) -\/ {\bfseries description}
-\end{DoxyCompactItemize}
+(N\+S\+String $\ast$) -\/ \hyperlink{interface_n_f_l_o_g_event_a466729f93dbef38aa5f2f81c07df29fe}{description}
+\begin{DoxyCompactList}\small\item\em description of object. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Properties}
 \begin{DoxyCompactItemize}
 \item 
@@ -31,6 +40,11 @@ N\+S\+Dictionary $\ast$ {\bfseries event\+Parameters}
 double {\bfseries time\+Stamp}
 \end{DoxyCompactItemize}
 
+
+\subsection{Detailed Description}
+Class of Event Object. 
+
+This class helps in creaating instance of event objects. In future for different types of events, we can create protocol of \hyperlink{interface_n_f_l_o_g_event}{N\+F\+L\+O\+G\+Event} Object and generalize it futher. 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 

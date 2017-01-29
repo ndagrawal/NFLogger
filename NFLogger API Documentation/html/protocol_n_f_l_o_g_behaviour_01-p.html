@@ -65,6 +65,11 @@ $(function() {
 <div class="title">&lt;NFLOGBehaviour &gt; Protocol Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>Protocol defining to help create different behaviour for <a class="el" href="interface_n_f_logger.html" title="Provides all available methods for logging UI events from your app. ">NFLogger</a> library as per different modes.  
+ <a href="protocol_n_f_l_o_g_behaviour_01-p.html#details">More...</a></p>
+
+<p><code>#import &lt;<a class="el" href="_n_f_l_o_g_behaviour_8h_source.html">NFLOGBehaviour.h</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for &lt;NFLOGBehaviour &gt;:</div>
 <div class="dyncontent">
@@ -77,19 +82,25 @@ Inheritance diagram for &lt;NFLOGBehaviour &gt;:</div>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Instance Methods</h2></td></tr>
 <tr class="memitem:ab0e50ce3a4a91cba687eec9cd21e9a78"><td class="memItemLeft" align="right" valign="top"><a id="ab0e50ce3a4a91cba687eec9cd21e9a78"></a>
-(void)&#160;</td><td class="memItemRight" valign="bottom">- <b>swizzleClasses</b></td></tr>
+(void)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="protocol_n_f_l_o_g_behaviour_01-p.html#ab0e50ce3a4a91cba687eec9cd21e9a78">swizzleClasses</a></td></tr>
+<tr class="memdesc:ab0e50ce3a4a91cba687eec9cd21e9a78"><td class="mdescLeft">&#160;</td><td class="mdescRight">Method to define the behaviour of swizzled classes. For Auto Mode, classes should be swizzled (yet to be implemented). For Manual Mode, classes should not be swizzled. <br /></td></tr>
 <tr class="separator:ab0e50ce3a4a91cba687eec9cd21e9a78"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afcac3d44d23654909ae1da3ee5c61840"><td class="memItemLeft" align="right" valign="top"><a id="afcac3d44d23654909ae1da3ee5c61840"></a>
-(void)&#160;</td><td class="memItemRight" valign="bottom">- <b>logEvent:withParameters:completionBlock:</b></td></tr>
+(void)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="protocol_n_f_l_o_g_behaviour_01-p.html#afcac3d44d23654909ae1da3ee5c61840">logEvent:withParameters:completionBlock:</a></td></tr>
+<tr class="memdesc:afcac3d44d23654909ae1da3ee5c61840"><td class="mdescLeft">&#160;</td><td class="mdescRight">LogEvent in Database. This method creates an instance of <a class="el" href="interface_n_f_l_o_g_event.html" title="Class of Event Object. ">NFLOGEvent</a> class and dispatches it to database. <br /></td></tr>
 <tr class="separator:afcac3d44d23654909ae1da3ee5c61840"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a33b7f90b7f9108d33592e0916f5503f5"><td class="memItemLeft" align="right" valign="top"><a id="a33b7f90b7f9108d33592e0916f5503f5"></a>
-(void)&#160;</td><td class="memItemRight" valign="bottom">- <b>startActiveEvent:withParameters:completionBlock:</b></td></tr>
+(void)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="protocol_n_f_l_o_g_behaviour_01-p.html#a33b7f90b7f9108d33592e0916f5503f5">startActiveEvent:withParameters:completionBlock:</a></td></tr>
+<tr class="memdesc:a33b7f90b7f9108d33592e0916f5503f5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Logs startActiveEvent in Database. This method creates an instance of <a class="el" href="interface_n_f_l_o_g_event.html" title="Class of Event Object. ">NFLOGEvent</a> class and dispatches it to database. <br /></td></tr>
 <tr class="separator:a33b7f90b7f9108d33592e0916f5503f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a040b1fc4ce9a3e52b89043fd49d86409"><td class="memItemLeft" align="right" valign="top"><a id="a040b1fc4ce9a3e52b89043fd49d86409"></a>
-(void)&#160;</td><td class="memItemRight" valign="bottom">- <b>endActiveEvent:completionBlock:</b></td></tr>
+(void)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="protocol_n_f_l_o_g_behaviour_01-p.html#a040b1fc4ce9a3e52b89043fd49d86409">endActiveEvent:completionBlock:</a></td></tr>
+<tr class="memdesc:a040b1fc4ce9a3e52b89043fd49d86409"><td class="mdescLeft">&#160;</td><td class="mdescRight">Logs EndActiveEvent in Database. This method creates an instance of <a class="el" href="interface_n_f_l_o_g_event.html" title="Class of Event Object. ">NFLOGEvent</a> class and dispatches it to database. <br /></td></tr>
 <tr class="separator:a040b1fc4ce9a3e52b89043fd49d86409"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<hr/>The documentation for this protocol was generated from the following file:<ul>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Protocol defining to help create different behaviour for <a class="el" href="interface_n_f_logger.html" title="Provides all available methods for logging UI events from your app. ">NFLogger</a> library as per different modes. </p>
+</div><hr/>The documentation for this protocol was generated from the following file:<ul>
 <li>/Users/nileshagrawal/Documents/workspace/interviewprojects/netflix/NFLogger/NFLogger/<a class="el" href="_n_f_l_o_g_behaviour_8h_source.html">NFLOGBehaviour.h</a></li>
 </ul>
 </div><!-- contents -->

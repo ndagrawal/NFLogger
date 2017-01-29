@@ -145,19 +145,10 @@ This method to get the version of \hyperlink{interface_n_f_logger}{N\+F\+Logger}
      [\hyperlink{interface_n_f_logger}{NFLogger} initializeSDKWithMode:NFLOGManualCapture];
      \textcolor{comment}{//To set the upload interval for 60 seconds.}
      [\hyperlink{interface_n_f_logger}{NFLogger} setUploadInterval:60];
+     NSLog(\textcolor{stringliteral}{@"%@"},[\hyperlink{interface_n_f_logger}{NFLogger} \hyperlink{interface_n_f_logger_af6ab573a8e6498e7a50e74a022025b91}{getNFLoggerVersion}]);
 \}
 \end{DoxyCode}
-
-
-
-\begin{DoxyParams}{Parameters}
-{\em seconds} & number of seconds at which data should be uploaded.\\
-\hline
-\end{DoxyParams}
-\begin{DoxyNote}{Note}
-Default upload interval is set to 30 seconds. 
-\end{DoxyNote}
-\mbox{\Hypertarget{interface_n_f_logger_a1bfc37639bda4740700d9c76027cad1f}\label{interface_n_f_logger_a1bfc37639bda4740700d9c76027cad1f}} 
+ \mbox{\Hypertarget{interface_n_f_logger_a1bfc37639bda4740700d9c76027cad1f}\label{interface_n_f_logger_a1bfc37639bda4740700d9c76027cad1f}} 
 \index{N\+F\+Logger@{N\+F\+Logger}!initialize\+S\+D\+K\+With\+Mode\+:@{initialize\+S\+D\+K\+With\+Mode\+:}}
 \index{initialize\+S\+D\+K\+With\+Mode\+:@{initialize\+S\+D\+K\+With\+Mode\+:}!N\+F\+Logger@{N\+F\+Logger}}
 \subsubsection{\texorpdfstring{initialize\+S\+D\+K\+With\+Mode\+:()}{initializeSDKWithMode:()}}
@@ -446,7 +437,7 @@ event\+Name cannot be nil or empty string. event\+Name should be unique for a pa
 \end{DoxyNote}
 
 \begin{DoxyParams}{Parameters}
-{\em parameters} & dictionary to add extra information, along with the logged event. parameter can be optionally nil. \\
+{\em paramters} & dictionary to add extra information, along with the logged event. parameter can be optionally nil. \\
 \hline
 \end{DoxyParams}
 \mbox{\Hypertarget{interface_n_f_logger_a943cd3b2d89a9b40f9bb2540d8fcd190}\label{interface_n_f_logger_a943cd3b2d89a9b40f9bb2540d8fcd190}} 
@@ -485,7 +476,7 @@ event\+Name cannot be nil or empty string. event\+Name should be unique for a pa
 \end{DoxyNote}
 
 \begin{DoxyParams}{Parameters}
-{\em parameters} & dictionary to add extra information, along with the logged event. parameter can be optionally nil. completion handler can be optionally nil. \\
+{\em paramters} & dictionary to add extra information, along with the logged event. parameter can be optionally nil. completion handler can be optionally nil. \\
 \hline
 \end{DoxyParams}
 

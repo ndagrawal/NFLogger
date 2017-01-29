@@ -19,6 +19,12 @@
 #import <UIKit/UIKit.h>
 
 static NFLOGRequestManager *logRequestMaanger;
+/*! 
+    @brief Serial Queue to dispatch tasks in FIFO fashion.
+    Serial Queue is defined as we want task to happen in FIFO fashion.
+    Serial Queues allows only one task at a time, 
+    hence only thread accesses the database file at one time to open write and close. This complies with the design of Sqlite Database.
+ */
 static dispatch_queue_t serialQueue;
 
 @interface NFLOGRequestManager()
@@ -46,7 +52,12 @@ static dispatch_queue_t serialQueue;
     }
     return self;
 }
-
+/*
+ Observer
+ Whenever app comes to foregound the app receives UIApplicationDidBecomeActiveNotification.
+ Whenever app goes to background, the app receives UIApplicationDidEnterBackgroundNotification
+ We are just subsribing to this notification and starting and stopping our timers.
+ */
 -(void)registerNotifications{
     [[NSNotificationCenter defaultCenter]
      addObserver:self

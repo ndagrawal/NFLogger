@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['initializesdkwithmode_3a',['initializeSDKWithMode:',['../interface_n_f_logger.html#a1bfc37639bda4740700d9c76027cad1f',1,'NFLogger']]]
+  ['getnfloggerversion',['getNFLoggerVersion',['../interface_n_f_logger.html#af6ab573a8e6498e7a50e74a022025b91',1,'NFLogger']]]
 ];

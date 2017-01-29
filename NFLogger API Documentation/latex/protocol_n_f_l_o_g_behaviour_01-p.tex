@@ -1,5 +1,14 @@
 \hypertarget{protocol_n_f_l_o_g_behaviour_01-p}{}\section{$<$N\+F\+L\+O\+G\+Behaviour $>$ Protocol Reference}
 \label{protocol_n_f_l_o_g_behaviour_01-p}\index{$<$\+N\+F\+L\+O\+G\+Behaviour $>$@{$<$\+N\+F\+L\+O\+G\+Behaviour $>$}}
+
+
+Protocol defining to help create different behaviour for \hyperlink{interface_n_f_logger}{N\+F\+Logger} library as per different modes.  
+
+
+
+
+{\ttfamily \#import $<$N\+F\+L\+O\+G\+Behaviour.\+h$>$}
+
 Inheritance diagram for $<$N\+F\+L\+O\+G\+Behaviour $>$\+:\begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -10,18 +19,21 @@ Inheritance diagram for $<$N\+F\+L\+O\+G\+Behaviour $>$\+:\begin{figure}[H]
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\Hypertarget{protocol_n_f_l_o_g_behaviour_01-p_ab0e50ce3a4a91cba687eec9cd21e9a78}\label{protocol_n_f_l_o_g_behaviour_01-p_ab0e50ce3a4a91cba687eec9cd21e9a78}} 
-(void) -\/ {\bfseries swizzle\+Classes}
-\item 
+(void) -\/ \hyperlink{protocol_n_f_l_o_g_behaviour_01-p_ab0e50ce3a4a91cba687eec9cd21e9a78}{swizzle\+Classes}
+\begin{DoxyCompactList}\small\item\em Method to define the behaviour of swizzled classes. For Auto Mode, classes should be swizzled (yet to be implemented). For Manual Mode, classes should not be swizzled. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{protocol_n_f_l_o_g_behaviour_01-p_afcac3d44d23654909ae1da3ee5c61840}\label{protocol_n_f_l_o_g_behaviour_01-p_afcac3d44d23654909ae1da3ee5c61840}} 
-(void) -\/ {\bfseries log\+Event\+:with\+Parameters\+:completion\+Block\+:}
-\item 
+(void) -\/ \hyperlink{protocol_n_f_l_o_g_behaviour_01-p_afcac3d44d23654909ae1da3ee5c61840}{log\+Event\+:with\+Parameters\+:completion\+Block\+:}
+\begin{DoxyCompactList}\small\item\em Log\+Event in Database. This method creates an instance of \hyperlink{interface_n_f_l_o_g_event}{N\+F\+L\+O\+G\+Event} class and dispatches it to database. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{protocol_n_f_l_o_g_behaviour_01-p_a33b7f90b7f9108d33592e0916f5503f5}\label{protocol_n_f_l_o_g_behaviour_01-p_a33b7f90b7f9108d33592e0916f5503f5}} 
-(void) -\/ {\bfseries start\+Active\+Event\+:with\+Parameters\+:completion\+Block\+:}
-\item 
+(void) -\/ \hyperlink{protocol_n_f_l_o_g_behaviour_01-p_a33b7f90b7f9108d33592e0916f5503f5}{start\+Active\+Event\+:with\+Parameters\+:completion\+Block\+:}
+\begin{DoxyCompactList}\small\item\em Logs start\+Active\+Event in Database. This method creates an instance of \hyperlink{interface_n_f_l_o_g_event}{N\+F\+L\+O\+G\+Event} class and dispatches it to database. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{protocol_n_f_l_o_g_behaviour_01-p_a040b1fc4ce9a3e52b89043fd49d86409}\label{protocol_n_f_l_o_g_behaviour_01-p_a040b1fc4ce9a3e52b89043fd49d86409}} 
-(void) -\/ {\bfseries end\+Active\+Event\+:completion\+Block\+:}
-\end{DoxyCompactItemize}
+(void) -\/ \hyperlink{protocol_n_f_l_o_g_behaviour_01-p_a040b1fc4ce9a3e52b89043fd49d86409}{end\+Active\+Event\+:completion\+Block\+:}
+\begin{DoxyCompactList}\small\item\em Logs End\+Active\+Event in Database. This method creates an instance of \hyperlink{interface_n_f_l_o_g_event}{N\+F\+L\+O\+G\+Event} class and dispatches it to database. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
+
+\subsection{Detailed Description}
+Protocol defining to help create different behaviour for \hyperlink{interface_n_f_logger}{N\+F\+Logger} library as per different modes. 
 
 The documentation for this protocol was generated from the following file\+:\begin{DoxyCompactItemize}
 \item 

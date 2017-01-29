@@ -9,7 +9,10 @@
 #import <Foundation/Foundation.h>
 #import "NFLOGBehaviour.h"
 
-
+/*!
+ @brief Behaviour for NFLogger library for Manual Mode.
+ Refer NFLOGBehavior for documentation.
+ */
 @interface NFLOGManualBehaviour : NSObject<NFLOGBehaviour>
 
 

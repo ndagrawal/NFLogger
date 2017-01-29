@@ -37,33 +37,31 @@ static NFLogger * sharedLog;
 }
 
 /*
- * Method tells if the initialization of the sdk was successful.
+ Table Creation :
+ Method tells if the initialization of the sdk was successful.
+ Table Creation to store the specific time event , and active event, Table creation happens only once, no matter how many times this API is called.
+ 
+ Policy Management :
+ Setting logBehaviour - user can set the behaviour in runtime, either through initialization api or in furture through downloaded policy. Temporarily, I have taken policy information from the user, while initializing, in future such information can be taken through a user defined policy which can be downloaded.
  */
+
 +(BOOL)initializeSDKWithMode:(NFLOGMODE)mode{
     
     __block BOOL successful = YES;
-    
-    //Table Creation .
+    //Create Tables.
     [[NFLOGRequestManager sharedInstance] createTableforEventType:NFLOG_SPECIFIC_TIME_EVENT];
-    
     [[NFLOGRequestManager sharedInstance] createTableforEventType:NFLOG_START_ACTIVE_TIME_EVENT];
-    
-    
+
     //Policy Reading
     if(mode == NFLOGAutoCapture){
         [[self sharedInstance] setLogBehaviour:[[NFLOGAutoBehaviour alloc] init]];
     }else if(mode == NFLOGManualCapture){
         [[self sharedInstance] setLogBehaviour:[[NFLOGManualBehaviour alloc] init]];
     }
-    //TODO: Implement Configuration Reading.
-    //If configuration reading is not sucessful, then disable the sdk, rather than continuing to use it and return NO.
-    //WE might have to create a concurrent initializerQueue which will do two things,
-    //1. Create Tables (both table creation in one operation and nextly,
-    //2. Read the configuration and store it.
     
     //Setting inital Logging Level.
     [[NFLOGLogger sharedInstance] setLogLevel:NFLOG_LEVEL_NONE];
-    //[[NFLOGRequestManager sharedInstance] validateTimer];
+    
     return successful;
 }
 

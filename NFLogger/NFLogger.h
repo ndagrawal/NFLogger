@@ -95,6 +95,7 @@ typedef NS_ENUM(NSInteger, NFLogLevel) {
  * @param seconds number of seconds at which data should be uploaded.
  *
  * @note Default upload interval is set to 30 seconds.
+ * @since 1.0.0
  */
 +(void)setUploadInterval:(NSInteger)seconds;
 
@@ -112,7 +113,7 @@ typedef NS_ENUM(NSInteger, NFLogLevel) {
  *      NSLog(@"%@",[NFLogger getNFLoggerVersion]);
  * }
  * @endcode
- *
+ * @since 1.0.0
  *
  *
  */
@@ -145,7 +146,7 @@ typedef NS_ENUM(NSInteger, NFLogLevel) {
  * @param logLevel  set different logLevels for NFLogger library
  * @note
  * Default Logger Level Mode is NFLOG_LEVEL_NONE. 
- *
+ * @since 1.0.0
  */
 +(void)setLogLevelOfNFLog:(NFLogLevel)logLevel;
 
@@ -164,6 +165,7 @@ typedef NS_ENUM(NSInteger, NFLogLevel) {
  * @note 
  * eventName cannot be nil or empty string.
  * eventName should be unique for a particular type of event.
+ * @since 1.0.0
  */
 +(void)logEvent:(NSString *)eventName;
 
@@ -188,6 +190,7 @@ typedef NS_ENUM(NSInteger, NFLogLevel) {
  * eventName cannot be nil or empty string.
  * eventName should be unique for a particular type of event.
  * parameter can be optionally nil.
+ * @since 1.0.0
  */
 +(void)logEvent:(NSString *)eventName withParameters:(NSDictionary *)parameters;
 
@@ -223,6 +226,7 @@ typedef NS_ENUM(NSInteger, NFLogLevel) {
  * eventName should be unique for a particular type of event.
  * parameter can be optionally nil.
  * completion handler can be optionally nil.
+ * @since 1.0.0
  */
 +(void)logEvent:(NSString *)eventName withParameters:(NSDictionary *)parameters completionBlock:(void (^)(NFLOGRecordStatus recordStatus))completionBlock;
 /*!
@@ -242,6 +246,7 @@ typedef NS_ENUM(NSInteger, NFLogLevel) {
  * @note
  * eventName cannot be nil or empty string.
  * eventName should be unique for a particular type of event.
+ * @since 1.0.0
  */
 +(void)startActiveEvent:(NSString *)eventName;
 
@@ -266,6 +271,7 @@ typedef NS_ENUM(NSInteger, NFLogLevel) {
  * eventName should be unique for a particular type of event.
  * @param  paramters dictionary to add extra information, along with the logged event.
  * parameter can be optionally nil.
+ * @since 1.0.0
  */
 +(void)startActiveEvent:(NSString *)eventName withParameters:(NSDictionary *)paramters;
 
@@ -299,6 +305,7 @@ typedef NS_ENUM(NSInteger, NFLogLevel) {
  * @param  paramters dictionary to add extra information, along with the logged event.
  * parameter can be optionally nil.
  * completion handler can be optionally nil.
+ * @since 1.0.0
  */
 +(void)startActiveEvent:(NSString *)eventName withParameters:(NSDictionary *)paramters completionBlock:(void (^)(NFLOGRecordStatus recordStatus)) completionBlock;
 
@@ -319,6 +326,7 @@ typedef NS_ENUM(NSInteger, NFLogLevel) {
  * @note
  * eventName cannot be nil or empty string.
  * eventName should be unique for a particular type of event.
+ * @since 1.0.0
  */
 +(void)endActiveEvent:(NSString *)eventName;
 
@@ -349,6 +357,7 @@ typedef NS_ENUM(NSInteger, NFLogLevel) {
  * eventName cannot be nil or empty string.
  * eventName should be unique for a particular type of event.
  * completion handler can be optionally nil.
+ * @since 1.0.0
  */
 +(void)endActiveEvent:(NSString *)eventName completionBlock:(void (^)(NFLOGRecordStatus recordStatus))completionBlock;
 

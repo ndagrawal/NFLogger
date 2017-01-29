@@ -9,6 +9,10 @@
 #import <Foundation/Foundation.h>
 #import "NFLOGEventTable.h"
 
+/*!
+    @brief Factory class to get table instance based on tableName.
+    static factory design pattern.
+ */
 @interface NFLOGTableFactory : NSObject
 
 +(id<NFLOGEventTable>)getTableInstance:(NSString *)tableName;

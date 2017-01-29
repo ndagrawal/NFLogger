@@ -13,9 +13,13 @@
 #import "NFLOGRequestManager.h"
 
 @implementation NFLOGAutoBehaviour
+
 -(void)swizzleClasses{
     //TODO: Implement Method Swizzling
+    //This method is not implemented at present, because of the scope of project, but in future we will implement it .
+    //Method is hence kept as demo.
 }
+
 -(void)logEvent:(NSString *)eventName withParameters:(NSDictionary *)parameters completionBlock:(void (^)(NFLOGRecordStatus recordStatus))completionBlock{
     NFLOGEvent *event = [[NFLOGEvent alloc] initWithEventName:eventName eventType:NFLOG_SPECIFIC_TIME_EVENT eventParameters:parameters timeStamp:[NFLOGUtility getUnixtimestamp]];
     [[NFLOGRequestManager sharedInstance] record:event withCompletionBlock:completionBlock];

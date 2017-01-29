@@ -8,6 +8,10 @@
 
 #import <Foundation/Foundation.h>
 #import "NFLOGBehaviour.h"
+
+/*!
+    @brief Class defining behaviour of NFLogger in Disabled Mode.
+ */
 @interface NFLOGDisabledBehaviour : NSObject<NFLOGBehaviour>
 
 @end

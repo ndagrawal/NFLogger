@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['logevent_3a',['logEvent:',['../interface_n_f_logger.html#a932bba0925a8ffefec035de7f3cff73a',1,'NFLogger']]],
-  ['logevent_3awithparameters_3a',['logEvent:withParameters:',['../interface_n_f_logger.html#a0135c2e9b6e8d0241bbbb3383a2ed310',1,'NFLogger']]],
-  ['logevent_3awithparameters_3acompletionblock_3a',['logEvent:withParameters:completionBlock:',['../interface_n_f_logger.html#a92e20244e4fd66dca9596a9e758cc6a1',1,'NFLogger']]]
+  ['initializesdkwithmode_3a',['initializeSDKWithMode:',['../interface_n_f_logger.html#a1bfc37639bda4740700d9c76027cad1f',1,'NFLogger']]],
+  ['initwitheventname_3aeventtype_3aeventparameters_3atimestamp_3a',['initWithEventName:eventType:eventParameters:timeStamp:',['../interface_n_f_l_o_g_event.html#ad1ab207aca486a4b31fe8e74c7559ac0',1,'NFLOGEvent']]]
 ];

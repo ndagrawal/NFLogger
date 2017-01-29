@@ -9,6 +9,10 @@
 #import <Foundation/Foundation.h>
 #import "NFLOGBehaviour.h"
 
+/*!
+  @brief Behaviour for NFLogger library for Auto Mode.
+  Refer NFLOGBehavior for documentation.
+ */
 @interface NFLOGAutoBehaviour : NSObject<NFLOGBehaviour>
 
 
