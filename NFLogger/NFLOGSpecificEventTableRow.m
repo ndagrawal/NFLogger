@@ -10,7 +10,8 @@
 #import "NFLOGSqlParam.h"
 #import "NFLOGConstants.h"
 #import "NFLOGUtility.h"
-#import "NFLLogger.h"
+#import "NFLOGLogger.h"
+
 #define allTrim( object ) [object stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet] ]
 
 @implementation NFLOGSpecificEventTableRow
@@ -70,6 +71,7 @@
         [dictionary setObject:paramDict forKey:NFLOG_JSON_KEY_EVENT_PARAMETERS];
     }
     NFLogDebug(@"%@",dictionary);
+    
     return [dictionary copy];
 }
 

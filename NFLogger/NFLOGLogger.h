@@ -7,16 +7,16 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "NFLog.h"
+#import "NFLogger.h"
 
-@interface NFLLogger : NSObject{
+@interface NFLOGLogger : NSObject{
 }
 
 @property  NFLogLevel logLevel;
 
-+(NFLLogger *) sharedInstance;
++(NFLOGLogger *) sharedInstance;
 
-#define LOG_LEVEL [[NFLLogger sharedInstance] logLevel]
+#define LOG_LEVEL [[NFLOGLogger sharedInstance] logLevel]
 
 #define  NFLogError(fmt, ...)  \
 if ((NFLOG_LEVEL_ERROR & LOG_LEVEL) == NFLOG_LEVEL_ERROR)  NSLog((@"[NFLOGGER][ERROR][Method %s] [Line %d] " fmt),__PRETTY_FUNCTION__, __LINE__, ##__VA_ARGS__)

@@ -1,0 +1,32 @@
+\hypertarget{interface_n_f_network_manager}{}\section{N\+F\+Network\+Manager Class Reference}
+\label{interface_n_f_network_manager}\index{N\+F\+Network\+Manager@{N\+F\+Network\+Manager}}
+Inheritance diagram for N\+F\+Network\+Manager\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{interface_n_f_network_manager}
+\end{center}
+\end{figure}
+\subsection*{Instance Methods}
+\begin{DoxyCompactItemize}
+\item 
+(void) -\/ \hyperlink{interface_n_f_network_manager_a146f3a7713b9e65ecb007318cdc7a99c}{upload\+All\+Events\+:with\+Completion\+Block\+:}
+\end{DoxyCompactItemize}
+
+
+\subsection{Method Documentation}
+\mbox{\Hypertarget{interface_n_f_network_manager_a146f3a7713b9e65ecb007318cdc7a99c}\label{interface_n_f_network_manager_a146f3a7713b9e65ecb007318cdc7a99c}} 
+\index{N\+F\+Network\+Manager@{N\+F\+Network\+Manager}!upload\+All\+Events\+:with\+Completion\+Block\+:@{upload\+All\+Events\+:with\+Completion\+Block\+:}}
+\index{upload\+All\+Events\+:with\+Completion\+Block\+:@{upload\+All\+Events\+:with\+Completion\+Block\+:}!N\+F\+Network\+Manager@{N\+F\+Network\+Manager}}
+\subsubsection{\texorpdfstring{upload\+All\+Events\+:with\+Completion\+Block\+:()}{uploadAllEvents:withCompletionBlock:()}}
+{\footnotesize\ttfamily -\/ (void) upload\+All\+Events\+: \begin{DoxyParamCaption}\item[{(N\+S\+Dictionary $\ast$)}]{dictionary }\item[{withCompletionBlock:(Upload\+Completion\+Block)}]{completion\+Block }\end{DoxyParamCaption}}
+
+Note \+: Prefreable choice would be to use \char`\"{}sync\char`\"{} N\+S\+U\+R\+L\+Connection, but since the A\+PI is deprecated, we are using N\+S\+U\+R\+L\+Session.
+
+Note that \char`\"{}sync\char`\"{}-\/ronization care is taken through N\+F\+Request\+Manager\textquotesingle{}s upload\+And\+Delete\+Method while retrieving entries, and then the entries are send to N\+S\+U\+R\+L\+Session\textquotesingle{}s operation queue to upload. This is to make sure, proper order is ensured .
+
+The completion block implementation in upload\+And\+Delete\+All method, makes sure, that we are sending the results in the serial\+Queue, which takes care of deleting the entries from the database. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/nileshagrawal/\+Documents/workspace/interviewprojects/netflix/\+N\+F\+Logger/\+N\+F\+Logger/N\+F\+Network\+Manager.\+h\item 
+/\+Users/nileshagrawal/\+Documents/workspace/interviewprojects/netflix/\+N\+F\+Logger/\+N\+F\+Logger/N\+F\+Network\+Manager.\+m\end{DoxyCompactItemize}

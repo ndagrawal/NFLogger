@@ -1,0 +1,496 @@
+\hypertarget{interface_n_f_logger}{}\section{N\+F\+Logger Class Reference}
+\label{interface_n_f_logger}\index{N\+F\+Logger@{N\+F\+Logger}}
+
+
+Provides all available methods for logging UI events from your app.  
+
+
+
+
+{\ttfamily \#import $<$N\+F\+Logger.\+h$>$}
+
+Inheritance diagram for N\+F\+Logger\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{interface_n_f_logger}
+\end{center}
+\end{figure}
+\subsection*{Class Methods}
+\begin{DoxyCompactItemize}
+\item 
+(B\+O\+OL) + \hyperlink{interface_n_f_logger_a1bfc37639bda4740700d9c76027cad1f}{initialize\+S\+D\+K\+With\+Mode\+:}
+\begin{DoxyCompactList}\small\item\em Initialize the \hyperlink{interface_n_f_logger}{N\+F\+Logger} S\+DK. \end{DoxyCompactList}\item 
+(void) + \hyperlink{interface_n_f_logger_abab12d34a22ef54d94e9c1f32f785bbd}{set\+Upload\+Interval\+:}
+\begin{DoxyCompactList}\small\item\em Optinal Metod to set the time interval on which sdk should upload the collected metrics. \end{DoxyCompactList}\item 
+(N\+S\+String $\ast$) + \hyperlink{interface_n_f_logger_af6ab573a8e6498e7a50e74a022025b91}{get\+N\+F\+Logger\+Version}
+\begin{DoxyCompactList}\small\item\em to get the \hyperlink{interface_n_f_logger}{N\+F\+Logger}\textquotesingle{}s library version.. \end{DoxyCompactList}\item 
+(void) + \hyperlink{interface_n_f_logger_a6df3f92166f017f7574d7cf67dc6417e}{set\+Log\+Level\+Of\+N\+F\+Log\+:}
+\begin{DoxyCompactList}\small\item\em To set the log\+Level of \hyperlink{interface_n_f_logger}{N\+F\+Logger} library. \end{DoxyCompactList}\item 
+(void) + \hyperlink{interface_n_f_logger_a932bba0925a8ffefec035de7f3cff73a}{log\+Event\+:}
+\begin{DoxyCompactList}\small\item\em Logs an event Logs an event which is collected at the timestamp, when it is called. Users are suggested to have a event\+Name which defines certain business purpose, so that members of non technical team working on app, can also understand when the event is logged. \end{DoxyCompactList}\item 
+(void) + \hyperlink{interface_n_f_logger_a0135c2e9b6e8d0241bbbb3383a2ed310}{log\+Event\+:with\+Parameters\+:}
+\begin{DoxyCompactList}\small\item\em Logs an event,as well as add optional parameters. \end{DoxyCompactList}\item 
+(void) + \hyperlink{interface_n_f_logger_a92e20244e4fd66dca9596a9e758cc6a1}{log\+Event\+:with\+Parameters\+:completion\+Block\+:}
+\begin{DoxyCompactList}\small\item\em Logs an event,as well as add optional parameters , provides completion\+Handler for user to get status of logged event. \end{DoxyCompactList}\item 
+(void) + \hyperlink{interface_n_f_logger_a2d98749d91d892500fab101747d06a71}{start\+Active\+Event\+:}
+\begin{DoxyCompactList}\small\item\em starts Logging an actively spanning event Logs an event which has end time associated with it, hence event will be logged when end time api is called with same event\+Name. Users are suggested to have a event\+Name which defines certain business purpose, so that members of non technical team working on app, can also understand when the event is logged. \end{DoxyCompactList}\item 
+(void) + \hyperlink{interface_n_f_logger_a415def4182d5d458ff013bacb1320857}{start\+Active\+Event\+:with\+Parameters\+:}
+\begin{DoxyCompactList}\small\item\em starts Logging an actively spanning event, as well as add optional parameters. Logs an event which has end time associated with it, hence event will be logged when end time api is called with same event\+Name. Users are suggested to have a event\+Name which defines certain business purpose, so that members of non technical team working on app, can also understand when the event is logged. \end{DoxyCompactList}\item 
+(void) + \hyperlink{interface_n_f_logger_a943cd3b2d89a9b40f9bb2540d8fcd190}{start\+Active\+Event\+:with\+Parameters\+:completion\+Block\+:}
+\begin{DoxyCompactList}\small\item\em starts Logging an actively spanning event, as well as add optional parameters. provides completion\+Handler for user to get status of logged event. Logs an event which has end time associated with it, hence event will be logged when end time api is called with same event\+Name. Users are suggested to have a event\+Name which defines certain business purpose, so that members of non technical team working on app, can also understand when the event is logged. \end{DoxyCompactList}\item 
+(void) + \hyperlink{interface_n_f_logger_a6cac38d011820ec21dc314c7a4d4aaf4}{end\+Active\+Event\+:}
+\begin{DoxyCompactList}\small\item\em ends Logging an actively spanning event with event\+Name Ends Logging an event with event\+Name. Users are suggested to have a event\+Name which defines certain business purpose, so that members of non technical team working on app, can also understand when the event is logged. \end{DoxyCompactList}\item 
+(void) + \hyperlink{interface_n_f_logger_a72b51800e587c99090a5b8ce8788fa14}{end\+Active\+Event\+:completion\+Block\+:}
+\begin{DoxyCompactList}\small\item\em ends Logging an actively spanning event with event\+Name provides completion\+Handler for user to get status of logged event. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+(typedef) -\/ \hyperlink{interface_n_f_logger_ab785af89c63637bf04e29bebc0d781de}{N\+S\+\_\+\+E\+N\+UM}
+\begin{DoxyCompactList}\small\item\em Enum to provide status of the logged events. \end{DoxyCompactList}\item 
+(typedef) -\/ \hyperlink{interface_n_f_logger_ae7d5d1604436c440bd209346ff72e85f}{N\+S\+\_\+\+E\+N\+UM}
+\begin{DoxyCompactList}\small\item\em Enum to initialize\+S\+DK in manual and auto mode. \end{DoxyCompactList}\item 
+(typedef) -\/ \hyperlink{interface_n_f_logger_aa59e1d712c8479701815743004967132}{N\+S\+\_\+\+E\+N\+UM}
+\begin{DoxyCompactList}\small\item\em Enum to get provide log\+Level for logs related to \hyperlink{interface_n_f_logger}{N\+F\+Logger}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Provides all available methods for logging UI events from your app. 
+
+Set of methods that allow developers to log events detailed, and collect information regarding the use of their app by end users.
+
+\begin{DoxyNote}{Note}
+For more information regarding the use of this library, you can connect to support center at \href{mailto:nilesh.d.agrawal@gmail.com}{\tt nilesh.\+d.\+agrawal@gmail.\+com}
+\end{DoxyNote}
+\begin{DoxyVersion}{Version}
+1.\+0.\+0 
+\end{DoxyVersion}
+
+
+\subsection{Method Documentation}
+\mbox{\Hypertarget{interface_n_f_logger_a6cac38d011820ec21dc314c7a4d4aaf4}\label{interface_n_f_logger_a6cac38d011820ec21dc314c7a4d4aaf4}} 
+\index{N\+F\+Logger@{N\+F\+Logger}!end\+Active\+Event\+:@{end\+Active\+Event\+:}}
+\index{end\+Active\+Event\+:@{end\+Active\+Event\+:}!N\+F\+Logger@{N\+F\+Logger}}
+\subsubsection{\texorpdfstring{end\+Active\+Event\+:()}{endActiveEvent:()}}
+{\footnotesize\ttfamily + (void) end\+Active\+Event\+: \begin{DoxyParamCaption}\item[{(N\+S\+String $\ast$)}]{event\+Name }\end{DoxyParamCaption}}
+
+
+
+ends Logging an actively spanning event with event\+Name Ends Logging an event with event\+Name. Users are suggested to have a event\+Name which defines certain business purpose, so that members of non technical team working on app, can also understand when the event is logged. 
+
+The api also helps to know time for which the event has spanned.
+
+
+\begin{DoxyCode}
+-(IBAction)buttonClicked:(\textcolor{keywordtype}{id})sender\{
+ [\hyperlink{interface_n_f_logger}{NFLogger} endActiveEvent:\textcolor{stringliteral}{@"End Transaction"}];
+\}
+\end{DoxyCode}
+ 
+\begin{DoxyParams}{Parameters}
+{\em event\+Name} & event\+Name is a unique key defining your event to be logged. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+event\+Name cannot be nil or empty string. event\+Name should be unique for a particular type of event. 
+\end{DoxyNote}
+\mbox{\Hypertarget{interface_n_f_logger_a72b51800e587c99090a5b8ce8788fa14}\label{interface_n_f_logger_a72b51800e587c99090a5b8ce8788fa14}} 
+\index{N\+F\+Logger@{N\+F\+Logger}!end\+Active\+Event\+:completion\+Block\+:@{end\+Active\+Event\+:completion\+Block\+:}}
+\index{end\+Active\+Event\+:completion\+Block\+:@{end\+Active\+Event\+:completion\+Block\+:}!N\+F\+Logger@{N\+F\+Logger}}
+\subsubsection{\texorpdfstring{end\+Active\+Event\+:completion\+Block\+:()}{endActiveEvent:completionBlock:()}}
+{\footnotesize\ttfamily + (void) \hyperlink{interface_n_f_logger_a6cac38d011820ec21dc314c7a4d4aaf4}{end\+Active\+Event\+:} \begin{DoxyParamCaption}\item[{(N\+S\+String $\ast$)}]{event\+Name }\item[{completionBlock:(void($^\wedge$)(N\+F\+L\+O\+G\+Record\+Status record\+Status))}]{completion\+Block }\end{DoxyParamCaption}}
+
+
+
+ends Logging an actively spanning event with event\+Name provides completion\+Handler for user to get status of logged event. 
+
+Ends Logging an event with event\+Name. Users are suggested to have a event\+Name which defines certain business purpose, so that members of non technical team working on app, can also understand when the event is logged.
+
+The api also helps to know time for which the event has spanned.
+
+Event logging is async task, hence, any action scheduled after the status is received in completion handler, should be placed in main queue, to display on UI.
+
+
+\begin{DoxyCode}
+-(IBAction)buttonClicked:(\textcolor{keywordtype}{id})sender\{
+ [\hyperlink{interface_n_f_logger}{NFLogger} endActiveEvent:\textcolor{stringliteral}{@"End Transaction"} completionBlock:^(NFLOGRecordStatus recordStatus) \{
+      dispatch\_async(dispatch\_get\_main\_queue(), ^\{
+          NSLog(\textcolor{stringliteral}{@"Sucess Status Received in main Queue"});
+       \});
+  \}];
+\}
+\end{DoxyCode}
+ 
+\begin{DoxyParams}{Parameters}
+{\em event\+Name} & event\+Name is a unique key defining your event to be logged. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+event\+Name cannot be nil or empty string. event\+Name should be unique for a particular type of event. completion handler can be optionally nil. 
+\end{DoxyNote}
+\mbox{\Hypertarget{interface_n_f_logger_af6ab573a8e6498e7a50e74a022025b91}\label{interface_n_f_logger_af6ab573a8e6498e7a50e74a022025b91}} 
+\index{N\+F\+Logger@{N\+F\+Logger}!get\+N\+F\+Logger\+Version@{get\+N\+F\+Logger\+Version}}
+\index{get\+N\+F\+Logger\+Version@{get\+N\+F\+Logger\+Version}!N\+F\+Logger@{N\+F\+Logger}}
+\subsubsection{\texorpdfstring{get\+N\+F\+Logger\+Version()}{getNFLoggerVersion()}}
+{\footnotesize\ttfamily + (N\+S\+String $\ast$) get\+N\+F\+Logger\+Version \begin{DoxyParamCaption}{ }\end{DoxyParamCaption}}
+
+
+
+to get the \hyperlink{interface_n_f_logger}{N\+F\+Logger}\textquotesingle{}s library version.. 
+
+This method to get the version of \hyperlink{interface_n_f_logger}{N\+F\+Logger}\textquotesingle{}s library version.
+
+
+\begin{DoxyCode}
+-(void)applicationDidFinishLaunching:(UIApplication *) application\{
+     [\hyperlink{interface_n_f_logger}{NFLogger} initializeSDKWithMode:NFLOGManualCapture];
+     \textcolor{comment}{//To set the upload interval for 60 seconds.}
+     [\hyperlink{interface_n_f_logger}{NFLogger} setUploadInterval:60];
+\}
+\end{DoxyCode}
+
+
+
+\begin{DoxyParams}{Parameters}
+{\em seconds} & number of seconds at which data should be uploaded.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+Default upload interval is set to 30 seconds. 
+\end{DoxyNote}
+\mbox{\Hypertarget{interface_n_f_logger_a1bfc37639bda4740700d9c76027cad1f}\label{interface_n_f_logger_a1bfc37639bda4740700d9c76027cad1f}} 
+\index{N\+F\+Logger@{N\+F\+Logger}!initialize\+S\+D\+K\+With\+Mode\+:@{initialize\+S\+D\+K\+With\+Mode\+:}}
+\index{initialize\+S\+D\+K\+With\+Mode\+:@{initialize\+S\+D\+K\+With\+Mode\+:}!N\+F\+Logger@{N\+F\+Logger}}
+\subsubsection{\texorpdfstring{initialize\+S\+D\+K\+With\+Mode\+:()}{initializeSDKWithMode:()}}
+{\footnotesize\ttfamily + (B\+O\+OL) initialize\+S\+D\+K\+With\+Mode\+: \begin{DoxyParamCaption}\item[{(N\+F\+L\+O\+G\+M\+O\+DE)}]{mode }\end{DoxyParamCaption}}
+
+
+
+Initialize the \hyperlink{interface_n_f_logger}{N\+F\+Logger} S\+DK. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em mode} & version in which sdk should function.\\
+\hline
+\end{DoxyParams}
+This method serves as entry point for this library. It initializes the library to collect application information inside your application. It must be placed within the scope of application\+Did\+Finish\+Launching method in the App\+Delegate.\+m file of your app.
+
+
+\begin{DoxyCode}
+-(void)applicationDidFinishLaunching:(UIApplication *) application\{
+     [\hyperlink{interface_n_f_logger}{NFLogger} initializeSDKWithMode:NFLOGManualCapture];
+\}
+\end{DoxyCode}
+
+
+\begin{DoxySince}{Since}
+1.\+0.\+0 
+\end{DoxySince}
+\mbox{\Hypertarget{interface_n_f_logger_a932bba0925a8ffefec035de7f3cff73a}\label{interface_n_f_logger_a932bba0925a8ffefec035de7f3cff73a}} 
+\index{N\+F\+Logger@{N\+F\+Logger}!log\+Event\+:@{log\+Event\+:}}
+\index{log\+Event\+:@{log\+Event\+:}!N\+F\+Logger@{N\+F\+Logger}}
+\subsubsection{\texorpdfstring{log\+Event\+:()}{logEvent:()}}
+{\footnotesize\ttfamily + (void) log\+Event\+: \begin{DoxyParamCaption}\item[{(N\+S\+String $\ast$)}]{event\+Name }\end{DoxyParamCaption}}
+
+
+
+Logs an event Logs an event which is collected at the timestamp, when it is called. Users are suggested to have a event\+Name which defines certain business purpose, so that members of non technical team working on app, can also understand when the event is logged. 
+
+
+\begin{DoxyCode}
+-(IBAction)buttonClicked:(\textcolor{keywordtype}{id})sender\{
+ [\hyperlink{interface_n_f_logger}{NFLogger} logEvent:\textcolor{stringliteral}{@"Add to Cart"}];
+\}
+\end{DoxyCode}
+ 
+\begin{DoxyParams}{Parameters}
+{\em event\+Name} & event\+Name is a unique key defining your event to be logged. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+event\+Name cannot be nil or empty string. event\+Name should be unique for a particular type of event. 
+\end{DoxyNote}
+\mbox{\Hypertarget{interface_n_f_logger_a0135c2e9b6e8d0241bbbb3383a2ed310}\label{interface_n_f_logger_a0135c2e9b6e8d0241bbbb3383a2ed310}} 
+\index{N\+F\+Logger@{N\+F\+Logger}!log\+Event\+:with\+Parameters\+:@{log\+Event\+:with\+Parameters\+:}}
+\index{log\+Event\+:with\+Parameters\+:@{log\+Event\+:with\+Parameters\+:}!N\+F\+Logger@{N\+F\+Logger}}
+\subsubsection{\texorpdfstring{log\+Event\+:with\+Parameters\+:()}{logEvent:withParameters:()}}
+{\footnotesize\ttfamily + (void) \hyperlink{interface_n_f_logger_a932bba0925a8ffefec035de7f3cff73a}{log\+Event\+:} \begin{DoxyParamCaption}\item[{(N\+S\+String $\ast$)}]{event\+Name }\item[{withParameters:(N\+S\+Dictionary $\ast$)}]{parameters }\end{DoxyParamCaption}}
+
+
+
+Logs an event,as well as add optional parameters. 
+
+Logs an event which is collected at the specific timestamp, when it is called. This api also helps to add information in the form of dictionary. Users are suggested to have a event\+Name which defines certain business purpose, so that members of non technical team working on app, can also understand when the event is logged.
+
+
+\begin{DoxyCode}
+-(IBAction)buttonClicked:(\textcolor{keywordtype}{id})sender\{
+ NSDictionary *dictionary = [[NSDictionary alloc] initWithObjectsAndKeys:\textcolor{stringliteral}{@"CarModel"},\textcolor{stringliteral}{@"Audi"}, nil];
+ [\hyperlink{interface_n_f_logger}{NFLogger} logEvent:\textcolor{stringliteral}{@"PurchaseCar"} withParameters:dictionary];
+\}
+\end{DoxyCode}
+ 
+\begin{DoxyParams}{Parameters}
+{\em event\+Name} & event\+Name is a unique key defining your event to be logged. \\
+\hline
+{\em parameters} & dictionary to add extra information, along with the logged event.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+event\+Name cannot be nil or empty string. event\+Name should be unique for a particular type of event. parameter can be optionally nil. 
+\end{DoxyNote}
+\mbox{\Hypertarget{interface_n_f_logger_a92e20244e4fd66dca9596a9e758cc6a1}\label{interface_n_f_logger_a92e20244e4fd66dca9596a9e758cc6a1}} 
+\index{N\+F\+Logger@{N\+F\+Logger}!log\+Event\+:with\+Parameters\+:completion\+Block\+:@{log\+Event\+:with\+Parameters\+:completion\+Block\+:}}
+\index{log\+Event\+:with\+Parameters\+:completion\+Block\+:@{log\+Event\+:with\+Parameters\+:completion\+Block\+:}!N\+F\+Logger@{N\+F\+Logger}}
+\subsubsection{\texorpdfstring{log\+Event\+:with\+Parameters\+:completion\+Block\+:()}{logEvent:withParameters:completionBlock:()}}
+{\footnotesize\ttfamily + (void) \hyperlink{interface_n_f_logger_a932bba0925a8ffefec035de7f3cff73a}{log\+Event\+:} \begin{DoxyParamCaption}\item[{(N\+S\+String $\ast$)}]{event\+Name }\item[{withParameters:(N\+S\+Dictionary $\ast$)}]{parameters }\item[{completionBlock:(void($^\wedge$)(N\+F\+L\+O\+G\+Record\+Status record\+Status))}]{completion\+Block }\end{DoxyParamCaption}}
+
+
+
+Logs an event,as well as add optional parameters , provides completion\+Handler for user to get status of logged event. 
+
+Logs an event which is collected at the specific timestamp, when it is called. This api also helps to add information in the form of dictionary. Completion Handler provides the status of event logged.
+
+Users are suggested to have a event\+Name which defines certain business purpose, so that members of non technical team working on app, can also understand when the event is logged.
+
+Event logging is async task, hence, any action scheduled after the status is received in completion handler, should be placed in main queue, to display on UI.
+
+
+\begin{DoxyCode}
+-(IBAction)buttonClicked:(\textcolor{keywordtype}{id})sender\{
+ NSDictionary *dictionary = [[NSDictionary alloc] initWithObjectsAndKeys:\textcolor{stringliteral}{@"CarModel"},\textcolor{stringliteral}{@"Audi"}, nil];
+ [\hyperlink{interface_n_f_logger}{NFLogger} logEvent:\textcolor{stringliteral}{@"PurchaseCar"} withParameters:dictionary completionBlock:^(NFLOGRecordStatus 
+      recordStatus) \{
+      dispatch\_async(dispatch\_get\_main\_queue(), ^\{
+          NSLog(\textcolor{stringliteral}{@"Sucess Status Received in main Queue"});
+          \});
+  \}];
+\}
+\end{DoxyCode}
+
+
+
+\begin{DoxyParams}{Parameters}
+{\em event\+Name} & event\+Name is a unique key defining your event to be logged. \\
+\hline
+{\em parameters} & dictionary to add extra information, along with the logged event.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+event\+Name cannot be nil or empty string. event\+Name should be unique for a particular type of event. parameter can be optionally nil. completion handler can be optionally nil. 
+\end{DoxyNote}
+\mbox{\Hypertarget{interface_n_f_logger_ab785af89c63637bf04e29bebc0d781de}\label{interface_n_f_logger_ab785af89c63637bf04e29bebc0d781de}} 
+\index{N\+F\+Logger@{N\+F\+Logger}!N\+S\+\_\+\+E\+N\+UM@{N\+S\+\_\+\+E\+N\+UM}}
+\index{N\+S\+\_\+\+E\+N\+UM@{N\+S\+\_\+\+E\+N\+UM}!N\+F\+Logger@{N\+F\+Logger}}
+\subsubsection{\texorpdfstring{N\+S\+\_\+\+E\+N\+U\+M()}{NS\_ENUM()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily -\/ (typedef) N\+S\+\_\+\+E\+N\+UM \begin{DoxyParamCaption}\item[{(N\+S\+U\+Integer)}]{ }\item[{(N\+F\+L\+O\+G\+Record\+Status)}]{ }\end{DoxyParamCaption}}
+
+
+
+Enum to provide status of the logged events. 
+
+\begin{DoxySince}{Since}
+1.\+0.\+0 
+\end{DoxySince}
+\mbox{\Hypertarget{interface_n_f_logger_ae7d5d1604436c440bd209346ff72e85f}\label{interface_n_f_logger_ae7d5d1604436c440bd209346ff72e85f}} 
+\index{N\+F\+Logger@{N\+F\+Logger}!N\+S\+\_\+\+E\+N\+UM@{N\+S\+\_\+\+E\+N\+UM}}
+\index{N\+S\+\_\+\+E\+N\+UM@{N\+S\+\_\+\+E\+N\+UM}!N\+F\+Logger@{N\+F\+Logger}}
+\subsubsection{\texorpdfstring{N\+S\+\_\+\+E\+N\+U\+M()}{NS\_ENUM()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily -\/ (typedef) N\+S\+\_\+\+E\+N\+UM \begin{DoxyParamCaption}\item[{(N\+S\+U\+Integer)}]{ }\item[{(N\+F\+L\+O\+G\+M\+O\+DE)}]{ }\end{DoxyParamCaption}}
+
+
+
+Enum to initialize\+S\+DK in manual and auto mode. 
+
+In Manual Mode, all the apis will work. In Auto Mode, some of the classes will log events automatically and manual apis will also work.
+
+\begin{DoxySince}{Since}
+1.\+0.\+0 
+\end{DoxySince}
+\mbox{\Hypertarget{interface_n_f_logger_aa59e1d712c8479701815743004967132}\label{interface_n_f_logger_aa59e1d712c8479701815743004967132}} 
+\index{N\+F\+Logger@{N\+F\+Logger}!N\+S\+\_\+\+E\+N\+UM@{N\+S\+\_\+\+E\+N\+UM}}
+\index{N\+S\+\_\+\+E\+N\+UM@{N\+S\+\_\+\+E\+N\+UM}!N\+F\+Logger@{N\+F\+Logger}}
+\subsubsection{\texorpdfstring{N\+S\+\_\+\+E\+N\+U\+M()}{NS\_ENUM()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily -\/ (typedef) N\+S\+\_\+\+E\+N\+UM \begin{DoxyParamCaption}\item[{(N\+S\+Integer)}]{ }\item[{(N\+F\+Log\+Level)}]{ }\end{DoxyParamCaption}}
+
+
+
+Enum to get provide log\+Level for logs related to \hyperlink{interface_n_f_logger}{N\+F\+Logger}. 
+
+\begin{DoxyNote}{Note}
+This enum is useful for debugging purpose only. Default mode is none.
+\end{DoxyNote}
+\begin{DoxySince}{Since}
+1.\+0.\+0 
+\end{DoxySince}
+\mbox{\Hypertarget{interface_n_f_logger_a6df3f92166f017f7574d7cf67dc6417e}\label{interface_n_f_logger_a6df3f92166f017f7574d7cf67dc6417e}} 
+\index{N\+F\+Logger@{N\+F\+Logger}!set\+Log\+Level\+Of\+N\+F\+Log\+:@{set\+Log\+Level\+Of\+N\+F\+Log\+:}}
+\index{set\+Log\+Level\+Of\+N\+F\+Log\+:@{set\+Log\+Level\+Of\+N\+F\+Log\+:}!N\+F\+Logger@{N\+F\+Logger}}
+\subsubsection{\texorpdfstring{set\+Log\+Level\+Of\+N\+F\+Log\+:()}{setLogLevelOfNFLog:()}}
+{\footnotesize\ttfamily + (void) set\+Log\+Level\+Of\+N\+F\+Log\+: \begin{DoxyParamCaption}\item[{(N\+F\+Log\+Level)}]{log\+Level }\end{DoxyParamCaption}}
+
+
+
+To set the log\+Level of \hyperlink{interface_n_f_logger}{N\+F\+Logger} library. 
+
+This method helps to set the log\+Level to get the logs of various level (D\+E\+B\+U\+G/\+V\+E\+R\+B\+O\+S\+E/\+E\+R\+R\+OR).
+
+Following code snippet to demonstrate the use of this api. 
+\begin{DoxyCode}
+-(void)applicationDidFinishLaunching:(UIApplication *) application\{
+     [\hyperlink{interface_n_f_logger}{NFLogger} initializeSDKWithMode:NFLOGManualCapture];
+     \textcolor{comment}{//To set the upload interval for 60 seconds.}
+     [\hyperlink{interface_n_f_logger}{NFLogger} setUploadInterval:60];
+     [\hyperlink{interface_n_f_logger}{NFLogger} setLogLevelOfNFLog:NFLOG\_LEVEL\_DEBUG];
+\}
+\end{DoxyCode}
+
+
+Alternatively, this api can also be used to set log\+Level of two Level\textquotesingle{}s simulatenously through OR operation. 
+\begin{DoxyCode}
+-(void)applicationDidFinishLaunching:(UIApplication *) application\{
+     [\hyperlink{interface_n_f_logger}{NFLogger} initializeSDKWithMode:NFLOGManualCapture];
+     \textcolor{comment}{//To set the upload interval for 60 seconds.}
+     [\hyperlink{interface_n_f_logger}{NFLogger} setUploadInterval:60];
+     [\hyperlink{interface_n_f_logger}{NFLogger} setLogLevelOfNFLog:NFLOG\_LEVEL\_DEBUG|NFLOG\_LEVEL\_VERBOSE];
+\}
+\end{DoxyCode}
+ 
+\begin{DoxyParams}{Parameters}
+{\em log\+Level} & set different log\+Levels for \hyperlink{interface_n_f_logger}{N\+F\+Logger} library \\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+Default Logger Level Mode is N\+F\+L\+O\+G\+\_\+\+L\+E\+V\+E\+L\+\_\+\+N\+O\+NE. 
+\end{DoxyNote}
+\mbox{\Hypertarget{interface_n_f_logger_abab12d34a22ef54d94e9c1f32f785bbd}\label{interface_n_f_logger_abab12d34a22ef54d94e9c1f32f785bbd}} 
+\index{N\+F\+Logger@{N\+F\+Logger}!set\+Upload\+Interval\+:@{set\+Upload\+Interval\+:}}
+\index{set\+Upload\+Interval\+:@{set\+Upload\+Interval\+:}!N\+F\+Logger@{N\+F\+Logger}}
+\subsubsection{\texorpdfstring{set\+Upload\+Interval\+:()}{setUploadInterval:()}}
+{\footnotesize\ttfamily + (void) set\+Upload\+Interval\+: \begin{DoxyParamCaption}\item[{(N\+S\+Integer)}]{seconds }\end{DoxyParamCaption}}
+
+
+
+Optinal Metod to set the time interval on which sdk should upload the collected metrics. 
+
+This optional method helps to set upload interval , to upload data (events) at a specific interval only. The more the upload interval is more data is batched together for upload, thus reducing number of network calls. For best performance default upload interval can be at 1 min.
+
+
+\begin{DoxyCode}
+-(void)applicationDidFinishLaunching:(UIApplication *) application\{
+     [\hyperlink{interface_n_f_logger}{NFLogger} initializeSDKWithMode:NFLOGManualCapture];
+     [\hyperlink{interface_n_f_logger}{NFLogger} setUploadInterval:60];
+\}
+\end{DoxyCode}
+
+
+
+\begin{DoxyParams}{Parameters}
+{\em seconds} & number of seconds at which data should be uploaded.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+Default upload interval is set to 30 seconds. 
+\end{DoxyNote}
+\mbox{\Hypertarget{interface_n_f_logger_a2d98749d91d892500fab101747d06a71}\label{interface_n_f_logger_a2d98749d91d892500fab101747d06a71}} 
+\index{N\+F\+Logger@{N\+F\+Logger}!start\+Active\+Event\+:@{start\+Active\+Event\+:}}
+\index{start\+Active\+Event\+:@{start\+Active\+Event\+:}!N\+F\+Logger@{N\+F\+Logger}}
+\subsubsection{\texorpdfstring{start\+Active\+Event\+:()}{startActiveEvent:()}}
+{\footnotesize\ttfamily + (void) start\+Active\+Event\+: \begin{DoxyParamCaption}\item[{(N\+S\+String $\ast$)}]{event\+Name }\end{DoxyParamCaption}}
+
+
+
+starts Logging an actively spanning event Logs an event which has end time associated with it, hence event will be logged when end time api is called with same event\+Name. Users are suggested to have a event\+Name which defines certain business purpose, so that members of non technical team working on app, can also understand when the event is logged. 
+
+The api also helps to know time for which the event has spanned.
+
+
+\begin{DoxyCode}
+-(IBAction)buttonClicked:(\textcolor{keywordtype}{id})sender\{
+ [\hyperlink{interface_n_f_logger}{NFLogger} startActiveEvent:\textcolor{stringliteral}{@"Add to Cart"}];
+\}
+\end{DoxyCode}
+ 
+\begin{DoxyParams}{Parameters}
+{\em event\+Name} & event\+Name is a unique key defining your event to be logged. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+event\+Name cannot be nil or empty string. event\+Name should be unique for a particular type of event. 
+\end{DoxyNote}
+\mbox{\Hypertarget{interface_n_f_logger_a415def4182d5d458ff013bacb1320857}\label{interface_n_f_logger_a415def4182d5d458ff013bacb1320857}} 
+\index{N\+F\+Logger@{N\+F\+Logger}!start\+Active\+Event\+:with\+Parameters\+:@{start\+Active\+Event\+:with\+Parameters\+:}}
+\index{start\+Active\+Event\+:with\+Parameters\+:@{start\+Active\+Event\+:with\+Parameters\+:}!N\+F\+Logger@{N\+F\+Logger}}
+\subsubsection{\texorpdfstring{start\+Active\+Event\+:with\+Parameters\+:()}{startActiveEvent:withParameters:()}}
+{\footnotesize\ttfamily + (void) \hyperlink{interface_n_f_logger_a2d98749d91d892500fab101747d06a71}{start\+Active\+Event\+:} \begin{DoxyParamCaption}\item[{(N\+S\+String $\ast$)}]{event\+Name }\item[{withParameters:(N\+S\+Dictionary $\ast$)}]{paramters }\end{DoxyParamCaption}}
+
+
+
+starts Logging an actively spanning event, as well as add optional parameters. Logs an event which has end time associated with it, hence event will be logged when end time api is called with same event\+Name. Users are suggested to have a event\+Name which defines certain business purpose, so that members of non technical team working on app, can also understand when the event is logged. 
+
+This api also helps to add information in the form of dictionary. The api also helps to know time for which the event has spanned.
+
+
+\begin{DoxyCode}
+-(IBAction)buttonClicked:(\textcolor{keywordtype}{id})sender\{
+ NSDictionary *dictionary = [[NSDictionary alloc] initWithObjectsAndKeys:\textcolor{stringliteral}{@"CarModel"},\textcolor{stringliteral}{@"Audi"}, nil];
+ [\hyperlink{interface_n_f_logger}{NFLogger} startActiveEvent:\textcolor{stringliteral}{@"Add to Cart"} withParameters:dictionary];
+\}
+\end{DoxyCode}
+ 
+\begin{DoxyParams}{Parameters}
+{\em event\+Name} & event\+Name is a unique key defining your event to be logged. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+event\+Name cannot be nil or empty string. event\+Name should be unique for a particular type of event. 
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em parameters} & dictionary to add extra information, along with the logged event. parameter can be optionally nil. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{interface_n_f_logger_a943cd3b2d89a9b40f9bb2540d8fcd190}\label{interface_n_f_logger_a943cd3b2d89a9b40f9bb2540d8fcd190}} 
+\index{N\+F\+Logger@{N\+F\+Logger}!start\+Active\+Event\+:with\+Parameters\+:completion\+Block\+:@{start\+Active\+Event\+:with\+Parameters\+:completion\+Block\+:}}
+\index{start\+Active\+Event\+:with\+Parameters\+:completion\+Block\+:@{start\+Active\+Event\+:with\+Parameters\+:completion\+Block\+:}!N\+F\+Logger@{N\+F\+Logger}}
+\subsubsection{\texorpdfstring{start\+Active\+Event\+:with\+Parameters\+:completion\+Block\+:()}{startActiveEvent:withParameters:completionBlock:()}}
+{\footnotesize\ttfamily + (void) \hyperlink{interface_n_f_logger_a2d98749d91d892500fab101747d06a71}{start\+Active\+Event\+:} \begin{DoxyParamCaption}\item[{(N\+S\+String $\ast$)}]{event\+Name }\item[{withParameters:(N\+S\+Dictionary $\ast$)}]{paramters }\item[{completionBlock:(void($^\wedge$)(N\+F\+L\+O\+G\+Record\+Status record\+Status))}]{completion\+Block }\end{DoxyParamCaption}}
+
+
+
+starts Logging an actively spanning event, as well as add optional parameters. provides completion\+Handler for user to get status of logged event. Logs an event which has end time associated with it, hence event will be logged when end time api is called with same event\+Name. Users are suggested to have a event\+Name which defines certain business purpose, so that members of non technical team working on app, can also understand when the event is logged. 
+
+This api also helps to add information in the form of dictionary. The api also helps to know time for which the event has spanned.
+
+Event logging is async task, hence, any action scheduled after the status is received in completion handler, should be placed in main queue, to display on UI.
+
+
+\begin{DoxyCode}
+-(IBAction)buttonClicked:(\textcolor{keywordtype}{id})sender\{
+ NSDictionary *dictionary = [[NSDictionary alloc] initWithObjectsAndKeys:\textcolor{stringliteral}{@"CarModel"},\textcolor{stringliteral}{@"Audi"}, nil];
+ [\hyperlink{interface_n_f_logger}{NFLogger} startActiveEvent:\textcolor{stringliteral}{@"Add to Cart"} withParameters:dictionary completionBlock:^(
+      NFLOGRecordStatus recordStatus) \{
+      dispatch\_async(dispatch\_get\_main\_queue(), ^\{
+          NSLog(\textcolor{stringliteral}{@"Sucess Status Received in main Queue"});
+       \});
+  \}];
+\}
+\end{DoxyCode}
+ 
+\begin{DoxyParams}{Parameters}
+{\em event\+Name} & event\+Name is a unique key defining your event to be logged. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+event\+Name cannot be nil or empty string. event\+Name should be unique for a particular type of event. 
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em parameters} & dictionary to add extra information, along with the logged event. parameter can be optionally nil. completion handler can be optionally nil. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/nileshagrawal/\+Documents/workspace/interviewprojects/netflix/\+N\+F\+Logger/\+N\+F\+Logger/N\+F\+Logger.\+h\item 
+/\+Users/nileshagrawal/\+Documents/workspace/interviewprojects/netflix/\+N\+F\+Logger/\+N\+F\+Logger/N\+F\+Logger.\+m\end{DoxyCompactItemize}

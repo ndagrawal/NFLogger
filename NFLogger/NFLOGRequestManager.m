@@ -7,7 +7,7 @@
 //
 
 #import "NFLOGRequestManager.h"
-#import "NFLog.h"
+#import "NFLOGLogger.h"
 #import "NFLOGEvent.h"
 #import "NFLOGDatabaseManager.h"
 #import "NFLOGTableFactory.h"
@@ -15,7 +15,7 @@
 #import "NFLOGActiveEventTableRow.h"
 #import "NFNetworkManager.h"
 #import "NFLOGUtility.h"
-#import "NFLLogger.h"
+#import "NFLOGLogger.h"
 #import <UIKit/UIKit.h>
 
 static NFLOGRequestManager *logRequestMaanger;

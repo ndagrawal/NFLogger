@@ -9,7 +9,7 @@
 #import "NFLOGSqlite.h"
 #import "NFLOGSqlParam.h"
 #import <sqlite3.h>
-#import "NFLLogger.h"
+#import "NFLOGLogger.h"
 
 @interface NFLOGSqlite(){
     struct sqlite3* sqlite;

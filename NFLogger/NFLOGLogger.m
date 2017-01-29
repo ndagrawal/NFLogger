@@ -6,16 +6,16 @@
 //  Copyright © 2017 Nilesh Agrawal. All rights reserved.
 //
 
-#import "NFLLogger.h"
+#import "NFLOGLogger.h"
 
-static NFLLogger * sharedLogger;
+static NFLOGLogger * sharedLogger;
 
-@implementation NFLLogger
+@implementation NFLOGLogger
 
 +(id)sharedInstance{
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-        sharedLogger = [[NFLLogger alloc] init];
+        sharedLogger = [[NFLOGLogger alloc] init];
     });
     return sharedLogger;
 }

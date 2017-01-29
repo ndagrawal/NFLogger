@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "NFLog.h"
+#import "NFLogger.h"
 
 @protocol NFLOGBehaviour <NSObject>
 -(void)swizzleClasses;

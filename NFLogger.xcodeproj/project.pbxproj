@@ -12,8 +12,8 @@
 		C401745D1E399688005BF015 /* NFLOGConstants.h in Headers */ = {isa = PBXBuildFile; fileRef = C401745B1E399688005BF015 /* NFLOGConstants.h */; };
 		C401745E1E399688005BF015 /* NFLOGConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = C401745C1E399688005BF015 /* NFLOGConstants.m */; };
 		C40174611E3996F0005BF015 /* NFLOGEventTable.h in Headers */ = {isa = PBXBuildFile; fileRef = C401745F1E3996F0005BF015 /* NFLOGEventTable.h */; };
-		C40174651E3998C0005BF015 /* NFLog.h in Headers */ = {isa = PBXBuildFile; fileRef = C40174631E3998C0005BF015 /* NFLog.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		C40174661E3998C0005BF015 /* NFLog.m in Sources */ = {isa = PBXBuildFile; fileRef = C40174641E3998C0005BF015 /* NFLog.m */; };
+		C40174651E3998C0005BF015 /* NFLogger.h in Headers */ = {isa = PBXBuildFile; fileRef = C40174631E3998C0005BF015 /* NFLogger.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C40174661E3998C0005BF015 /* NFLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = C40174641E3998C0005BF015 /* NFLogger.m */; };
 		C40174711E39A0FF005BF015 /* NFLOGEvent.h in Headers */ = {isa = PBXBuildFile; fileRef = C401746F1E39A0FF005BF015 /* NFLOGEvent.h */; };
 		C40174721E39A0FF005BF015 /* NFLOGEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = C40174701E39A0FF005BF015 /* NFLOGEvent.m */; };
 		C40174791E39A2A1005BF015 /* NFLOGEventTableRow.h in Headers */ = {isa = PBXBuildFile; fileRef = C40174771E39A2A1005BF015 /* NFLOGEventTableRow.h */; };
@@ -34,8 +34,8 @@
 		C401749C1E39B868005BF015 /* NFLOGActiveEventTableRow.h in Headers */ = {isa = PBXBuildFile; fileRef = C401749A1E39B868005BF015 /* NFLOGActiveEventTableRow.h */; };
 		C401749D1E39B868005BF015 /* NFLOGActiveEventTableRow.m in Sources */ = {isa = PBXBuildFile; fileRef = C401749B1E39B868005BF015 /* NFLOGActiveEventTableRow.m */; };
 		C40174A01E39D007005BF015 /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = C401749F1E39D007005BF015 /* libsqlite3.0.tbd */; };
-		C40174A31E39D508005BF015 /* NFLLogger.h in Headers */ = {isa = PBXBuildFile; fileRef = C40174A11E39D508005BF015 /* NFLLogger.h */; };
-		C40174A41E39D508005BF015 /* NFLLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = C40174A21E39D508005BF015 /* NFLLogger.m */; };
+		C40174A31E39D508005BF015 /* NFLOGLogger.h in Headers */ = {isa = PBXBuildFile; fileRef = C40174A11E39D508005BF015 /* NFLOGLogger.h */; };
+		C40174A41E39D508005BF015 /* NFLOGLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = C40174A21E39D508005BF015 /* NFLOGLogger.m */; };
 		C40174A71E3A60ED005BF015 /* NFLOGRequestManager.h in Headers */ = {isa = PBXBuildFile; fileRef = C40174A51E3A60ED005BF015 /* NFLOGRequestManager.h */; };
 		C40174A81E3A60ED005BF015 /* NFLOGRequestManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C40174A61E3A60ED005BF015 /* NFLOGRequestManager.m */; };
 		C40174CE1E3BD561005BF015 /* NFNetworkManager.h in Headers */ = {isa = PBXBuildFile; fileRef = C40174CC1E3BD561005BF015 /* NFNetworkManager.h */; };
@@ -54,7 +54,7 @@
 		C40175131E3C3CAE005BF015 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C40175121E3C3CAE005BF015 /* Assets.xcassets */; };
 		C40175161E3C3CAE005BF015 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C40175141E3C3CAE005BF015 /* LaunchScreen.storyboard */; };
 		C401752C1E3C3CAE005BF015 /* NFLoggerDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = C401752B1E3C3CAE005BF015 /* NFLoggerDemoUITests.m */; };
-		C40175371E3C3CD2005BF015 /* NFLog.m in Sources */ = {isa = PBXBuildFile; fileRef = C40174641E3998C0005BF015 /* NFLog.m */; };
+		C40175371E3C3CD2005BF015 /* NFLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = C40174641E3998C0005BF015 /* NFLogger.m */; };
 		C40175381E3C3CD2005BF015 /* NFLOGRequestManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C40174A61E3A60ED005BF015 /* NFLOGRequestManager.m */; };
 		C40175391E3C3CD2005BF015 /* NFLOGEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = C40174701E39A0FF005BF015 /* NFLOGEvent.m */; };
 		C401753A1E3C3CD2005BF015 /* NFLOGTableFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = C401747C1E39AE50005BF015 /* NFLOGTableFactory.m */; };
@@ -67,7 +67,7 @@
 		C40175411E3C3CD2005BF015 /* NFLOGActiveEventTableRow.m in Sources */ = {isa = PBXBuildFile; fileRef = C401749B1E39B868005BF015 /* NFLOGActiveEventTableRow.m */; };
 		C40175421E3C3CD2005BF015 /* NFLOGUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = C40174581E39967A005BF015 /* NFLOGUtility.m */; };
 		C40175431E3C3CD2005BF015 /* NFLOGConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = C401745C1E399688005BF015 /* NFLOGConstants.m */; };
-		C40175441E3C3CD2005BF015 /* NFLLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = C40174A21E39D508005BF015 /* NFLLogger.m */; };
+		C40175441E3C3CD2005BF015 /* NFLOGLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = C40174A21E39D508005BF015 /* NFLOGLogger.m */; };
 		C40175451E3C3CD2005BF015 /* NFNetworkManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C40174CD1E3BD561005BF015 /* NFNetworkManager.m */; };
 		C40175461E3C3CD2005BF015 /* NFLOGDisabledBehaviour.m in Sources */ = {isa = PBXBuildFile; fileRef = C40174D61E3C16A1005BF015 /* NFLOGDisabledBehaviour.m */; };
 		C40175471E3C3CD2005BF015 /* NFLOGAutoBehaviour.m in Sources */ = {isa = PBXBuildFile; fileRef = C40174DA1E3C16FF005BF015 /* NFLOGAutoBehaviour.m */; };
@@ -105,8 +105,8 @@
 		C401745B1E399688005BF015 /* NFLOGConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NFLOGConstants.h; sourceTree = "<group>"; };
 		C401745C1E399688005BF015 /* NFLOGConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NFLOGConstants.m; sourceTree = "<group>"; };
 		C401745F1E3996F0005BF015 /* NFLOGEventTable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NFLOGEventTable.h; sourceTree = "<group>"; };
-		C40174631E3998C0005BF015 /* NFLog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NFLog.h; sourceTree = "<group>"; };
-		C40174641E3998C0005BF015 /* NFLog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NFLog.m; sourceTree = "<group>"; };
+		C40174631E3998C0005BF015 /* NFLogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NFLogger.h; sourceTree = "<group>"; };
+		C40174641E3998C0005BF015 /* NFLogger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NFLogger.m; sourceTree = "<group>"; };
 		C401746F1E39A0FF005BF015 /* NFLOGEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NFLOGEvent.h; sourceTree = "<group>"; };
 		C40174701E39A0FF005BF015 /* NFLOGEvent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NFLOGEvent.m; sourceTree = "<group>"; };
 		C40174771E39A2A1005BF015 /* NFLOGEventTableRow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NFLOGEventTableRow.h; sourceTree = "<group>"; };
@@ -127,8 +127,8 @@
 		C401749A1E39B868005BF015 /* NFLOGActiveEventTableRow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NFLOGActiveEventTableRow.h; sourceTree = "<group>"; };
 		C401749B1E39B868005BF015 /* NFLOGActiveEventTableRow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NFLOGActiveEventTableRow.m; sourceTree = "<group>"; };
 		C401749F1E39D007005BF015 /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
-		C40174A11E39D508005BF015 /* NFLLogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NFLLogger.h; sourceTree = "<group>"; };
-		C40174A21E39D508005BF015 /* NFLLogger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NFLLogger.m; sourceTree = "<group>"; };
+		C40174A11E39D508005BF015 /* NFLOGLogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NFLOGLogger.h; sourceTree = "<group>"; };
+		C40174A21E39D508005BF015 /* NFLOGLogger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NFLOGLogger.m; sourceTree = "<group>"; };
 		C40174A51E3A60ED005BF015 /* NFLOGRequestManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NFLOGRequestManager.h; sourceTree = "<group>"; };
 		C40174A61E3A60ED005BF015 /* NFLOGRequestManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NFLOGRequestManager.m; sourceTree = "<group>"; };
 		C40174CC1E3BD561005BF015 /* NFNetworkManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NFNetworkManager.h; sourceTree = "<group>"; };
@@ -222,8 +222,8 @@
 		C401744E1E39961F005BF015 /* NFLogger */ = {
 			isa = PBXGroup;
 			children = (
-				C40174631E3998C0005BF015 /* NFLog.h */,
-				C40174641E3998C0005BF015 /* NFLog.m */,
+				C40174631E3998C0005BF015 /* NFLogger.h */,
+				C40174641E3998C0005BF015 /* NFLogger.m */,
 				C401746E1E39A0DE005BF015 /* Events */,
 				C40174D41E3C15B1005BF015 /* PolicyBasedBehaviour */,
 				C43DA7D51E3C5B9300396C7E /* ThreadManagement */,
@@ -254,8 +254,8 @@
 				C40174581E39967A005BF015 /* NFLOGUtility.m */,
 				C401745B1E399688005BF015 /* NFLOGConstants.h */,
 				C401745C1E399688005BF015 /* NFLOGConstants.m */,
-				C40174A11E39D508005BF015 /* NFLLogger.h */,
-				C40174A21E39D508005BF015 /* NFLLogger.m */,
+				C40174A11E39D508005BF015 /* NFLOGLogger.h */,
+				C40174A21E39D508005BF015 /* NFLOGLogger.m */,
 			);
 			name = Utility;
 			sourceTree = "<group>";
@@ -399,7 +399,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C40174651E3998C0005BF015 /* NFLog.h in Headers */,
+				C40174651E3998C0005BF015 /* NFLogger.h in Headers */,
 				C40174591E39967A005BF015 /* NFLOGUtility.h in Headers */,
 				C40174791E39A2A1005BF015 /* NFLOGEventTableRow.h in Headers */,
 				C401749C1E39B868005BF015 /* NFLOGActiveEventTableRow.h in Headers */,
@@ -407,7 +407,7 @@
 				C40174851E39B04A005BF015 /* NFLOGActiveEventTable.h in Headers */,
 				C40174A71E3A60ED005BF015 /* NFLOGRequestManager.h in Headers */,
 				C40174981E39B854005BF015 /* NFLOGSpecificEventTableRow.h in Headers */,
-				C40174A31E39D508005BF015 /* NFLLogger.h in Headers */,
+				C40174A31E39D508005BF015 /* NFLOGLogger.h in Headers */,
 				C40174D71E3C16A1005BF015 /* NFLOGDisabledBehaviour.h in Headers */,
 				C40174711E39A0FF005BF015 /* NFLOGEvent.h in Headers */,
 				C40174DB1E3C16FF005BF015 /* NFLOGAutoBehaviour.h in Headers */,
@@ -594,7 +594,7 @@
 				C401749D1E39B868005BF015 /* NFLOGActiveEventTableRow.m in Sources */,
 				C40174E01E3C1712005BF015 /* NFLOGManualBehaviour.m in Sources */,
 				C40174991E39B854005BF015 /* NFLOGSpecificEventTableRow.m in Sources */,
-				C40174661E3998C0005BF015 /* NFLog.m in Sources */,
+				C40174661E3998C0005BF015 /* NFLogger.m in Sources */,
 				C401745E1E399688005BF015 /* NFLOGConstants.m in Sources */,
 				C401748B1E39B7CF005BF015 /* NFLOGSqlite.m in Sources */,
 				C40174DC1E3C16FF005BF015 /* NFLOGAutoBehaviour.m in Sources */,
@@ -605,7 +605,7 @@
 				C40174821E39B03A005BF015 /* NFLOGSpecificEventTable.m in Sources */,
 				C401745A1E39967A005BF015 /* NFLOGUtility.m in Sources */,
 				C401747E1E39AE50005BF015 /* NFLOGTableFactory.m in Sources */,
-				C40174A41E39D508005BF015 /* NFLLogger.m in Sources */,
+				C40174A41E39D508005BF015 /* NFLOGLogger.m in Sources */,
 				C401748F1E39B7DC005BF015 /* NFLOGSqlParam.m in Sources */,
 				C40174861E39B04A005BF015 /* NFLOGActiveEventTable.m in Sources */,
 			);
@@ -615,7 +615,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C40175371E3C3CD2005BF015 /* NFLog.m in Sources */,
+				C40175371E3C3CD2005BF015 /* NFLogger.m in Sources */,
 				C40175381E3C3CD2005BF015 /* NFLOGRequestManager.m in Sources */,
 				C40175391E3C3CD2005BF015 /* NFLOGEvent.m in Sources */,
 				C401753A1E3C3CD2005BF015 /* NFLOGTableFactory.m in Sources */,
@@ -628,7 +628,7 @@
 				C40175411E3C3CD2005BF015 /* NFLOGActiveEventTableRow.m in Sources */,
 				C40175421E3C3CD2005BF015 /* NFLOGUtility.m in Sources */,
 				C40175431E3C3CD2005BF015 /* NFLOGConstants.m in Sources */,
-				C40175441E3C3CD2005BF015 /* NFLLogger.m in Sources */,
+				C40175441E3C3CD2005BF015 /* NFLOGLogger.m in Sources */,
 				C40175451E3C3CD2005BF015 /* NFNetworkManager.m in Sources */,
 				C40175461E3C3CD2005BF015 /* NFLOGDisabledBehaviour.m in Sources */,
 				C40175471E3C3CD2005BF015 /* NFLOGAutoBehaviour.m in Sources */,
@@ -793,6 +793,7 @@
 		C40174551E39961F005BF015 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD)";
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEFINES_MODULE = YES;
@@ -803,15 +804,19 @@
 				INFOPLIST_FILE = NFLogger/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = mh_dylib;
+				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = com.nileshagrawal.netflix.NFLogger;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				VALID_ARCHS = "arm64 armv7 armv7s i386 x86_64";
 			};
 			name = Debug;
 		};
 		C40174561E39961F005BF015 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD)";
 				CODE_SIGN_IDENTITY = "";
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = K5XW29FQZ5;
@@ -821,9 +826,12 @@
 				INFOPLIST_FILE = NFLogger/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = mh_dylib;
+				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = com.nileshagrawal.netflix.NFLogger;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				VALID_ARCHS = "arm64 armv7 armv7s i386 x86_64";
 			};
 			name = Release;
 		};
@@ -880,8 +888,8 @@
 		C40175351E3C3CAE005BF015 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer: Nilesh Agrawal (EVMFE482S6)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Nilesh Agrawal (EVMFE482S6)";
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = K5XW29FQZ5;
 				INFOPLIST_FILE = NFLoggerDemoUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -894,8 +902,8 @@
 		C40175361E3C3CAE005BF015 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer: Nilesh Agrawal (EVMFE482S6)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Nilesh Agrawal (EVMFE482S6)";
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = K5XW29FQZ5;
 				INFOPLIST_FILE = NFLoggerDemoUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";

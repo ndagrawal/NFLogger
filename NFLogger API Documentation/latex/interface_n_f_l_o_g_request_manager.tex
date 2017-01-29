@@ -1,0 +1,59 @@
+\hypertarget{interface_n_f_l_o_g_request_manager}{}\section{N\+F\+L\+O\+G\+Request\+Manager Class Reference}
+\label{interface_n_f_l_o_g_request_manager}\index{N\+F\+L\+O\+G\+Request\+Manager@{N\+F\+L\+O\+G\+Request\+Manager}}
+Inheritance diagram for N\+F\+L\+O\+G\+Request\+Manager\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{interface_n_f_l_o_g_request_manager}
+\end{center}
+\end{figure}
+\subsection*{Instance Methods}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{interface_n_f_l_o_g_request_manager_a2c7a9f7fd9fb53d6a94a585274a6bc4f}\label{interface_n_f_l_o_g_request_manager_a2c7a9f7fd9fb53d6a94a585274a6bc4f}} 
+(void) -\/ {\bfseries create\+Tablefor\+Event\+Type\+:}
+\item 
+\mbox{\Hypertarget{interface_n_f_l_o_g_request_manager_a334b837987a00fcc1a88f0c8002a5916}\label{interface_n_f_l_o_g_request_manager_a334b837987a00fcc1a88f0c8002a5916}} 
+(void) -\/ {\bfseries record\+:with\+Completion\+Block\+:}
+\item 
+\mbox{\Hypertarget{interface_n_f_l_o_g_request_manager_a99a0afcb8645e6dbfa96987c90ad6c1b}\label{interface_n_f_l_o_g_request_manager_a99a0afcb8645e6dbfa96987c90ad6c1b}} 
+(void) -\/ {\bfseries update\+:with\+Completion\+Block\+:}
+\item 
+(void) -\/ \hyperlink{interface_n_f_l_o_g_request_manager_aa134b2591aa16f5577724d26e53b3eb5}{upload\+And\+Delete}
+\item 
+\mbox{\Hypertarget{interface_n_f_l_o_g_request_manager_adbb6382b702a49840494e7ea6f5d724a}\label{interface_n_f_l_o_g_request_manager_adbb6382b702a49840494e7ea6f5d724a}} 
+(void) -\/ {\bfseries validate\+Timer}
+\item 
+\mbox{\Hypertarget{interface_n_f_l_o_g_request_manager_a2a140a361a5b85f7c1ff51f4a60bbab3}\label{interface_n_f_l_o_g_request_manager_a2a140a361a5b85f7c1ff51f4a60bbab3}} 
+(void) -\/ {\bfseries stop\+Timer}
+\end{DoxyCompactItemize}
+\subsection*{Class Methods}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{interface_n_f_l_o_g_request_manager_a345364dbcef1eeb7af13c1bfe117580e}\label{interface_n_f_l_o_g_request_manager_a345364dbcef1eeb7af13c1bfe117580e}} 
+(id) + {\bfseries shared\+Instance}
+\end{DoxyCompactItemize}
+\subsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{interface_n_f_l_o_g_request_manager_afa6110f250aa2488b759db1cd0cc3d10}\label{interface_n_f_l_o_g_request_manager_afa6110f250aa2488b759db1cd0cc3d10}} 
+N\+S\+Integer {\bfseries upload\+Interval}
+\end{DoxyCompactItemize}
+
+
+\subsection{Method Documentation}
+\mbox{\Hypertarget{interface_n_f_l_o_g_request_manager_aa134b2591aa16f5577724d26e53b3eb5}\label{interface_n_f_l_o_g_request_manager_aa134b2591aa16f5577724d26e53b3eb5}} 
+\index{N\+F\+L\+O\+G\+Request\+Manager@{N\+F\+L\+O\+G\+Request\+Manager}!upload\+And\+Delete@{upload\+And\+Delete}}
+\index{upload\+And\+Delete@{upload\+And\+Delete}!N\+F\+L\+O\+G\+Request\+Manager@{N\+F\+L\+O\+G\+Request\+Manager}}
+\subsubsection{\texorpdfstring{upload\+And\+Delete()}{uploadAndDelete()}}
+{\footnotesize\ttfamily -\/ (void) upload\+And\+Delete \begin{DoxyParamCaption}{ }\end{DoxyParamCaption}}
+
+Note \+: Prefreable choice would be to use \char`\"{}sync\char`\"{} N\+S\+U\+R\+L\+Connection, but since the A\+PI is deprecated, we are using N\+S\+U\+R\+L\+Session.
+
+Note that \char`\"{}sync\char`\"{}-\/ronization care is taken through N\+F\+Request\+Manager\textquotesingle{}s upload\+And\+Delete\+Method while retrieving entries, and then the entries are send to N\+S\+U\+R\+L\+Session\textquotesingle{}s operation queue to upload. This is to make sure, proper order is ensured .
+
+The completion block implementation in upload\+And\+Delete\+All method, makes sure, that we are sending the results in the serial\+Queue, which takes care of deleting the entries from the database. We have to make this \char`\"{}sync\char`\"{}, since we want upload to happen only after all the entries are retrived, and a proper json is formed. \char`\"{}sync\char`\"{} dispatch will make sure, that network manager upload action happens only after sync thread is completely executed.
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/nileshagrawal/\+Documents/workspace/interviewprojects/netflix/\+N\+F\+Logger/\+N\+F\+Logger/N\+F\+L\+O\+G\+Request\+Manager.\+h\item 
+/\+Users/nileshagrawal/\+Documents/workspace/interviewprojects/netflix/\+N\+F\+Logger/\+N\+F\+Logger/N\+F\+L\+O\+G\+Request\+Manager.\+m\end{DoxyCompactItemize}

@@ -6,34 +6,32 @@
 //  Copyright © 2017 Nilesh Agrawal. All rights reserved.
 //
 
-#import "NFLog.h"
+#import "NFLogger.h"
 #import "NFLOGConstants.h"
 #import "NFLOGRequestManager.h"
-#import "NFLOGEvent.h"
+
 #import "NFLOGUtility.h"
-
-
 #import "NFLOGBehaviour.h"
 #import "NFLOGDisabledBehaviour.h"
 #import "NFLOGAutoBehaviour.h"
 #import "NFLOGManualBehaviour.h"
-#import "NFLLogger.h"
+#import "NFLOGLogger.h"
 
-static NFLog * sharedLog;
+static NFLogger * sharedLog;
 
-@interface NFLog()
+@interface NFLogger()
 @property NSInteger uploadInterval;
 @property id<NFLOGBehaviour> logBehaviour;
 @end
 
-@implementation NFLog
+@implementation NFLogger
 @synthesize uploadInterval = _uploadInterval;
 @synthesize logBehaviour = _logBehaviour;
 
 +(id)sharedInstance{
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-        sharedLog = [[NFLog alloc] init];
+        sharedLog = [[NFLogger alloc] init];
     });
     return sharedLog;
 }
@@ -64,7 +62,7 @@ static NFLog * sharedLog;
     //2. Read the configuration and store it.
     
     //Setting inital Logging Level.
-    [[NFLLogger sharedInstance] setLogLevel:NFLOG_LEVEL_NONE];
+    [[NFLOGLogger sharedInstance] setLogLevel:NFLOG_LEVEL_NONE];
     //[[NFLOGRequestManager sharedInstance] validateTimer];
     return successful;
 }
@@ -78,11 +76,11 @@ static NFLog * sharedLog;
 }
 
 +(void)setLogLevelOfNFLog:(NFLogLevel)logLevel{
-    [[NFLLogger sharedInstance] setLogLevel:logLevel];
+    [[NFLOGLogger sharedInstance] setLogLevel:logLevel];
 }
 
 +(void)logEvent:(NSString *)eventName{
-    if(eventName == nil || allTrim(eventName)){
+    if(eventName == nil || [allTrim(eventName) length] == 0){
         NFLogDebug(@"event name is nil so failed to log event");
         return;
     }
@@ -91,7 +89,7 @@ static NFLog * sharedLog;
 
 
 +(void)logEvent:(NSString *)eventName withParameters:(NSDictionary *)parameters{
-    if(eventName == nil || allTrim(eventName)){
+    if(eventName == nil || [allTrim(eventName) length] == 0){
         NFLogDebug(@"event name is nil so failed to log event");
         return;
     }
@@ -100,7 +98,7 @@ static NFLog * sharedLog;
 
 
 +(void)logEvent:(NSString *)eventName withParameters:(NSDictionary *)parameters completionBlock:(void (^)(NFLOGRecordStatus recordStatus))completionBlock{
-    if(eventName == nil || allTrim(eventName)){
+    if(eventName == nil || [allTrim(eventName) length] == 0){
         NFLogDebug(@"event name is nil so failed to log event");
         completionBlock(NFLOGEventRecordFailed);
         return;
@@ -109,7 +107,7 @@ static NFLog * sharedLog;
 }
 
 +(void)startActiveEvent:(NSString *)eventName{
-    if(eventName == nil || allTrim(eventName)){
+    if(eventName == nil ||[allTrim(eventName) length] == 0){
         NFLogDebug(@"event name is nil so failed to log event");
         return;
     }
@@ -117,7 +115,7 @@ static NFLog * sharedLog;
 }
 
 +(void)startActiveEvent:(NSString *)eventName withParameters:(NSDictionary *)paramters{
-    if(eventName == nil || allTrim(eventName)){
+    if(eventName == nil || [allTrim(eventName) length] == 0){
         NFLogDebug(@"event name is nil so failed to log event");
         return;
     }
@@ -125,7 +123,7 @@ static NFLog * sharedLog;
 }
 
 +(void)startActiveEvent:(NSString *)eventName withParameters:(NSDictionary *)paramters completionBlock:(void (^)(NFLOGRecordStatus recordStatus)) completionBlock{
-    if(eventName == nil || allTrim(eventName)){
+    if(eventName == nil || [allTrim(eventName) length] == 0){
         NFLogDebug(@"event name is nil so failed to log event");
         completionBlock(NFLOGEventRecordFailed);
         return;
@@ -134,7 +132,7 @@ static NFLog * sharedLog;
 }
 
 +(void)endActiveEvent:(NSString *)eventName{
-    if(eventName == nil || allTrim(eventName)){
+    if(eventName == nil || [allTrim(eventName) length] == 0){
         NFLogDebug(@"event name is nil so failed to log event");
         return;
     }
@@ -142,7 +140,7 @@ static NFLog * sharedLog;
 }
 
 +(void)endActiveEvent:(NSString *)eventName completionBlock:(void (^)(NFLOGRecordStatus recordStatus))completionBlock{
-    if(eventName == nil || allTrim(eventName)){
+    if(eventName == nil || [allTrim(eventName) length] == 0){
         NFLogDebug(@"event name is nil so failed to log event");
         completionBlock(NFLOGEventRecordFailed);
         return;

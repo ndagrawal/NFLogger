@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "NFLog.h"
+#import "NFLogger.h"
 
 @class NFLOGEvent;
 
