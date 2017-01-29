@@ -12,13 +12,13 @@
 
 typedef NS_ENUM(NSUInteger, NFLOGRecordStatus) {
     NFLOGEventRecordFailed  = 0,
-    NFLOGEventRecorded      = (1 << 1),
+    NFLOGEventRecorded      = (1 << 0),
     NFLOGDisabled           = (1 << 2),
 };
 
 typedef NS_ENUM(NSUInteger, NFLOGMODE) {
     NFLOGAutoCapture        = 0,
-    NFLOGManualCapture      = (1 << 1),
+    NFLOGManualCapture      = (1 << 0),
 };
 
 typedef NS_ENUM(NSInteger, NFLogLevel) {
@@ -28,6 +28,7 @@ typedef NS_ENUM(NSInteger, NFLogLevel) {
     NFLOG_LEVEL_VERBOSE       = (1 << 2)
 };
 
+
 +(BOOL)initializeSDKWithMode:(NFLOGMODE)mode;
 
 +(void)setUploadInterval:(NSInteger)seconds;
@@ -36,16 +37,20 @@ typedef NS_ENUM(NSInteger, NFLogLevel) {
 
 +(void)setLogLevelOfNFLog:(NFLogLevel)logLevel;
 
-+(NFLOGRecordStatus)logEvent:(NSString *)eventName;
++(void)logEvent:(NSString *)eventName;
 
-+(NFLOGRecordStatus)logEvent:(NSString *)eventName withParameters:(NSDictionary *)parameters;
++(void)logEvent:(NSString *)eventName withParameters:(NSDictionary *)parameters;
 
-+(NFLOGRecordStatus)startActiveEvent:(NSString *)eventName;
++(void)logEvent:(NSString *)eventName withParameters:(NSDictionary *)parameters completionBlock:(void (^)(NFLOGRecordStatus recordStatus))completionBlock;
 
-+(NFLOGRecordStatus)endActiveEvent:(NSString *)eventName;
++(void)startActiveEvent:(NSString *)eventName;
 
-+(NFLOGRecordStatus)startActiveEvent:(NSString *)eventName withParameters:(NSDictionary *)paramters;
++(void)startActiveEvent:(NSString *)eventName withParameters:(NSDictionary *)paramters;
 
-+(NFLOGRecordStatus)endActiveEvent:(NSString *)eventName withParameters:(NSDictionary *)parameters;
++(void)startActiveEvent:(NSString *)eventName withParameters:(NSDictionary *)paramters completionBlock:(void (^)(NFLOGRecordStatus recordStatus)) completionBlock;
+
++(void)endActiveEvent:(NSString *)eventName;
+
++(void)endActiveEvent:(NSString *)eventName completionBlock:(void (^)(NFLOGRecordStatus recordStatus))completionBlock;
 
 @end

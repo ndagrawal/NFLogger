@@ -8,7 +8,6 @@
 
 #import "NFLog.h"
 #import "NFLOGConstants.h"
-#import "NFLOGDatabaseManager.h"
 #import "NFLOGRequestManager.h"
 #import "NFLOGEvent.h"
 #import "NFLOGUtility.h"
@@ -47,13 +46,10 @@ static NFLog * sharedLog;
     __block BOOL successful = YES;
     
     //Table Creation .
-    [[NFLOGRequestManager sharedInstance] createTableforEventType:NFLOG_SPECIFIC_TIME_EVENT_TABLE_NAME withCompletionBlock:^(BOOL success) {
-        successful &= success;
-    }];
+    [[NFLOGRequestManager sharedInstance] createTableforEventType:NFLOG_SPECIFIC_TIME_EVENT];
     
-    [[NFLOGRequestManager sharedInstance] createTableforEventType:NFLOG_SPECIFIC_TIME_EVENT_TABLE_NAME withCompletionBlock:^(BOOL success) {
-        successful &= success;
-    }];
+    [[NFLOGRequestManager sharedInstance] createTableforEventType:NFLOG_START_ACTIVE_TIME_EVENT];
+    
     
     //Policy Reading
     if(mode == NFLOGAutoCapture){
@@ -69,7 +65,7 @@ static NFLog * sharedLog;
     
     //Setting inital Logging Level.
     [[NFLLogger sharedInstance] setLogLevel:NFLOG_LEVEL_NONE];
-    
+    //[[NFLOGRequestManager sharedInstance] validateTimer];
     return successful;
 }
 
@@ -85,28 +81,38 @@ static NFLog * sharedLog;
     [[NFLLogger sharedInstance] setLogLevel:logLevel];
 }
 
-+(NFLOGRecordStatus)logEvent:(NSString *)eventName{
-    return [[[self sharedInstance] logBehaviour] logEvent:eventName withParameters:nil];
++(void)logEvent:(NSString *)eventName{
+    [[[self sharedInstance] logBehaviour] logEvent:eventName withParameters:nil completionBlock:nil];
 }
 
-+(NFLOGRecordStatus)logEvent:(NSString *)eventName withParameters:(NSDictionary *)parameters{
-    return [[[self sharedInstance] logBehaviour] logEvent:eventName withParameters:parameters];
+
++(void)logEvent:(NSString *)eventName withParameters:(NSDictionary *)parameters{
+    [[[self sharedInstance] logBehaviour] logEvent:eventName withParameters:parameters completionBlock:nil];
 }
 
-+(NFLOGRecordStatus)startActiveEvent:(NSString *)eventName{
-    return [[[self sharedInstance] logBehaviour] startActiveEvent:eventName withParameters:nil];
+
++(void)logEvent:(NSString *)eventName withParameters:(NSDictionary *)parameters completionBlock:(void (^)(NFLOGRecordStatus recordStatus))completionBlock{
+    [[[self sharedInstance] logBehaviour] logEvent:eventName withParameters:parameters completionBlock:completionBlock];
 }
 
-+(NFLOGRecordStatus)endActiveEvent:(NSString *)eventName{
-    return [[[self sharedInstance] logBehaviour] endActiveEvent:eventName withParameters:nil];
++(void)startActiveEvent:(NSString *)eventName{
+    [[[self sharedInstance] logBehaviour] startActiveEvent:eventName withParameters:nil completionBlock:nil];
 }
 
-+(NFLOGRecordStatus)startActiveEvent:(NSString *)eventName withParameters:(NSDictionary *)paramters{
-    return [[[self sharedInstance] logBehaviour] startActiveEvent:eventName withParameters:paramters];
++(void)startActiveEvent:(NSString *)eventName withParameters:(NSDictionary *)paramters{
+    [[[self sharedInstance] logBehaviour] startActiveEvent:eventName withParameters:paramters completionBlock:nil];
 }
 
-+(NFLOGRecordStatus)endActiveEvent:(NSString *)eventName withParameters:(NSDictionary *)parameters{
-    return [[[self sharedInstance] logBehaviour] endActiveEvent:eventName withParameters:parameters];
++(void)startActiveEvent:(NSString *)eventName withParameters:(NSDictionary *)paramters completionBlock:(void (^)(NFLOGRecordStatus recordStatus)) completionBlock{
+    [[[self sharedInstance] logBehaviour] startActiveEvent:eventName withParameters:paramters completionBlock:completionBlock];
+}
+
++(void)endActiveEvent:(NSString *)eventName{
+    [[[self sharedInstance] logBehaviour] endActiveEvent:eventName completionBlock:nil];
+}
+
++(void)endActiveEvent:(NSString *)eventName completionBlock:(void (^)(NFLOGRecordStatus recordStatus))completionBlock{
+    [[[self sharedInstance] logBehaviour] endActiveEvent:eventName completionBlock:completionBlock];
 }
 
 @end
