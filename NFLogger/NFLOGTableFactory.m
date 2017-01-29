@@ -15,9 +15,9 @@
 
 +(id<NFLOGEventTable>)getTableInstance:(NSString *)tableName{
     id<NFLOGEventTable> table = nil;
-    if([tableName isEqualToString:NFLOG_ACTIVE_EVENT_TABLE_NAME]){
+    if([tableName isEqualToString:NFLOG_START_ACTIVE_TIME_EVENT] || [tableName isEqualToString:NFLOG_END_TIME_EVENT]){
         return [[NFLOGActiveEventTable alloc] init];
-    }else if([tableName isEqualToString:NFLOG_SPECIFIC_TIME_EVENT_TABLE_NAME]){
+    }else if([tableName isEqualToString:NFLOG_SPECIFIC_TIME_EVENT]){
         return [[NFLOGSpecificEventTable alloc] init];
     }
     return table;

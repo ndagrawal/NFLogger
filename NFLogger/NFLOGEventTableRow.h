@@ -10,9 +10,12 @@
 #import "NFLOGEvent.h"
 
 @protocol NFLOGEventTableRow <NSObject>
+
+@property (nonatomic,strong) NSString * eventType;
+
 -(id)initWithEvent:(NFLOGEvent *)event;
 -(void)configWithDict:(NSDictionary *)dict;
 -(NSDictionary *)toDictionary;
--(NSString *)toString;
 -(NSString *)description;
+
 @end

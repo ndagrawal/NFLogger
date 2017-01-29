@@ -12,16 +12,25 @@
 -(void)swizzleClasses{
     
 }
--(NFLOGRecordStatus)logEvent:(NSString *)eventName withParameters:(NSDictionary *)parameters{
-    return NFLOGDisabled;
+
+-(void)logEvent:(NSString *)eventName withParameters:(NSDictionary *)parameters completionBlock:(void (^)(NFLOGRecordStatus recordStatus))completionBlock{
+    
+    if(completionBlock){
+        completionBlock(NFLOGDisabled);
+    }
 }
 
--(NFLOGRecordStatus)startActiveEvent:(NSString *)eventName withParameters:(NSDictionary *)paramters{
-    return NFLOGDisabled;
+-(void)startActiveEvent:(NSString *)eventName withParameters:(NSDictionary *)parameters completionBlock:(void (^)(NFLOGRecordStatus recordStatus))completionBlock{
+    if(completionBlock){
+        completionBlock(NFLOGDisabled);
+    }
 }
 
--(NFLOGRecordStatus)endActiveEvent:(NSString *)eventName withParameters:(NSDictionary *)parameters{
-    return NFLOGDisabled;
+-(void)endActiveEvent:(NSString *)eventName completionBlock:(void (^)(NFLOGRecordStatus recordStatus))completionBlock{
+    if(completionBlock){
+        completionBlock(NFLOGDisabled);
+    }
 }
+
 
 @end

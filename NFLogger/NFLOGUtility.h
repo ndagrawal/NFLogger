@@ -7,9 +7,12 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "NFLOGEventTableRow.h"
 
 @interface NFLOGUtility : NSObject
 
 +(NSInteger)getUnixtimestamp;
-
++(NSDictionary *)convertToJSON:(NSMutableArray<id<NFLOGEventTableRow>> *)eventRows;
++(NSString *)convertToString:(NSDictionary *)dict;
++(NSDictionary *)convertToDictionary:(NSString *)string;
 @end

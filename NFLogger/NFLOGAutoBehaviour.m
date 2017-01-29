@@ -14,59 +14,21 @@
 
 @implementation NFLOGAutoBehaviour
 -(void)swizzleClasses{
-    
     //TODO: Implement Method Swizzling
 }
-
--(NFLOGRecordStatus)logEvent:(NSString *)eventName withParameters:(NSDictionary *)parameters{
-    
-    //Create Event Instance
+-(void)logEvent:(NSString *)eventName withParameters:(NSDictionary *)parameters completionBlock:(void (^)(NFLOGRecordStatus recordStatus))completionBlock{
     NFLOGEvent *event = [[NFLOGEvent alloc] initWithEventName:eventName eventType:NFLOG_SPECIFIC_TIME_EVENT eventParameters:parameters timeStamp:[NFLOGUtility getUnixtimestamp]];
-    
-    //Record the event.
-    [[NFLOGRequestManager sharedInstance] record:event withCompletionBlock:^NFLOGRecordStatus(BOOL success) {
-        if(success){
-            return NFLOGEventRecorded;
-        }else{
-            return NFLOGEventRecordFailed;
-        }
-    }];
-    return NFLOGEventRecordFailed;
+    [[NFLOGRequestManager sharedInstance] record:event withCompletionBlock:completionBlock];
 }
 
--(NFLOGRecordStatus)startActiveEvent:(NSString *)eventName withParameters:(NSDictionary *)parameters{
-    
-    //Create Event Instance
-    NFLOGEvent *event = [[NFLOGEvent alloc] initWithEventName:eventName eventType:NFLOG_SPECIFIC_TIME_EVENT eventParameters:parameters timeStamp:[NFLOGUtility getUnixtimestamp]];
-    
-    //Record the event.
-    [[NFLOGRequestManager sharedInstance] record:event withCompletionBlock:^NFLOGRecordStatus(BOOL success) {
-        if(success){
-            return NFLOGEventRecorded;
-        }else{
-            return NFLOGEventRecordFailed;
-        }
-    }];
-    return NFLOGEventRecordFailed;
-    
-    
+-(void)startActiveEvent:(NSString *)eventName withParameters:(NSDictionary *)parameters completionBlock:(void (^)(NFLOGRecordStatus recordStatus))completionBlock{
+    NFLOGEvent *event = [[NFLOGEvent alloc] initWithEventName:eventName eventType:NFLOG_START_ACTIVE_TIME_EVENT eventParameters:parameters timeStamp:[NFLOGUtility getUnixtimestamp]];
+    [[NFLOGRequestManager sharedInstance] record:event withCompletionBlock:completionBlock];
 }
 
--(NFLOGRecordStatus)endActiveEvent:(NSString *)eventName withParameters:(NSDictionary *)parameters{
-    //Create Event Instance
-    NFLOGEvent *event = [[NFLOGEvent alloc] initWithEventName:eventName eventType:NFLOG_SPECIFIC_TIME_EVENT eventParameters:parameters timeStamp:[NFLOGUtility getUnixtimestamp]];
-    
-    //Record the event.
-    [[NFLOGRequestManager sharedInstance] update:event withCompletionBlock:^NFLOGRecordStatus(BOOL success) {
-        if(success){
-            return NFLOGEventRecorded;
-        }else{
-            return NFLOGEventRecordFailed;
-        }
-    }];
-    return NFLOGEventRecordFailed;
+-(void)endActiveEvent:(NSString *)eventName completionBlock:(void (^)(NFLOGRecordStatus recordStatus))completionBlock{
+    NFLOGEvent *event = [[NFLOGEvent alloc] initWithEventName:eventName eventType:NFLOG_END_TIME_EVENT eventParameters:nil timeStamp:[NFLOGUtility getUnixtimestamp]];
+    [[NFLOGRequestManager sharedInstance] update:event withCompletionBlock:completionBlock];
 }
-
-
 
 @end

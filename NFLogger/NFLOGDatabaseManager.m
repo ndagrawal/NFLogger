@@ -12,7 +12,7 @@
 static NFLOGDatabaseManager* dbManager;
 
 @implementation NFLOGDatabaseManager
-
+@synthesize eventTable = _eventTable;
 +(id)sharedInstance{
     static dispatch_once_t queueOnceToken;
     dispatch_once(&queueOnceToken, ^{
@@ -49,6 +49,7 @@ static NFLOGDatabaseManager* dbManager;
     }
     NFLOGSqlite* sqlite = [[NFLOGSqlite alloc] init];
     if(![sqlite openForCreateWithFileName:self.dbFilePath]){
+        
         return NO;
     }
     BOOL ret = [_eventTable createTablewithSqlite:sqlite];

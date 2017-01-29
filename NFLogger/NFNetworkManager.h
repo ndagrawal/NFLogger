@@ -7,7 +7,10 @@
 //
 
 #import <Foundation/Foundation.h>
+typedef void (^UploadCompletionBlock)(NSData *data);
 
 @interface NFNetworkManager : NSObject
+
+-(void)uploadAllEvents:(NSDictionary *)data withCompletionBlock:(UploadCompletionBlock)completionBlock;
 
 @end

@@ -216,15 +216,13 @@
 			children = (
 				C40174631E3998C0005BF015 /* NFLog.h */,
 				C40174641E3998C0005BF015 /* NFLog.m */,
-				C40174A51E3A60ED005BF015 /* NFLOGRequestManager.h */,
-				C40174A61E3A60ED005BF015 /* NFLOGRequestManager.m */,
 				C401746E1E39A0DE005BF015 /* Events */,
+				C40174D41E3C15B1005BF015 /* PolicyBasedBehaviour */,
+				C43DA7D51E3C5B9300396C7E /* ThreadManagement */,
 				C40174671E3999C2005BF015 /* Persistance */,
+				C43DA7D61E3C5BA300396C7E /* NetworkManagement */,
 				C40174681E3999E2005BF015 /* Utility */,
 				C40174501E39961F005BF015 /* Info.plist */,
-				C40174CC1E3BD561005BF015 /* NFNetworkManager.h */,
-				C40174CD1E3BD561005BF015 /* NFNetworkManager.m */,
-				C40174D41E3C15B1005BF015 /* Behaviour */,
 			);
 			path = NFLogger;
 			sourceTree = "<group>";
@@ -308,7 +306,7 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		C40174D41E3C15B1005BF015 /* Behaviour */ = {
+		C40174D41E3C15B1005BF015 /* PolicyBasedBehaviour */ = {
 			isa = PBXGroup;
 			children = (
 				C40174D01E3C15A5005BF015 /* NFLOGBehaviour.h */,
@@ -319,7 +317,7 @@
 				C40174DD1E3C1712005BF015 /* NFLOGManualBehaviour.h */,
 				C40174DE1E3C1712005BF015 /* NFLOGManualBehaviour.m */,
 			);
-			name = Behaviour;
+			name = PolicyBasedBehaviour;
 			sourceTree = "<group>";
 		};
 		C40175051E3C3CAE005BF015 /* NFLoggerDemo */ = {
@@ -362,6 +360,24 @@
 				C401752D1E3C3CAE005BF015 /* Info.plist */,
 			);
 			path = NFLoggerDemoUITests;
+			sourceTree = "<group>";
+		};
+		C43DA7D51E3C5B9300396C7E /* ThreadManagement */ = {
+			isa = PBXGroup;
+			children = (
+				C40174A51E3A60ED005BF015 /* NFLOGRequestManager.h */,
+				C40174A61E3A60ED005BF015 /* NFLOGRequestManager.m */,
+			);
+			name = ThreadManagement;
+			sourceTree = "<group>";
+		};
+		C43DA7D61E3C5BA300396C7E /* NetworkManagement */ = {
+			isa = PBXGroup;
+			children = (
+				C40174CC1E3BD561005BF015 /* NFNetworkManager.h */,
+				C40174CD1E3BD561005BF015 /* NFNetworkManager.m */,
+			);
+			name = NetworkManagement;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -884,6 +900,7 @@
 				C40175301E3C3CAE005BF015 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C40175311E3C3CAE005BF015 /* Build configuration list for PBXNativeTarget "NFLoggerDemoTests" */ = {
 			isa = XCConfigurationList;
@@ -892,6 +909,7 @@
 				C40175331E3C3CAE005BF015 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C40175341E3C3CAE005BF015 /* Build configuration list for PBXNativeTarget "NFLoggerDemoUITests" */ = {
 			isa = XCConfigurationList;
@@ -900,6 +918,7 @@
 				C40175361E3C3CAE005BF015 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

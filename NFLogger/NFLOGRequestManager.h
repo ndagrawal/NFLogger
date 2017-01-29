@@ -7,21 +7,19 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "NFLOGEvent.h"
 #import "NFLog.h"
 
-typedef NFLOGRecordStatus (^RequestCompletionBlock) (BOOL sucess);
-typedef void (^TableCreateCompletionBlock)(BOOL success);
+@class NFLOGEvent;
+
+typedef void (^RequestCompletionBlock) (NFLOGRecordStatus recordStatus);
 
 @interface NFLOGRequestManager : NSObject
 
-
 @property NSInteger uploadInterval;
-
 +(id)sharedInstance;
 
 #pragma mark - Database Related Methods.
--(void)createTableforEventType:(NSString *)eventType withCompletionBlock:(TableCreateCompletionBlock) completionBlock;
+-(void)createTableforEventType:(NSString *)eventType;
 -(void)record:(NFLOGEvent *)event withCompletionBlock:(RequestCompletionBlock) completionBlock;
 -(void)update:(NFLOGEvent *)event withCompletionBlock:(RequestCompletionBlock) completionBlock;
 -(void)uploadAndDelete;

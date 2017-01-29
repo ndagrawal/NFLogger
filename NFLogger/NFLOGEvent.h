@@ -14,7 +14,7 @@
 @property (nonatomic,strong) NSString * eventName;
 @property (nonatomic,strong) NSString * eventType;
 @property (nonatomic,strong) NSDictionary *eventParameters;
-@property  NSInteger timeStamp;
+@property (nonatomic,assign) double timeStamp;
 
 -(id)initWithEventName:(NSString *)eventName eventType:(NSString *)eventType eventParameters:(NSDictionary *)eventParameters timeStamp:(NSInteger)timeStamp;
 

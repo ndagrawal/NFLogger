@@ -25,7 +25,7 @@
 }
 
 -(NSString *) description{
-    return [NSString stringWithFormat:@"event name = %@ , event Type = %@ , timeStamp = %ld",_eventName,_eventType,_timeStamp];
+    return [NSString stringWithFormat:@"event name = %@ , event Type = %@ , timeStamp = %.f",_eventName,_eventType,_timeStamp];
 }
 
 @end

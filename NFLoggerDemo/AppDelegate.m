@@ -19,7 +19,7 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     [NFLog initializeSDKWithMode:NFLOGManualCapture];
-    [NFLog setLogLevelOfNFLog:NFLOG_LEVEL_VERBOSE];
+    [NFLog setLogLevelOfNFLog:NFLOG_LEVEL_VERBOSE|NFLOG_LEVEL_DEBUG|NFLOG_LEVEL_ERROR];
     return YES;
 }
 
