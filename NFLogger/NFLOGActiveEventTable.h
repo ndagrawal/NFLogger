@@ -12,4 +12,5 @@
 @interface NFLOGActiveEventTable : NSObject<NFLOGEventTable>
 
 
+
 @end

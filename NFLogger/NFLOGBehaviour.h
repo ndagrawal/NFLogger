@@ -12,11 +12,10 @@
 @protocol NFLOGBehaviour <NSObject>
 -(void)swizzleClasses;
 
--(NFLOGRecordStatus)logEvent:(NSString *)eventName withParameters:(NSDictionary *)parameters;
+-(void)logEvent:(NSString *)eventName withParameters:(NSDictionary *)parameters completionBlock:(void (^)(NFLOGRecordStatus recordStatus))completionBlock;
 
--(NFLOGRecordStatus)startActiveEvent:(NSString *)eventName withParameters:(NSDictionary *)parameters;
+-(void)startActiveEvent:(NSString *)eventName withParameters:(NSDictionary *)parameters completionBlock:(void (^)(NFLOGRecordStatus recordStatus))completionBlock;
 
--(NFLOGRecordStatus)endActiveEvent:(NSString *)eventName withParameters:(NSDictionary *)parameters;
-
+-(void)endActiveEvent:(NSString *)eventName completionBlock:(void (^)(NFLOGRecordStatus recordStatus))completionBlock;
 @end
 
