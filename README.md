@@ -2,6 +2,10 @@
 
 
 
+Please refer [Header File Documentation] (https://github.com/ndagrawal/NFLogger/blob/master/NFLogger/NFLOGLogger.h) to check the usage of APIs of the library. 
+
+
+
 MIT License
 
 Copyright (c) 2017 Nilesh Agrawal
