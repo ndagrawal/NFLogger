@@ -2,7 +2,7 @@
 
 
 
-Please refer [Header File Documentation] (https://github.com/ndagrawal/NFLogger/blob/master/NFLogger/NFLOGLogger.h) to check the usage of APIs of the library. 
+Please refer [Header File Documentation] (https://github.com/ndagrawal/NFLogger/blob/master/NFLogger/NFLogger.h) to check the usage of APIs of the library. 
 
 
 
