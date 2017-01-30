@@ -1,0 +1,6 @@
+framework module NFLogger {
+  umbrella header "NFLogger.h"
+
+  export *
+  module * { export * }
+}
