@@ -1,5 +1,6 @@
 var searchData=
 [
-  ['endactiveevent_3a',['endActiveEvent:',['../interface_n_f_logger.html#a6cac38d011820ec21dc314c7a4d4aaf4',1,'NFLogger']]],
-  ['endactiveevent_3acompletionblock_3a',['endActiveEvent:completionBlock:',['../protocol_n_f_l_o_g_behaviour_01-p.html#a040b1fc4ce9a3e52b89043fd49d86409',1,'NFLOGBehaviour -p::endActiveEvent:completionBlock:()'],['../interface_n_f_logger.html#a72b51800e587c99090a5b8ce8788fa14',1,'NFLogger::endActiveEvent:completionBlock:()']]]
+  ['deleteevent_3a',['deleteEvent:',['../interface_n_f_l_o_g_database_manager.html#a0e91938877e0300601a96bf34231eb2c',1,'NFLOGDatabaseManager']]],
+  ['deleteevent_3awithsqlite_3a',['deleteEvent:withSqlite:',['../protocol_n_f_l_o_g_event_table_01-p.html#a3441d672e63f2ef47fe79b17d70535b3',1,'NFLOGEventTable -p']]],
+  ['description',['description',['../interface_n_f_l_o_g_event.html#a466729f93dbef38aa5f2f81c07df29fe',1,'NFLOGEvent']]]
 ];

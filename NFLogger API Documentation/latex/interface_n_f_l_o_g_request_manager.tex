@@ -1,5 +1,14 @@
 \hypertarget{interface_n_f_l_o_g_request_manager}{}\section{N\+F\+L\+O\+G\+Request\+Manager Class Reference}
 \label{interface_n_f_l_o_g_request_manager}\index{N\+F\+L\+O\+G\+Request\+Manager@{N\+F\+L\+O\+G\+Request\+Manager}}
+
+
+Singleton class that cares of thread management and timer for uploading.  
+
+
+
+
+{\ttfamily \#import $<$N\+F\+L\+O\+G\+Request\+Manager.\+h$>$}
+
 Inheritance diagram for N\+F\+L\+O\+G\+Request\+Manager\+:\begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -9,49 +18,77 @@ Inheritance diagram for N\+F\+L\+O\+G\+Request\+Manager\+:\begin{figure}[H]
 \subsection*{Instance Methods}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{interface_n_f_l_o_g_request_manager_a2c7a9f7fd9fb53d6a94a585274a6bc4f}\label{interface_n_f_l_o_g_request_manager_a2c7a9f7fd9fb53d6a94a585274a6bc4f}} 
-(void) -\/ {\bfseries create\+Tablefor\+Event\+Type\+:}
-\item 
+(void) -\/ \hyperlink{interface_n_f_l_o_g_request_manager_a2c7a9f7fd9fb53d6a94a585274a6bc4f}{create\+Tablefor\+Event\+Type\+:}
+\begin{DoxyCompactList}\small\item\em Create Table for a particular event type. Note that we are creating two types of table\+: \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{interface_n_f_l_o_g_request_manager_a334b837987a00fcc1a88f0c8002a5916}\label{interface_n_f_l_o_g_request_manager_a334b837987a00fcc1a88f0c8002a5916}} 
-(void) -\/ {\bfseries record\+:with\+Completion\+Block\+:}
-\item 
+(void) -\/ \hyperlink{interface_n_f_l_o_g_request_manager_a334b837987a00fcc1a88f0c8002a5916}{record\+:with\+Completion\+Block\+:}
+\begin{DoxyCompactList}\small\item\em Recording the event in the table. Note that whenever a log\+Event or start\+Active\+Event A\+P\+Is are called this method is invoked and we do \char`\"{}insertion\char`\"{} operation inside the database. Insertion is again an async operation. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{interface_n_f_l_o_g_request_manager_a99a0afcb8645e6dbfa96987c90ad6c1b}\label{interface_n_f_l_o_g_request_manager_a99a0afcb8645e6dbfa96987c90ad6c1b}} 
-(void) -\/ {\bfseries update\+:with\+Completion\+Block\+:}
-\item 
+(void) -\/ \hyperlink{interface_n_f_l_o_g_request_manager_a99a0afcb8645e6dbfa96987c90ad6c1b}{update\+:with\+Completion\+Block\+:}
+\begin{DoxyCompactList}\small\item\em Updating the event in active\+Event\+Table. Note that whenever end\+Active\+Event A\+PI is called this method is invoked and we \char`\"{}update\char`\"{} operation inside the database. Updation is again an async operation. \end{DoxyCompactList}\item 
 (void) -\/ \hyperlink{interface_n_f_l_o_g_request_manager_aa134b2591aa16f5577724d26e53b3eb5}{upload\+And\+Delete}
-\item 
+\begin{DoxyCompactList}\small\item\em Method retrives all the entries from database, converts in suitable J\+S\+ON format and uploads it. Note \+: Prefreable choice would be to use \char`\"{}sync\char`\"{} N\+S\+U\+R\+L\+Connection, but since the A\+PI is deprecated, we are using N\+S\+U\+R\+L\+Session. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{interface_n_f_l_o_g_request_manager_adbb6382b702a49840494e7ea6f5d724a}\label{interface_n_f_l_o_g_request_manager_adbb6382b702a49840494e7ea6f5d724a}} 
-(void) -\/ {\bfseries validate\+Timer}
-\item 
+(void) -\/ \hyperlink{interface_n_f_l_o_g_request_manager_adbb6382b702a49840494e7ea6f5d724a}{validate\+Timer}
+\begin{DoxyCompactList}\small\item\em Starting the timer. The timer is started whenever the user comes in foreground. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{interface_n_f_l_o_g_request_manager_a2a140a361a5b85f7c1ff51f4a60bbab3}\label{interface_n_f_l_o_g_request_manager_a2a140a361a5b85f7c1ff51f4a60bbab3}} 
-(void) -\/ {\bfseries stop\+Timer}
-\end{DoxyCompactItemize}
+(void) -\/ \hyperlink{interface_n_f_l_o_g_request_manager_a2a140a361a5b85f7c1ff51f4a60bbab3}{stop\+Timer}
+\begin{DoxyCompactList}\small\item\em Ending the timer. The timer is ended whenever the user goes to background. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Class Methods}
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\Hypertarget{interface_n_f_l_o_g_request_manager_a345364dbcef1eeb7af13c1bfe117580e}\label{interface_n_f_l_o_g_request_manager_a345364dbcef1eeb7af13c1bfe117580e}} 
-(id) + {\bfseries shared\+Instance}
-\end{DoxyCompactItemize}
+(id) + \hyperlink{interface_n_f_l_o_g_request_manager_a345364dbcef1eeb7af13c1bfe117580e}{shared\+Instance}
+\begin{DoxyCompactList}\small\item\em Singleton Object for the \hyperlink{interface_n_f_l_o_g_request_manager}{N\+F\+L\+O\+G\+Request\+Manager} We want only one single instance to take care of threading and logging events to database as per the event types. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Properties}
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\Hypertarget{interface_n_f_l_o_g_request_manager_afa6110f250aa2488b759db1cd0cc3d10}\label{interface_n_f_l_o_g_request_manager_afa6110f250aa2488b759db1cd0cc3d10}} 
-N\+S\+Integer {\bfseries upload\+Interval}
-\end{DoxyCompactItemize}
+N\+S\+Integer \hyperlink{interface_n_f_l_o_g_request_manager_afa6110f250aa2488b759db1cd0cc3d10}{upload\+Interval}
+\begin{DoxyCompactList}\small\item\em upload interval determines the time interval when the events should be uploaded. We have considered this to be in seconds, for convenince. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
+
+\subsection{Detailed Description}
+Singleton class that cares of thread management and timer for uploading. 
+
+This class thus acts a Mediator between user api, database and networking. The class also acts as an observer for getting events like app goes foreground/background to start and stop timers 
 
 \subsection{Method Documentation}
-\mbox{\Hypertarget{interface_n_f_l_o_g_request_manager_aa134b2591aa16f5577724d26e53b3eb5}\label{interface_n_f_l_o_g_request_manager_aa134b2591aa16f5577724d26e53b3eb5}} 
+\mbox{\Hypertarget{interface_n_f_l_o_g_request_manager_a2c7a9f7fd9fb53d6a94a585274a6bc4f}\label{interface_n_f_l_o_g_request_manager_a2c7a9f7fd9fb53d6a94a585274a6bc4f}} 
+\index{N\+F\+L\+O\+G\+Request\+Manager@{N\+F\+L\+O\+G\+Request\+Manager}!create\+Tablefor\+Event\+Type\+:@{create\+Tablefor\+Event\+Type\+:}}
+\index{create\+Tablefor\+Event\+Type\+:@{create\+Tablefor\+Event\+Type\+:}!N\+F\+L\+O\+G\+Request\+Manager@{N\+F\+L\+O\+G\+Request\+Manager}}
+\subsubsection{\texorpdfstring{create\+Tablefor\+Event\+Type\+:()}{createTableforEventType:()}}
+{\footnotesize\ttfamily -\/ (void) create\+Tablefor\+Event\+Type\+: \begin{DoxyParamCaption}\item[{(N\+S\+String $\ast$)}]{event\+Type }\end{DoxyParamCaption}}
+
+
+
+Create Table for a particular event type. Note that we are creating two types of table\+: 
+
+
+\begin{DoxyEnumerate}
+\item Table for Storing Specific Time Events.
+\item Table for Storing events that span for a particular period , this events have start and end time associated with them. Table creation is also done in async thread, in serial queue. 
+\end{DoxyEnumerate}\mbox{\Hypertarget{interface_n_f_l_o_g_request_manager_aa134b2591aa16f5577724d26e53b3eb5}\label{interface_n_f_l_o_g_request_manager_aa134b2591aa16f5577724d26e53b3eb5}} 
 \index{N\+F\+L\+O\+G\+Request\+Manager@{N\+F\+L\+O\+G\+Request\+Manager}!upload\+And\+Delete@{upload\+And\+Delete}}
 \index{upload\+And\+Delete@{upload\+And\+Delete}!N\+F\+L\+O\+G\+Request\+Manager@{N\+F\+L\+O\+G\+Request\+Manager}}
 \subsubsection{\texorpdfstring{upload\+And\+Delete()}{uploadAndDelete()}}
 {\footnotesize\ttfamily -\/ (void) upload\+And\+Delete \begin{DoxyParamCaption}{ }\end{DoxyParamCaption}}
 
+
+
+Method retrives all the entries from database, converts in suitable J\+S\+ON format and uploads it. Note \+: Prefreable choice would be to use \char`\"{}sync\char`\"{} N\+S\+U\+R\+L\+Connection, but since the A\+PI is deprecated, we are using N\+S\+U\+R\+L\+Session. 
+
+Note that \char`\"{}sync\char`\"{}-\/ronization care is taken through N\+F\+Request\+Manager\textquotesingle{}s upload\+And\+Delete method while retrieving entries, and then the entries are send to N\+S\+U\+R\+L\+Session\textquotesingle{}s operation queue to upload. This is to make sure, proper order is ensured .
+
+The completion block implementation in method, makes sure, that we are sending the results in the serial\+Queue, which takes care of deleting the entries from the database.
+
 Note \+: Prefreable choice would be to use \char`\"{}sync\char`\"{} N\+S\+U\+R\+L\+Connection, but since the A\+PI is deprecated, we are using N\+S\+U\+R\+L\+Session.
 
 Note that \char`\"{}sync\char`\"{}-\/ronization care is taken through N\+F\+Request\+Manager\textquotesingle{}s upload\+And\+Delete\+Method while retrieving entries, and then the entries are send to N\+S\+U\+R\+L\+Session\textquotesingle{}s operation queue to upload. This is to make sure, proper order is ensured .
 
-The completion block implementation in upload\+And\+Delete\+All method, makes sure, that we are sending the results in the serial\+Queue, which takes care of deleting the entries from the database. We have to make this \char`\"{}sync\char`\"{}, since we want upload to happen only after all the entries are retrived, and a proper json is formed. \char`\"{}sync\char`\"{} dispatch will make sure, that network manager upload action happens only after sync thread is completely executed.
+The completion block implementation in upload\+And\+Delete\+All method, makes sure, that we are sending the results in the serial\+Queue, which takes care of deleting the entries from the database. Currently we are checking for all type of network and uploading, Ideally, we should only upload on W\+I\+FI and not user\textquotesingle{}s Mobile Data Plan\textquotesingle{}s data.
+
+We have to make this \char`\"{}sync\char`\"{}, since we want upload to happen only after all the entries are retrived, and a proper json is formed. \char`\"{}sync\char`\"{} dispatch will make sure, that network manager upload action happens only after sync thread is completely executed.
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 

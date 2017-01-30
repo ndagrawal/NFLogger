@@ -9,8 +9,9 @@
 #import <Foundation/Foundation.h>
 #import "NFLOGEventTable.h"
 
+/*!
+    @brief  Concrete Implementaion of NFLOGEventTable to support specific events.
+ */
 @interface NFLOGSpecificEventTable : NSObject<NFLOGEventTable>
-
-
 
 @end

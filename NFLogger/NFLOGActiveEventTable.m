@@ -29,9 +29,8 @@
 
 /**
  Note : 
- The "ignore" clause is used for a purpose.
+ The "ignore" clause is used for a purpose, that we dont want insert similar event again.
  **/
-
 -(BOOL)insertEvent:(NFLOGEvent *) event withSqlite:(NFLOGSqlite *)sqlite{
     
     NSString *insertSql = [NSString stringWithFormat:@"Insert or ignore into %@ (%@, %@, %@, %@, %@) values(?, ?, ?, ?, ?)",        NFLOG_ACTIVE_EVENT_TABLE_NAME,
@@ -48,15 +47,17 @@
 -(BOOL)updateEventRow:(NFLOGEvent *)event withSqlite:(NFLOGSqlite *)sqlite{
     NSString *updateSql = [NSString stringWithFormat:@"update %@ set %@  = ? where %@ = ?",
                            NFLOG_ACTIVE_EVENT_TABLE_NAME,
-                           NFLOG_ACTIVE_TIME_EVENT_NAME_COL,
-                           NFLOG_ACTIVE_TIME_EVENT_END_TIME_COL];
+                           NFLOG_ACTIVE_TIME_EVENT_END_TIME_COL,
+                           NFLOG_ACTIVE_TIME_EVENT_NAME_COL];
     NFLOGActiveEventTableRow *eventRow = [[NFLOGActiveEventTableRow alloc] initWithEvent:event];
-    return [sqlite executeUpdateWithSql:updateSql withParam:@[[eventRow eventNameParam],[eventRow eventEndTimeStampParam]]];
+
+    return [sqlite executeUpdateWithSql:updateSql withParam:@[[eventRow eventEndTimeStampParam],[eventRow eventNameParam]]];
 }
 
 
 -(NSMutableArray<id<NFLOGEventTableRow>> *)selectAllEventswithSqlite:(NFLOGSqlite *)sqlite{
-    NSString *selectSql = [NSString stringWithFormat:@"select * from %@ where %@!=0",NFLOG_ACTIVE_EVENT_TABLE_NAME,NFLOG_ACTIVE_TIME_EVENT_END_TIME_COL];
+    
+    NSString *selectSql = [NSString stringWithFormat:@"select * from %@ where %@ != 0",NFLOG_ACTIVE_EVENT_TABLE_NAME,NFLOG_ACTIVE_TIME_EVENT_END_TIME_COL];
     NSArray *result = [sqlite queryWithSql:selectSql];
     NSMutableArray<id<NFLOGEventTableRow>> *eventRows = [[NSMutableArray alloc] init];
     for(NSDictionary *dict in result){

@@ -7,6 +7,7 @@
 //
 
 #import "NFNetworkManager.h"
+#import "NFLOGLogger.h"
 
 @implementation NFNetworkManager
 
@@ -22,36 +23,44 @@
  makes sure, that we are sending the results in the serialQueue,
  which takes care of deleting the entries from the database.
 
+ Note : We are not using GZIP to avoid using 3rd party in this project.
+ 
  **/
 
--(void)uploadAllEvents:(NSDictionary *) dictionary withCompletionBlock:(UploadCompletionBlock)completionBlock{
++(void)uploadAllEvents:(NSDictionary *) dictionary withCompletionBlock:(UploadCompletionBlock)completionBlock{
     
-    // 1
     NSURL *url = [NSURL URLWithString:@"http://httpbin.org/post/"];
     NSURLSessionConfiguration *config = [NSURLSessionConfiguration defaultSessionConfiguration];
     NSURLSession *session = [NSURLSession sessionWithConfiguration:config];
-    
-    // 2
+    //2 JSON Serialization
+    NSError *error = nil;
+    NSData *data = [NSJSONSerialization dataWithJSONObject:dictionary options:kNilOptions error:&error];
     NSMutableURLRequest *request = [[NSMutableURLRequest alloc] initWithURL:url];
     request.HTTPMethod = @"POST";
-    
-    // 3
-    NSError *error = nil;
-    NSData *data = [NSJSONSerialization dataWithJSONObject:dictionary
-                                                   options:kNilOptions error:&error];
+    //Note : We are not using GZIP to avoid using 3rd party in this project
     request.HTTPBody = data;
+    request.timeoutInterval = 10.0f;
+    [request setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
+    [request setValue:@"application/json" forHTTPHeaderField:@"Accept"];
     
     if (!error) {
-        // 4
         NSURLSessionDataTask *dataTask = [session dataTaskWithRequest:request completionHandler:^(NSData * data, NSURLResponse *response, NSError * error) {
-            if(error == nil){
-                
+            //Check Client Side Errors
+            if(error){
+                NFLogDebug(@"Error = %@ , Code = %d",error.description,(int)error.code);
+                completionBlock(NO);
+                return;
             }
-            
-            completionBlock(data);
-            
+            //Check server side error.
+            if([response isKindOfClass:[NSHTTPURLResponse class]]){
+                NSInteger statusCode = [(NSHTTPURLResponse *)response statusCode];
+                if(statusCode == 200){
+                    completionBlock(YES);
+                }else{
+                    completionBlock(NO);
+                }
+            }
         }];
-        // 5
         [dataTask resume];
     }
 }

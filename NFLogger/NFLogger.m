@@ -9,7 +9,6 @@
 #import "NFLogger.h"
 #import "NFLOGConstants.h"
 #import "NFLOGRequestManager.h"
-
 #import "NFLOGUtility.h"
 #import "NFLOGBehaviour.h"
 #import "NFLOGDisabledBehaviour.h"

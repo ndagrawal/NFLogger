@@ -17,6 +17,7 @@
 #import "NFLOGUtility.h"
 #import "NFLOGLogger.h"
 #import <UIKit/UIKit.h>
+#import "NFLOGReachability.h"
 
 static NFLOGRequestManager *logRequestMaanger;
 /*! 
@@ -29,11 +30,13 @@ static dispatch_queue_t serialQueue;
 
 @interface NFLOGRequestManager()
 @property NSTimer *timer;
+@property NFLOGReachability *reachability;
 @end
 
 @implementation NFLOGRequestManager
 
 @synthesize uploadInterval = _uploadInterval;
+@synthesize reachability = _reachability;
 
 +(id)sharedInstance{
     static dispatch_once_t onceToken;
@@ -49,6 +52,7 @@ static dispatch_queue_t serialQueue;
         serialQueue = dispatch_queue_create("com.nflogger.databaseSerialQueue", DISPATCH_QUEUE_SERIAL);
         _uploadInterval = 1.0;
         [self registerNotifications];
+        _reachability = [NFLOGReachability reachabilityForInternetConnection];
     }
     return self;
 }
@@ -97,12 +101,15 @@ static dispatch_queue_t serialQueue;
     dispatch_async(serialQueue, ^{
         [[NFLOGDatabaseManager sharedInstance] setEventTable:[NFLOGTableFactory getTableInstance:[event eventType]]];
         success = [[NFLOGDatabaseManager sharedInstance] insertEvent:event];
+        if(success){
+             NFLogDebug(@"Event = %@ Recorded Successfully ",event);
+        }else{
+            NFLogDebug(@"Event = %@ Recording Failed ",event);
+        }
         if(completionBlock){
             if(success){
-                NFLogDebug(@"Event = %@ Recorded Successfully ",event);
                 completionBlock(NFLOGEventRecorded);
             }else{
-                NFLogDebug(@"Event = %@ Recording Failed ",event);
                 completionBlock(NFLOGEventRecordFailed);
             }
         }
@@ -114,12 +121,15 @@ static dispatch_queue_t serialQueue;
     dispatch_async(serialQueue, ^{
         [[NFLOGDatabaseManager sharedInstance] setEventTable:[NFLOGTableFactory getTableInstance:[event eventType]]];
         success = [[NFLOGDatabaseManager sharedInstance] updateEvent:event];
+        if(success){
+            NFLogDebug(@"Event = %@ Updated Successfully ",event);
+        }else{
+            NFLogDebug(@"Event = %@ Updated Failed ",event);
+        }
         if(completionBlock){
             if(success){
-                NFLogDebug(@"Event = %@ Updated Successfully ",event);
                 completionBlock(NFLOGEventRecorded);
             }else{
-                NFLogDebug(@"Event = %@ Updating Failed",event);
                 completionBlock(NFLOGEventRecordFailed);
             }
         }
@@ -143,6 +153,15 @@ static dispatch_queue_t serialQueue;
 
 -(void)uploadAndDelete{
     /**
+     Currently we are checking for all type of network and uploading, 
+     Ideally, we should only upload on WIFI and not user's Mobile Data Plan's data.
+     **/
+    if([_reachability isNetworkUnAvaliable]){
+        NFLogDebug(@"Network Connection Not Avaliable");
+        return;
+    }
+    
+    /**
      We have to make this "sync",
      since we want upload to happen only after all the entries are retrived, and a proper json is formed.
      "sync" dispatch will make sure, that network manager upload action happens only after sync thread is completely executed.
@@ -162,8 +181,10 @@ static dispatch_queue_t serialQueue;
     if(dictionary != nil){
         //NSURLSession and inside that create an async task for deleting all the data.
         NFLogDebug(@"Data to be uploaded %@",dictionary);
-        NFNetworkManager *networkManager = [[NFNetworkManager alloc] init];
-        [networkManager uploadAllEvents:dictionary withCompletionBlock:^(NSData *data) {
+        [NFNetworkManager uploadAllEvents:dictionary withCompletionBlock:^(BOOL uploadedSucess) {
+            //TODO : REMOVING UPLOADSUCCESS TEMP AS DONT HAVE BACKEND FOR 200 STATUS.
+            //if(uploadedSucess){
+                //Deletion only if upload is successful.
             dispatch_async(serialQueue, ^{
                 /*Deleting all the events that were sent.We are avoiding use of deleteAll Query, since, delete All also iterates through multiple entries inside,also, iterating through the retrived rows and deleting them, will be ensured that no entries other than the retrived once are deleted.
                  */
@@ -173,6 +194,7 @@ static dispatch_queue_t serialQueue;
                 }
                 
             });
+            //}
         }];
     }
 }

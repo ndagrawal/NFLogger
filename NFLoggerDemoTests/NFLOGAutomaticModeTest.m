@@ -7,7 +7,7 @@
 //
 
 #import <XCTest/XCTest.h>
-#import "NFLog.h"
+#import "NFLogger.h"
 #import "NFLOGAutoBehaviour.h"
 
 @interface NFLOGAutomaticModeTest : XCTestCase
@@ -20,7 +20,7 @@
 - (void)setUp {
     [super setUp];
     // Put setup code here. This method is called before the invocation of each test method in the class.
-    [NFLog initializeSDKWithMode:NFLOGAutoCapture];
+    [NFLogger initializeSDKWithMode:NFLOGAutoCapture];
     _autoLogBehaviour = [[NFLOGAutoBehaviour alloc] init];
 }
 
@@ -30,7 +30,7 @@
 }
 
 -(void)testLogEventWithCompletionHandler{
-    [NFLog logEvent:@"event" withParameters:nil completionBlock:^(NFLOGRecordStatus recordStatus) {
+    [NFLogger logEvent:@"event" withParameters:nil completionBlock:^(NFLOGRecordStatus recordStatus) {
         dispatch_async(dispatch_get_main_queue(), ^{
            XCTAssertEqual(recordStatus,NFLOGEventRecorded);
         });
@@ -38,7 +38,7 @@
 }
 
 -(void)testLogEventWithCompletionHandlerwithNilEvent{
-    [NFLog logEvent:nil withParameters:nil completionBlock:^(NFLOGRecordStatus recordStatus) {
+    [NFLogger logEvent:nil withParameters:nil completionBlock:^(NFLOGRecordStatus recordStatus) {
         dispatch_async(dispatch_get_main_queue(), ^{
             XCTAssertEqual(recordStatus,NFLOGEventRecorded);
         });
@@ -47,7 +47,7 @@
 
 -(void)testLogEventWithCompletionHandlerwithValidParameters{
     NSDictionary *dictionary = [NSDictionary dictionaryWithObjectsAndKeys:@"testObject1",@"key1",nil];
-    [NFLog logEvent:@"event" withParameters:dictionary completionBlock:^(NFLOGRecordStatus recordStatus) {
+    [NFLogger logEvent:@"event" withParameters:dictionary completionBlock:^(NFLOGRecordStatus recordStatus) {
         dispatch_async(dispatch_get_main_queue(), ^{
             XCTAssertEqual(recordStatus,NFLOGEventRecorded);
         });

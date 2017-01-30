@@ -14,6 +14,7 @@ var searchData=
   ['nflogger_28_29',['NFLogger()',['../category_n_f_logger_07_08.html',1,'']]],
   ['nfloglogger',['NFLOGLogger',['../interface_n_f_l_o_g_logger.html',1,'']]],
   ['nflogmanualbehaviour',['NFLOGManualBehaviour',['../interface_n_f_l_o_g_manual_behaviour.html',1,'']]],
+  ['nflogreachability',['NFLOGReachability',['../interface_n_f_l_o_g_reachability.html',1,'']]],
   ['nflogrequestmanager',['NFLOGRequestManager',['../interface_n_f_l_o_g_request_manager.html',1,'']]],
   ['nflogrequestmanager_28_29',['NFLOGRequestManager()',['../category_n_f_l_o_g_request_manager_07_08.html',1,'']]],
   ['nflogspecificeventtable',['NFLOGSpecificEventTable',['../interface_n_f_l_o_g_specific_event_table.html',1,'']]],

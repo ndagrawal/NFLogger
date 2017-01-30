@@ -22,7 +22,8 @@
     }
 }
 
-//events are not logged in disabled mode and NFLOGDisabled status is sent in completion block to notify user.-(void)startActiveEvent:(NSString *)eventName withParameters:(NSDictionary *)parameters completionBlock:(void (^)(NFLOGRecordStatus recordStatus))completionBlock{
+//events are not logged in disabled mode and NFLOGDisabled status is sent in completion block to notify user.
+-(void)startActiveEvent:(NSString *)eventName withParameters:(NSDictionary *)parameters completionBlock:(void (^)(NFLOGRecordStatus recordStatus))completionBlock{
     if(completionBlock){
         completionBlock(NFLOGDisabled);
     }

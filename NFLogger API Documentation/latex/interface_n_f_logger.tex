@@ -93,6 +93,9 @@ The api also helps to know time for which the event has spanned.
 \begin{DoxyNote}{Note}
 event\+Name cannot be nil or empty string. event\+Name should be unique for a particular type of event. 
 \end{DoxyNote}
+\begin{DoxySince}{Since}
+1.\+0.\+0 
+\end{DoxySince}
 \mbox{\Hypertarget{interface_n_f_logger_a72b51800e587c99090a5b8ce8788fa14}\label{interface_n_f_logger_a72b51800e587c99090a5b8ce8788fa14}} 
 \index{N\+F\+Logger@{N\+F\+Logger}!end\+Active\+Event\+:completion\+Block\+:@{end\+Active\+Event\+:completion\+Block\+:}}
 \index{end\+Active\+Event\+:completion\+Block\+:@{end\+Active\+Event\+:completion\+Block\+:}!N\+F\+Logger@{N\+F\+Logger}}
@@ -127,6 +130,9 @@ Event logging is async task, hence, any action scheduled after the status is rec
 \begin{DoxyNote}{Note}
 event\+Name cannot be nil or empty string. event\+Name should be unique for a particular type of event. completion handler can be optionally nil. 
 \end{DoxyNote}
+\begin{DoxySince}{Since}
+1.\+0.\+0 
+\end{DoxySince}
 \mbox{\Hypertarget{interface_n_f_logger_af6ab573a8e6498e7a50e74a022025b91}\label{interface_n_f_logger_af6ab573a8e6498e7a50e74a022025b91}} 
 \index{N\+F\+Logger@{N\+F\+Logger}!get\+N\+F\+Logger\+Version@{get\+N\+F\+Logger\+Version}}
 \index{get\+N\+F\+Logger\+Version@{get\+N\+F\+Logger\+Version}!N\+F\+Logger@{N\+F\+Logger}}
@@ -148,7 +154,10 @@ This method to get the version of \hyperlink{interface_n_f_logger}{N\+F\+Logger}
      NSLog(\textcolor{stringliteral}{@"%@"},[\hyperlink{interface_n_f_logger}{NFLogger} \hyperlink{interface_n_f_logger_af6ab573a8e6498e7a50e74a022025b91}{getNFLoggerVersion}]);
 \}
 \end{DoxyCode}
- \mbox{\Hypertarget{interface_n_f_logger_a1bfc37639bda4740700d9c76027cad1f}\label{interface_n_f_logger_a1bfc37639bda4740700d9c76027cad1f}} 
+ \begin{DoxySince}{Since}
+1.\+0.\+0 
+\end{DoxySince}
+\mbox{\Hypertarget{interface_n_f_logger_a1bfc37639bda4740700d9c76027cad1f}\label{interface_n_f_logger_a1bfc37639bda4740700d9c76027cad1f}} 
 \index{N\+F\+Logger@{N\+F\+Logger}!initialize\+S\+D\+K\+With\+Mode\+:@{initialize\+S\+D\+K\+With\+Mode\+:}}
 \index{initialize\+S\+D\+K\+With\+Mode\+:@{initialize\+S\+D\+K\+With\+Mode\+:}!N\+F\+Logger@{N\+F\+Logger}}
 \subsubsection{\texorpdfstring{initialize\+S\+D\+K\+With\+Mode\+:()}{initializeSDKWithMode:()}}
@@ -200,6 +209,9 @@ Logs an event Logs an event which is collected at the timestamp, when it is call
 \begin{DoxyNote}{Note}
 event\+Name cannot be nil or empty string. event\+Name should be unique for a particular type of event. 
 \end{DoxyNote}
+\begin{DoxySince}{Since}
+1.\+0.\+0 
+\end{DoxySince}
 \mbox{\Hypertarget{interface_n_f_logger_a0135c2e9b6e8d0241bbbb3383a2ed310}\label{interface_n_f_logger_a0135c2e9b6e8d0241bbbb3383a2ed310}} 
 \index{N\+F\+Logger@{N\+F\+Logger}!log\+Event\+:with\+Parameters\+:@{log\+Event\+:with\+Parameters\+:}}
 \index{log\+Event\+:with\+Parameters\+:@{log\+Event\+:with\+Parameters\+:}!N\+F\+Logger@{N\+F\+Logger}}
@@ -229,6 +241,9 @@ Logs an event which is collected at the specific timestamp, when it is called. T
 \begin{DoxyNote}{Note}
 event\+Name cannot be nil or empty string. event\+Name should be unique for a particular type of event. parameter can be optionally nil. 
 \end{DoxyNote}
+\begin{DoxySince}{Since}
+1.\+0.\+0 
+\end{DoxySince}
 \mbox{\Hypertarget{interface_n_f_logger_a92e20244e4fd66dca9596a9e758cc6a1}\label{interface_n_f_logger_a92e20244e4fd66dca9596a9e758cc6a1}} 
 \index{N\+F\+Logger@{N\+F\+Logger}!log\+Event\+:with\+Parameters\+:completion\+Block\+:@{log\+Event\+:with\+Parameters\+:completion\+Block\+:}}
 \index{log\+Event\+:with\+Parameters\+:completion\+Block\+:@{log\+Event\+:with\+Parameters\+:completion\+Block\+:}!N\+F\+Logger@{N\+F\+Logger}}
@@ -269,6 +284,9 @@ Event logging is async task, hence, any action scheduled after the status is rec
 \begin{DoxyNote}{Note}
 event\+Name cannot be nil or empty string. event\+Name should be unique for a particular type of event. parameter can be optionally nil. completion handler can be optionally nil. 
 \end{DoxyNote}
+\begin{DoxySince}{Since}
+1.\+0.\+0 
+\end{DoxySince}
 \mbox{\Hypertarget{interface_n_f_logger_ab785af89c63637bf04e29bebc0d781de}\label{interface_n_f_logger_ab785af89c63637bf04e29bebc0d781de}} 
 \index{N\+F\+Logger@{N\+F\+Logger}!N\+S\+\_\+\+E\+N\+UM@{N\+S\+\_\+\+E\+N\+UM}}
 \index{N\+S\+\_\+\+E\+N\+UM@{N\+S\+\_\+\+E\+N\+UM}!N\+F\+Logger@{N\+F\+Logger}}
@@ -353,6 +371,9 @@ Alternatively, this api can also be used to set log\+Level of two Level\textquot
 \begin{DoxyNote}{Note}
 Default Logger Level Mode is N\+F\+L\+O\+G\+\_\+\+L\+E\+V\+E\+L\+\_\+\+N\+O\+NE. 
 \end{DoxyNote}
+\begin{DoxySince}{Since}
+1.\+0.\+0 
+\end{DoxySince}
 \mbox{\Hypertarget{interface_n_f_logger_abab12d34a22ef54d94e9c1f32f785bbd}\label{interface_n_f_logger_abab12d34a22ef54d94e9c1f32f785bbd}} 
 \index{N\+F\+Logger@{N\+F\+Logger}!set\+Upload\+Interval\+:@{set\+Upload\+Interval\+:}}
 \index{set\+Upload\+Interval\+:@{set\+Upload\+Interval\+:}!N\+F\+Logger@{N\+F\+Logger}}
@@ -382,6 +403,9 @@ This optional method helps to set upload interval , to upload data (events) at a
 \begin{DoxyNote}{Note}
 Default upload interval is set to 30 seconds. 
 \end{DoxyNote}
+\begin{DoxySince}{Since}
+1.\+0.\+0 
+\end{DoxySince}
 \mbox{\Hypertarget{interface_n_f_logger_a2d98749d91d892500fab101747d06a71}\label{interface_n_f_logger_a2d98749d91d892500fab101747d06a71}} 
 \index{N\+F\+Logger@{N\+F\+Logger}!start\+Active\+Event\+:@{start\+Active\+Event\+:}}
 \index{start\+Active\+Event\+:@{start\+Active\+Event\+:}!N\+F\+Logger@{N\+F\+Logger}}
@@ -408,6 +432,9 @@ The api also helps to know time for which the event has spanned.
 \begin{DoxyNote}{Note}
 event\+Name cannot be nil or empty string. event\+Name should be unique for a particular type of event. 
 \end{DoxyNote}
+\begin{DoxySince}{Since}
+1.\+0.\+0 
+\end{DoxySince}
 \mbox{\Hypertarget{interface_n_f_logger_a415def4182d5d458ff013bacb1320857}\label{interface_n_f_logger_a415def4182d5d458ff013bacb1320857}} 
 \index{N\+F\+Logger@{N\+F\+Logger}!start\+Active\+Event\+:with\+Parameters\+:@{start\+Active\+Event\+:with\+Parameters\+:}}
 \index{start\+Active\+Event\+:with\+Parameters\+:@{start\+Active\+Event\+:with\+Parameters\+:}!N\+F\+Logger@{N\+F\+Logger}}
@@ -440,6 +467,9 @@ event\+Name cannot be nil or empty string. event\+Name should be unique for a pa
 {\em paramters} & dictionary to add extra information, along with the logged event. parameter can be optionally nil. \\
 \hline
 \end{DoxyParams}
+\begin{DoxySince}{Since}
+1.\+0.\+0 
+\end{DoxySince}
 \mbox{\Hypertarget{interface_n_f_logger_a943cd3b2d89a9b40f9bb2540d8fcd190}\label{interface_n_f_logger_a943cd3b2d89a9b40f9bb2540d8fcd190}} 
 \index{N\+F\+Logger@{N\+F\+Logger}!start\+Active\+Event\+:with\+Parameters\+:completion\+Block\+:@{start\+Active\+Event\+:with\+Parameters\+:completion\+Block\+:}}
 \index{start\+Active\+Event\+:with\+Parameters\+:completion\+Block\+:@{start\+Active\+Event\+:with\+Parameters\+:completion\+Block\+:}!N\+F\+Logger@{N\+F\+Logger}}
@@ -479,6 +509,9 @@ event\+Name cannot be nil or empty string. event\+Name should be unique for a pa
 {\em paramters} & dictionary to add extra information, along with the logged event. parameter can be optionally nil. completion handler can be optionally nil. \\
 \hline
 \end{DoxyParams}
+\begin{DoxySince}{Since}
+1.\+0.\+0 
+\end{DoxySince}
 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}

@@ -7,7 +7,7 @@
 //
 
 #import <XCTest/XCTest.h>
-#import "NFLog.h"
+#import "NFLogger.h"
 #import "NFLOGDisabledBehaviour.h"
 
 @interface NFLOGDisabledBehaviourTests : XCTestCase

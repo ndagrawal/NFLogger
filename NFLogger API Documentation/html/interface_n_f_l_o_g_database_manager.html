@@ -67,6 +67,11 @@ $(function() {
 <div class="title">NFLOGDatabaseManager Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>Database Management Class.  
+ <a href="interface_n_f_l_o_g_database_manager.html#details">More...</a></p>
+
+<p><code>#import &lt;<a class="el" href="_n_f_l_o_g_database_manager_8h_source.html">NFLOGDatabaseManager.h</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for NFLOGDatabaseManager:</div>
 <div class="dyncontent">
@@ -79,36 +84,71 @@ Inheritance diagram for NFLOGDatabaseManager:</div>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Instance Methods</h2></td></tr>
 <tr class="memitem:a7e15bd9e71611889693d5d76564f5569"><td class="memItemLeft" align="right" valign="top"><a id="a7e15bd9e71611889693d5d76564f5569"></a>
-(BOOL)&#160;</td><td class="memItemRight" valign="bottom">- <b>createTable</b></td></tr>
+(BOOL)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interface_n_f_l_o_g_database_manager.html#a7e15bd9e71611889693d5d76564f5569">createTable</a></td></tr>
+<tr class="memdesc:a7e15bd9e71611889693d5d76564f5569"><td class="mdescLeft">&#160;</td><td class="mdescRight">CreateTable. Table creation happens only once. <br /></td></tr>
 <tr class="separator:a7e15bd9e71611889693d5d76564f5569"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1c26d05a773d01af4342cef1c5112f06"><td class="memItemLeft" align="right" valign="top"><a id="a1c26d05a773d01af4342cef1c5112f06"></a>
-(BOOL)&#160;</td><td class="memItemRight" valign="bottom">- <b>insertEvent:</b></td></tr>
+(BOOL)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interface_n_f_l_o_g_database_manager.html#a1c26d05a773d01af4342cef1c5112f06">insertEvent:</a></td></tr>
+<tr class="memdesc:a1c26d05a773d01af4342cef1c5112f06"><td class="mdescLeft">&#160;</td><td class="mdescRight">Insert Event. Opens Database - Insert event - Closes Database. if event is nil, return NO, hence we dont insert event. <br /></td></tr>
 <tr class="separator:a1c26d05a773d01af4342cef1c5112f06"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a79ff4b36125958d5552b7ae780437557"><td class="memItemLeft" align="right" valign="top"><a id="a79ff4b36125958d5552b7ae780437557"></a>
-(BOOL)&#160;</td><td class="memItemRight" valign="bottom">- <b>updateEvent:</b></td></tr>
+(BOOL)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interface_n_f_l_o_g_database_manager.html#a79ff4b36125958d5552b7ae780437557">updateEvent:</a></td></tr>
+<tr class="memdesc:a79ff4b36125958d5552b7ae780437557"><td class="mdescLeft">&#160;</td><td class="mdescRight">Update Event. Opens Database - Update Event - Closes Database. if event is nil, return NO, hence we dont update event. <br /></td></tr>
 <tr class="separator:a79ff4b36125958d5552b7ae780437557"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0e91938877e0300601a96bf34231eb2c"><td class="memItemLeft" align="right" valign="top"><a id="a0e91938877e0300601a96bf34231eb2c"></a>
-(BOOL)&#160;</td><td class="memItemRight" valign="bottom">- <b>deleteEvent:</b></td></tr>
+(BOOL)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interface_n_f_l_o_g_database_manager.html#a0e91938877e0300601a96bf34231eb2c">deleteEvent:</a></td></tr>
+<tr class="memdesc:a0e91938877e0300601a96bf34231eb2c"><td class="mdescLeft">&#160;</td><td class="mdescRight">DeleteEvent. Opens database - delete event - closes database. if event is nil, return NO, hence we dont delete event. <br /></td></tr>
 <tr class="separator:a0e91938877e0300601a96bf34231eb2c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3a6c4da285f4a305700bce008d82c288"><td class="memItemLeft" align="right" valign="top"><a id="a3a6c4da285f4a305700bce008d82c288"></a>
-(NSMutableArray&lt; id&lt; NFLOGEventTableRow &gt;&gt; *)&#160;</td><td class="memItemRight" valign="bottom">- <b>selectAllEvent</b></td></tr>
+(NSMutableArray&lt; id&lt; NFLOGEventTableRow &gt;&gt; *)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interface_n_f_l_o_g_database_manager.html#a3a6c4da285f4a305700bce008d82c288">selectAllEvent</a></td></tr>
+<tr class="memdesc:a3a6c4da285f4a305700bce008d82c288"><td class="mdescLeft">&#160;</td><td class="mdescRight">Selects all events. Opens database - select all events - closes database if event is nil, return NO, hence we dont select all event. <br /></td></tr>
 <tr class="separator:a3a6c4da285f4a305700bce008d82c288"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 Class Methods</h2></td></tr>
 <tr class="memitem:a30813003be61506175fc411043d12b8d"><td class="memItemLeft" align="right" valign="top"><a id="a30813003be61506175fc411043d12b8d"></a>
-(<a class="el" href="interface_n_f_l_o_g_database_manager.html">NFLOGDatabaseManager</a> *)&#160;</td><td class="memItemRight" valign="bottom">+ <b>sharedInstance</b></td></tr>
+(<a class="el" href="interface_n_f_l_o_g_database_manager.html">NFLOGDatabaseManager</a> *)&#160;</td><td class="memItemRight" valign="bottom">+ <a class="el" href="interface_n_f_l_o_g_database_manager.html#a30813003be61506175fc411043d12b8d">sharedInstance</a></td></tr>
+<tr class="memdesc:a30813003be61506175fc411043d12b8d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Singleton Object of DatabaseManager. This class is made singleton, as we want only one instance as an handle to operate on sqlite, to open/close/write/read database. <br /></td></tr>
 <tr class="separator:a30813003be61506175fc411043d12b8d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="properties"></a>
 Properties</h2></td></tr>
-<tr class="memitem:a0c2d72e86efb3d5b8eccef89af7b5662"><td class="memItemLeft" align="right" valign="top"><a id="a0c2d72e86efb3d5b8eccef89af7b5662"></a>
-id&lt; NFLOGEventTable &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>eventTable</b></td></tr>
+<tr class="memitem:a0c2d72e86efb3d5b8eccef89af7b5662"><td class="memItemLeft" align="right" valign="top">id&lt; NFLOGEventTable &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_n_f_l_o_g_database_manager.html#a0c2d72e86efb3d5b8eccef89af7b5662">eventTable</a></td></tr>
+<tr class="memdesc:a0c2d72e86efb3d5b8eccef89af7b5662"><td class="mdescLeft">&#160;</td><td class="mdescRight">reference of <a class="el" href="class_n_f_l_o_g_event_table-p.html">NFLOGEventTable</a>.  <a href="#a0c2d72e86efb3d5b8eccef89af7b5662">More...</a><br /></td></tr>
 <tr class="separator:a0c2d72e86efb3d5b8eccef89af7b5662"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac0b4cda7d0c2ecf6767f74c308cf55c6"><td class="memItemLeft" align="right" valign="top"><a id="ac0b4cda7d0c2ecf6767f74c308cf55c6"></a>
 NSString *&#160;</td><td class="memItemRight" valign="bottom"><b>dbFilePath</b></td></tr>
 <tr class="separator:ac0b4cda7d0c2ecf6767f74c308cf55c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Database Management Class. </p>
+<p>This class handles the responsiblity of opening,closing, in sqlite, and all the insertion/deletion/update in database, just purely follows "Class Handles Single Responsiblity of DatabaseManagement" </p>
+</div><h2 class="groupheader">Property Documentation</h2>
+<a id="a0c2d72e86efb3d5b8eccef89af7b5662"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0c2d72e86efb3d5b8eccef89af7b5662">&#9670;&nbsp;</a></span>eventTable</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (id&lt;NFLOGEventTable&gt;) eventTable</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">read</span><span class="mlabel">write</span><span class="mlabel">nonatomic</span><span class="mlabel">strong</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>reference of <a class="el" href="class_n_f_l_o_g_event_table-p.html">NFLOGEventTable</a>. </p>
+<p>[This helps in achieving "strategy design pattern"]. <a class="el" href="interface_n_f_l_o_g_database_manager.html" title="Database Management Class. ">NFLOGDatabaseManager</a> has reference to the eventTable. Thus we can set the table and change the implementation as per table. </p>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li>/Users/nileshagrawal/Documents/workspace/interviewprojects/netflix/NFLogger/NFLogger/<a class="el" href="_n_f_l_o_g_database_manager_8h_source.html">NFLOGDatabaseManager.h</a></li>
 <li>/Users/nileshagrawal/Documents/workspace/interviewprojects/netflix/NFLogger/NFLogger/NFLOGDatabaseManager.m</li>

@@ -1,0 +1,83 @@
+\hypertarget{interface_n_f_l_o_g_reachability}{}\section{N\+F\+L\+O\+G\+Reachability Class Reference}
+\label{interface_n_f_l_o_g_reachability}\index{N\+F\+L\+O\+G\+Reachability@{N\+F\+L\+O\+G\+Reachability}}
+Inheritance diagram for N\+F\+L\+O\+G\+Reachability\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{interface_n_f_l_o_g_reachability}
+\end{center}
+\end{figure}
+\subsection*{Instance Methods}
+\begin{DoxyCompactItemize}
+\item 
+(B\+O\+OL) -\/ \hyperlink{interface_n_f_l_o_g_reachability_acebd4e7f3f879e0a609037856ddc89af}{start\+Notifier}
+\item 
+\mbox{\Hypertarget{interface_n_f_l_o_g_reachability_a493c666493773e9a84e98d9e6615afbc}\label{interface_n_f_l_o_g_reachability_a493c666493773e9a84e98d9e6615afbc}} 
+(void) -\/ {\bfseries stop\+Notifier}
+\item 
+\mbox{\Hypertarget{interface_n_f_l_o_g_reachability_ab242d7a19ec39abb64cf792bb4b21234}\label{interface_n_f_l_o_g_reachability_ab242d7a19ec39abb64cf792bb4b21234}} 
+(Network\+Status) -\/ {\bfseries current\+Reachability\+Status}
+\item 
+(B\+O\+OL) -\/ \hyperlink{interface_n_f_l_o_g_reachability_aaec74dc64d3fff3865acfadd47578099}{connection\+Required}
+\item 
+\mbox{\Hypertarget{interface_n_f_l_o_g_reachability_a5979dba628e6c19ba9c4f5303d610e44}\label{interface_n_f_l_o_g_reachability_a5979dba628e6c19ba9c4f5303d610e44}} 
+(B\+O\+OL) -\/ {\bfseries is\+Network\+Un\+Avaliable}
+\end{DoxyCompactItemize}
+\subsection*{Class Methods}
+\begin{DoxyCompactItemize}
+\item 
+(instancetype) + \hyperlink{interface_n_f_l_o_g_reachability_a78e0d1d8c368aa390026e894860854fb}{reachability\+With\+Host\+Name\+:}
+\item 
+(instancetype) + \hyperlink{interface_n_f_l_o_g_reachability_abc1eb7b16c3025c3e4f8538f0270ea4e}{reachability\+With\+Address\+:}
+\item 
+(instancetype) + \hyperlink{interface_n_f_l_o_g_reachability_a58284ef144dc19ec264db24f489f1adb}{reachability\+For\+Internet\+Connection}
+\end{DoxyCompactItemize}
+\subsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{interface_n_f_l_o_g_reachability_a712ee2f0e492a983f97cd92fb17d62f6}\label{interface_n_f_l_o_g_reachability_a712ee2f0e492a983f97cd92fb17d62f6}} 
+N\+S\+String $\ast$ {\bfseries network\+Type}
+\end{DoxyCompactItemize}
+
+
+\subsection{Method Documentation}
+\mbox{\Hypertarget{interface_n_f_l_o_g_reachability_aaec74dc64d3fff3865acfadd47578099}\label{interface_n_f_l_o_g_reachability_aaec74dc64d3fff3865acfadd47578099}} 
+\index{N\+F\+L\+O\+G\+Reachability@{N\+F\+L\+O\+G\+Reachability}!connection\+Required@{connection\+Required}}
+\index{connection\+Required@{connection\+Required}!N\+F\+L\+O\+G\+Reachability@{N\+F\+L\+O\+G\+Reachability}}
+\subsubsection{\texorpdfstring{connection\+Required()}{connectionRequired()}}
+{\footnotesize\ttfamily -\/ (B\+O\+OL) connection\+Required \begin{DoxyParamCaption}{ }\end{DoxyParamCaption}}
+
+W\+W\+AN may be available, but not active until a connection has been established. Wi\+Fi may require a connection for V\+PN on Demand. \mbox{\Hypertarget{interface_n_f_l_o_g_reachability_a58284ef144dc19ec264db24f489f1adb}\label{interface_n_f_l_o_g_reachability_a58284ef144dc19ec264db24f489f1adb}} 
+\index{N\+F\+L\+O\+G\+Reachability@{N\+F\+L\+O\+G\+Reachability}!reachability\+For\+Internet\+Connection@{reachability\+For\+Internet\+Connection}}
+\index{reachability\+For\+Internet\+Connection@{reachability\+For\+Internet\+Connection}!N\+F\+L\+O\+G\+Reachability@{N\+F\+L\+O\+G\+Reachability}}
+\subsubsection{\texorpdfstring{reachability\+For\+Internet\+Connection()}{reachabilityForInternetConnection()}}
+{\footnotesize\ttfamily + (instancetype) reachability\+For\+Internet\+Connection \begin{DoxyParamCaption}{ }\end{DoxyParamCaption}}
+
+Checks whether the default route is available. Should be used by applications that do not connect to a particular host. \mbox{\Hypertarget{interface_n_f_l_o_g_reachability_abc1eb7b16c3025c3e4f8538f0270ea4e}\label{interface_n_f_l_o_g_reachability_abc1eb7b16c3025c3e4f8538f0270ea4e}} 
+\index{N\+F\+L\+O\+G\+Reachability@{N\+F\+L\+O\+G\+Reachability}!reachability\+With\+Address\+:@{reachability\+With\+Address\+:}}
+\index{reachability\+With\+Address\+:@{reachability\+With\+Address\+:}!N\+F\+L\+O\+G\+Reachability@{N\+F\+L\+O\+G\+Reachability}}
+\subsubsection{\texorpdfstring{reachability\+With\+Address\+:()}{reachabilityWithAddress:()}}
+{\footnotesize\ttfamily + (instancetype) reachability\+With\+Address\+: \begin{DoxyParamCaption}\item[{(const struct sockaddr $\ast$)}]{host\+Address }\end{DoxyParamCaption}}
+
+Use to check the reachability of a given IP address. \mbox{\Hypertarget{interface_n_f_l_o_g_reachability_a78e0d1d8c368aa390026e894860854fb}\label{interface_n_f_l_o_g_reachability_a78e0d1d8c368aa390026e894860854fb}} 
+\index{N\+F\+L\+O\+G\+Reachability@{N\+F\+L\+O\+G\+Reachability}!reachability\+With\+Host\+Name\+:@{reachability\+With\+Host\+Name\+:}}
+\index{reachability\+With\+Host\+Name\+:@{reachability\+With\+Host\+Name\+:}!N\+F\+L\+O\+G\+Reachability@{N\+F\+L\+O\+G\+Reachability}}
+\subsubsection{\texorpdfstring{reachability\+With\+Host\+Name\+:()}{reachabilityWithHostName:()}}
+{\footnotesize\ttfamily + (instancetype) reachability\+With\+Host\+Name\+: \begin{DoxyParamCaption}\item[{(N\+S\+String $\ast$)}]{host\+Name }\end{DoxyParamCaption}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}
+\{
+    SCNetworkReachabilityRef \_reachabilityRef
+\end{DoxyCode}
+Use to check the reachability of a given host name. \mbox{\Hypertarget{interface_n_f_l_o_g_reachability_acebd4e7f3f879e0a609037856ddc89af}\label{interface_n_f_l_o_g_reachability_acebd4e7f3f879e0a609037856ddc89af}} 
+\index{N\+F\+L\+O\+G\+Reachability@{N\+F\+L\+O\+G\+Reachability}!start\+Notifier@{start\+Notifier}}
+\index{start\+Notifier@{start\+Notifier}!N\+F\+L\+O\+G\+Reachability@{N\+F\+L\+O\+G\+Reachability}}
+\subsubsection{\texorpdfstring{start\+Notifier()}{startNotifier()}}
+{\footnotesize\ttfamily -\/ (B\+O\+OL) start\+Notifier \begin{DoxyParamCaption}{ }\end{DoxyParamCaption}}
+
+Start listening for reachability notifications on the current run loop. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/nileshagrawal/\+Documents/workspace/interviewprojects/netflix/\+N\+F\+Logger/\+N\+F\+Logger/N\+F\+L\+O\+G\+Reachability.\+h\item 
+/\+Users/nileshagrawal/\+Documents/workspace/interviewprojects/netflix/\+N\+F\+Logger/\+N\+F\+Logger/N\+F\+L\+O\+G\+Reachability.\+m\end{DoxyCompactItemize}

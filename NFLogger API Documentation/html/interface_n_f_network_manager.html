@@ -59,12 +59,17 @@ $(function() {
 </div><!-- top -->
 <div class="header">
   <div class="summary">
-<a href="#pub-methods">Instance Methods</a> &#124;
+<a href="#pub-static-methods">Class Methods</a> &#124;
 <a href="interface_n_f_network_manager-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">NFNetworkManager Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>Class handles responsibility of handling network calls.  
+ <a href="interface_n_f_network_manager.html#details">More...</a></p>
+
+<p><code>#import &lt;<a class="el" href="_n_f_network_manager_8h_source.html">NFNetworkManager.h</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for NFNetworkManager:</div>
 <div class="dyncontent">
@@ -74,12 +79,15 @@ Inheritance diagram for NFNetworkManager:</div>
 </map>
  </div></div>
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
-Instance Methods</h2></td></tr>
-<tr class="memitem:a146f3a7713b9e65ecb007318cdc7a99c"><td class="memItemLeft" align="right" valign="top">(void)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interface_n_f_network_manager.html#a146f3a7713b9e65ecb007318cdc7a99c">uploadAllEvents:withCompletionBlock:</a></td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
+Class Methods</h2></td></tr>
+<tr class="memitem:a146f3a7713b9e65ecb007318cdc7a99c"><td class="memItemLeft" align="right" valign="top">(void)&#160;</td><td class="memItemRight" valign="bottom">+ <a class="el" href="interface_n_f_network_manager.html#a146f3a7713b9e65ecb007318cdc7a99c">uploadAllEvents:withCompletionBlock:</a></td></tr>
+<tr class="memdesc:a146f3a7713b9e65ecb007318cdc7a99c"><td class="mdescLeft">&#160;</td><td class="mdescRight">UploadEvents.  <a href="#a146f3a7713b9e65ecb007318cdc7a99c">More...</a><br /></td></tr>
 <tr class="separator:a146f3a7713b9e65ecb007318cdc7a99c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Method Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Class handles responsibility of handling network calls. </p>
+</div><h2 class="groupheader">Method Documentation</h2>
 <a id="a146f3a7713b9e65ecb007318cdc7a99c"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a146f3a7713b9e65ecb007318cdc7a99c">&#9670;&nbsp;</a></span>uploadAllEvents:withCompletionBlock:()</h2>
 
@@ -87,7 +95,7 @@ Instance Methods</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">- (void) uploadAllEvents: </td>
+          <td class="memname">+ (void) uploadAllEvents: </td>
           <td></td>
           <td class="paramtype">(NSDictionary *)&#160;</td>
           <td class="paramname"><em>dictionary</em></td>
@@ -105,9 +113,19 @@ Instance Methods</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>UploadEvents. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">data</td><td>data to be uploaded in NSDictionary Format.. </td></tr>
+    <tr><td class="paramname">completionBlock</td><td>to send status to user..</td></tr>
+  </table>
+  </dd>
+</dl>
 <p>Note : Prefreable choice would be to use "sync" NSURLConnection, but since the API is deprecated, we are using NSURLSession.</p>
 <p>Note that "sync"-ronization care is taken through NFRequestManager's uploadAndDeleteMethod while retrieving entries, and then the entries are send to NSURLSession's operation queue to upload. This is to make sure, proper order is ensured .</p>
-<p>The completion block implementation in uploadAndDeleteAll method, makes sure, that we are sending the results in the serialQueue, which takes care of deleting the entries from the database. </p>
+<p>The completion block implementation in uploadAndDeleteAll method, makes sure, that we are sending the results in the serialQueue, which takes care of deleting the entries from the database.</p>
+<p>Note : We are not using GZIP to avoid using 3rd party in this project. </p>
 
 </div>
 </div>

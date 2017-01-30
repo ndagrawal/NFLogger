@@ -1,5 +1,6 @@
 var searchData=
 [
-  ['uploadallevents_3awithcompletionblock_3a',['uploadAllEvents:withCompletionBlock:',['../interface_n_f_network_manager.html#a146f3a7713b9e65ecb007318cdc7a99c',1,'NFNetworkManager']]],
-  ['uploadanddelete',['uploadAndDelete',['../interface_n_f_l_o_g_request_manager.html#aa134b2591aa16f5577724d26e53b3eb5',1,'NFLOGRequestManager']]]
+  ['openforcreatewithfilename_3a',['openForCreateWithFileName:',['../interface_n_f_l_o_g_sqlite.html#a16af0ec78bdb2f90d379ad206c0b7d7c',1,'NFLOGSqlite']]],
+  ['openforreadwithfilename_3a',['openForReadWithFileName:',['../interface_n_f_l_o_g_sqlite.html#a30e962e6a3ee86dbb3d64e07991fc08b',1,'NFLOGSqlite']]],
+  ['openwithfilename_3a',['openWithFileName:',['../interface_n_f_l_o_g_sqlite.html#ab1dcb5309f55e038b101ce2037240091',1,'NFLOGSqlite']]]
 ];

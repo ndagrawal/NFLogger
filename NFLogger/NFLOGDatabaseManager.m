@@ -72,7 +72,7 @@ static NFLOGDatabaseManager* dbManager;
 }
 
 -(BOOL)updateEvent:(NFLOGEvent *)event{
-    if (event || self.dbFilePath == nil){
+    if (event == nil|| self.dbFilePath == nil){
         return NO;
     }
     NFLOGSqlite* sqlite = [[NFLOGSqlite alloc] init];

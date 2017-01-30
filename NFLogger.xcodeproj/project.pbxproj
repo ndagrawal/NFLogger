@@ -6,6 +6,20 @@
 	objectVersion = 46;
 	objects = {
 
+/* Begin PBXAggregateTarget section */
+		C43A3FE51E3F202A00E0CA5D /* NFLoggerLib */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = C43A3FE81E3F202A00E0CA5D /* Build configuration list for PBXAggregateTarget "NFLoggerLib" */;
+			buildPhases = (
+				C43A3FE91E3F203C00E0CA5D /* ShellScript */,
+			);
+			dependencies = (
+			);
+			name = NFLoggerLib;
+			productName = NFLoggerLib;
+		};
+/* End PBXAggregateTarget section */
+
 /* Begin PBXBuildFile section */
 		C40174591E39967A005BF015 /* NFLOGUtility.h in Headers */ = {isa = PBXBuildFile; fileRef = C40174571E39967A005BF015 /* NFLOGUtility.h */; };
 		C401745A1E39967A005BF015 /* NFLOGUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = C40174581E39967A005BF015 /* NFLOGUtility.m */; };
@@ -78,6 +92,9 @@
 		C43DA7E11E3DBE3200396C7E /* NFLOGAutomaticModeTest.m in Sources */ = {isa = PBXBuildFile; fileRef = C43DA7E01E3DBE3200396C7E /* NFLOGAutomaticModeTest.m */; };
 		C43DA7E31E3DBE3E00396C7E /* NFLOGManualModeTest.m in Sources */ = {isa = PBXBuildFile; fileRef = C43DA7E21E3DBE3E00396C7E /* NFLOGManualModeTest.m */; };
 		C43DA7E51E3DCA6C00396C7E /* NFLOGDisabledBehaviourTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C43DA7E41E3DCA6C00396C7E /* NFLOGDisabledBehaviourTests.m */; };
+		C43DA7EB1E3ED48200396C7E /* NFLOGReachability.h in Headers */ = {isa = PBXBuildFile; fileRef = C43DA7E91E3ED48200396C7E /* NFLOGReachability.h */; };
+		C43DA7EC1E3ED48200396C7E /* NFLOGReachability.m in Sources */ = {isa = PBXBuildFile; fileRef = C43DA7EA1E3ED48200396C7E /* NFLOGReachability.m */; };
+		C43DA7ED1E3EDACC00396C7E /* NFLOGReachability.m in Sources */ = {isa = PBXBuildFile; fileRef = C43DA7EA1E3ED48200396C7E /* NFLOGReachability.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -160,6 +177,8 @@
 		C43DA7E01E3DBE3200396C7E /* NFLOGAutomaticModeTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NFLOGAutomaticModeTest.m; sourceTree = "<group>"; };
 		C43DA7E21E3DBE3E00396C7E /* NFLOGManualModeTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NFLOGManualModeTest.m; sourceTree = "<group>"; };
 		C43DA7E41E3DCA6C00396C7E /* NFLOGDisabledBehaviourTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NFLOGDisabledBehaviourTests.m; sourceTree = "<group>"; };
+		C43DA7E91E3ED48200396C7E /* NFLOGReachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NFLOGReachability.h; sourceTree = "<group>"; };
+		C43DA7EA1E3ED48200396C7E /* NFLOGReachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NFLOGReachability.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -250,6 +269,7 @@
 		C40174681E3999E2005BF015 /* Utility */ = {
 			isa = PBXGroup;
 			children = (
+				C43DA7E81E3ED46900396C7E /* 3rdParty */,
 				C40174571E39967A005BF015 /* NFLOGUtility.h */,
 				C40174581E39967A005BF015 /* NFLOGUtility.m */,
 				C401745B1E399688005BF015 /* NFLOGConstants.h */,
@@ -392,6 +412,15 @@
 			name = NetworkManagement;
 			sourceTree = "<group>";
 		};
+		C43DA7E81E3ED46900396C7E /* 3rdParty */ = {
+			isa = PBXGroup;
+			children = (
+				C43DA7E91E3ED48200396C7E /* NFLOGReachability.h */,
+				C43DA7EA1E3ED48200396C7E /* NFLOGReachability.m */,
+			);
+			name = 3rdParty;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -416,6 +445,7 @@
 				C401745D1E399688005BF015 /* NFLOGConstants.h in Headers */,
 				C40174921E39B807005BF015 /* NFLOGDatabaseManager.h in Headers */,
 				C40174CE1E3BD561005BF015 /* NFNetworkManager.h in Headers */,
+				C43DA7EB1E3ED48200396C7E /* NFLOGReachability.h in Headers */,
 				C401748E1E39B7DC005BF015 /* NFLOGSqlParam.h in Headers */,
 				C40174D21E3C15A5005BF015 /* NFLOGBehaviour.h in Headers */,
 				C40174811E39B03A005BF015 /* NFLOGSpecificEventTable.h in Headers */,
@@ -528,6 +558,10 @@
 						ProvisioningStyle = Automatic;
 						TestTargetID = C40175031E3C3CAE005BF015;
 					};
+					C43A3FE51E3F202A00E0CA5D = {
+						CreatedOnToolsVersion = 8.2.1;
+						ProvisioningStyle = Automatic;
+					};
 				};
 			};
 			buildConfigurationList = C40174461E39961F005BF015 /* Build configuration list for PBXProject "NFLogger" */;
@@ -547,6 +581,7 @@
 				C40175031E3C3CAE005BF015 /* NFLoggerDemo */,
 				C401751B1E3C3CAE005BF015 /* NFLoggerDemoTests */,
 				C40175261E3C3CAE005BF015 /* NFLoggerDemoUITests */,
+				C43A3FE51E3F202A00E0CA5D /* NFLoggerLib */,
 			);
 		};
 /* End PBXProject section */
@@ -585,6 +620,22 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		C43A3FE91E3F203C00E0CA5D /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\n#!/bin/sh\n\nUNIVERSAL_OUTPUTFOLDER=${BUILD_DIR}/${CONFIGURATION}-universal\n\n# make sure the output directory exists\nmkdir -p \"${UNIVERSAL_OUTPUTFOLDER}\"\n\n# Step 1. Build Device and Simulator versions\nxcodebuild -target \"${PROJECT_NAME}\" ONLY_ACTIVE_ARCH=NO -configuration ${CONFIGURATION} -sdk iphoneos  BUILD_DIR=\"${BUILD_DIR}\" BUILD_ROOT=\"${BUILD_ROOT}\" clean build\nxcodebuild -target \"${PROJECT_NAME}\" -configuration ${CONFIGURATION} -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO BUILD_DIR=\"${BUILD_DIR}\" BUILD_ROOT=\"${BUILD_ROOT}\" clean build\n\n# Step 2. Copy the framework structure (from iphoneos build) to the universal folder\ncp -R \"${BUILD_DIR}/${CONFIGURATION}-iphoneos/${PROJECT_NAME}.framework\" \"${UNIVERSAL_OUTPUTFOLDER}/\"\n\n# Step 3. Copy Swift modules from iphonesimulator build (if it exists) to the copied framework directory\nSIMULATOR_SWIFT_MODULES_DIR=\"${BUILD_DIR}/${CONFIGURATION}-iphonesimulator/${PROJECT_NAME}.framework/Modules/${PROJECT_NAME}.swiftmodule/.\"\nif [ -d \"${SIMULATOR_SWIFT_MODULES_DIR}\" ]; then\ncp -R \"${SIMULATOR_SWIFT_MODULES_DIR}\" \"${UNIVERSAL_OUTPUTFOLDER}/${PROJECT_NAME}.framework/Modules/${PROJECT_NAME}.swiftmodule\"\nfi\n\n# Step 4. Create universal binary file using lipo and place the combined executable in the copied framework directory\nlipo -create -output \"${UNIVERSAL_OUTPUTFOLDER}/${PROJECT_NAME}.framework/${PROJECT_NAME}\" \"${BUILD_DIR}/${CONFIGURATION}-iphonesimulator/${PROJECT_NAME}.framework/${PROJECT_NAME}\" \"${BUILD_DIR}/${CONFIGURATION}-iphoneos/${PROJECT_NAME}.framework/${PROJECT_NAME}\"\n\n# Step 5. Convenience step to copy the framework to the project's directory\ncp -R \"${UNIVERSAL_OUTPUTFOLDER}/${PROJECT_NAME}.framework\" \"${PROJECT_DIR}\"\n\n# Step 6. Convenience step to open the project's directory in Finder\nopen \"${PROJECT_DIR}\"";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		C40174471E39961F005BF015 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -600,6 +651,7 @@
 				C40174DC1E3C16FF005BF015 /* NFLOGAutoBehaviour.m in Sources */,
 				C40174D81E3C16A1005BF015 /* NFLOGDisabledBehaviour.m in Sources */,
 				C40174CF1E3BD561005BF015 /* NFNetworkManager.m in Sources */,
+				C43DA7EC1E3ED48200396C7E /* NFLOGReachability.m in Sources */,
 				C40174721E39A0FF005BF015 /* NFLOGEvent.m in Sources */,
 				C40174A81E3A60ED005BF015 /* NFLOGRequestManager.m in Sources */,
 				C40174821E39B03A005BF015 /* NFLOGSpecificEventTable.m in Sources */,
@@ -615,6 +667,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C43DA7ED1E3EDACC00396C7E /* NFLOGReachability.m in Sources */,
 				C40175371E3C3CD2005BF015 /* NFLogger.m in Sources */,
 				C40175381E3C3CD2005BF015 /* NFLOGRequestManager.m in Sources */,
 				C40175391E3C3CD2005BF015 /* NFLOGEvent.m in Sources */,
@@ -913,6 +966,20 @@
 			};
 			name = Release;
 		};
+		C43A3FE61E3F202A00E0CA5D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		C43A3FE71E3F202A00E0CA5D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -960,6 +1027,14 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		C43A3FE81E3F202A00E0CA5D /* Build configuration list for PBXAggregateTarget "NFLoggerLib" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C43A3FE61E3F202A00E0CA5D /* Debug */,
+				C43A3FE71E3F202A00E0CA5D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};

@@ -67,6 +67,11 @@ $(function() {
 <div class="title">NFLOGRequestManager Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>Singleton class that cares of thread management and timer for uploading.  
+ <a href="interface_n_f_l_o_g_request_manager.html#details">More...</a></p>
+
+<p><code>#import &lt;<a class="el" href="_n_f_l_o_g_request_manager_8h_source.html">NFLOGRequestManager.h</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for NFLOGRequestManager:</div>
 <div class="dyncontent">
@@ -78,37 +83,71 @@ Inheritance diagram for NFLOGRequestManager:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Instance Methods</h2></td></tr>
-<tr class="memitem:a2c7a9f7fd9fb53d6a94a585274a6bc4f"><td class="memItemLeft" align="right" valign="top"><a id="a2c7a9f7fd9fb53d6a94a585274a6bc4f"></a>
-(void)&#160;</td><td class="memItemRight" valign="bottom">- <b>createTableforEventType:</b></td></tr>
+<tr class="memitem:a2c7a9f7fd9fb53d6a94a585274a6bc4f"><td class="memItemLeft" align="right" valign="top">(void)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interface_n_f_l_o_g_request_manager.html#a2c7a9f7fd9fb53d6a94a585274a6bc4f">createTableforEventType:</a></td></tr>
+<tr class="memdesc:a2c7a9f7fd9fb53d6a94a585274a6bc4f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create Table for a particular event type. Note that we are creating two types of table:  <a href="#a2c7a9f7fd9fb53d6a94a585274a6bc4f">More...</a><br /></td></tr>
 <tr class="separator:a2c7a9f7fd9fb53d6a94a585274a6bc4f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a334b837987a00fcc1a88f0c8002a5916"><td class="memItemLeft" align="right" valign="top"><a id="a334b837987a00fcc1a88f0c8002a5916"></a>
-(void)&#160;</td><td class="memItemRight" valign="bottom">- <b>record:withCompletionBlock:</b></td></tr>
+(void)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interface_n_f_l_o_g_request_manager.html#a334b837987a00fcc1a88f0c8002a5916">record:withCompletionBlock:</a></td></tr>
+<tr class="memdesc:a334b837987a00fcc1a88f0c8002a5916"><td class="mdescLeft">&#160;</td><td class="mdescRight">Recording the event in the table. Note that whenever a logEvent or startActiveEvent APIs are called this method is invoked and we do "insertion" operation inside the database. Insertion is again an async operation. <br /></td></tr>
 <tr class="separator:a334b837987a00fcc1a88f0c8002a5916"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a99a0afcb8645e6dbfa96987c90ad6c1b"><td class="memItemLeft" align="right" valign="top"><a id="a99a0afcb8645e6dbfa96987c90ad6c1b"></a>
-(void)&#160;</td><td class="memItemRight" valign="bottom">- <b>update:withCompletionBlock:</b></td></tr>
+(void)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interface_n_f_l_o_g_request_manager.html#a99a0afcb8645e6dbfa96987c90ad6c1b">update:withCompletionBlock:</a></td></tr>
+<tr class="memdesc:a99a0afcb8645e6dbfa96987c90ad6c1b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Updating the event in activeEventTable. Note that whenever endActiveEvent API is called this method is invoked and we "update" operation inside the database. Updation is again an async operation. <br /></td></tr>
 <tr class="separator:a99a0afcb8645e6dbfa96987c90ad6c1b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa134b2591aa16f5577724d26e53b3eb5"><td class="memItemLeft" align="right" valign="top">(void)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interface_n_f_l_o_g_request_manager.html#aa134b2591aa16f5577724d26e53b3eb5">uploadAndDelete</a></td></tr>
+<tr class="memdesc:aa134b2591aa16f5577724d26e53b3eb5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Method retrives all the entries from database, converts in suitable JSON format and uploads it. Note : Prefreable choice would be to use "sync" NSURLConnection, but since the API is deprecated, we are using NSURLSession.  <a href="#aa134b2591aa16f5577724d26e53b3eb5">More...</a><br /></td></tr>
 <tr class="separator:aa134b2591aa16f5577724d26e53b3eb5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adbb6382b702a49840494e7ea6f5d724a"><td class="memItemLeft" align="right" valign="top"><a id="adbb6382b702a49840494e7ea6f5d724a"></a>
-(void)&#160;</td><td class="memItemRight" valign="bottom">- <b>validateTimer</b></td></tr>
+(void)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interface_n_f_l_o_g_request_manager.html#adbb6382b702a49840494e7ea6f5d724a">validateTimer</a></td></tr>
+<tr class="memdesc:adbb6382b702a49840494e7ea6f5d724a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Starting the timer. The timer is started whenever the user comes in foreground. <br /></td></tr>
 <tr class="separator:adbb6382b702a49840494e7ea6f5d724a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2a140a361a5b85f7c1ff51f4a60bbab3"><td class="memItemLeft" align="right" valign="top"><a id="a2a140a361a5b85f7c1ff51f4a60bbab3"></a>
-(void)&#160;</td><td class="memItemRight" valign="bottom">- <b>stopTimer</b></td></tr>
+(void)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interface_n_f_l_o_g_request_manager.html#a2a140a361a5b85f7c1ff51f4a60bbab3">stopTimer</a></td></tr>
+<tr class="memdesc:a2a140a361a5b85f7c1ff51f4a60bbab3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ending the timer. The timer is ended whenever the user goes to background. <br /></td></tr>
 <tr class="separator:a2a140a361a5b85f7c1ff51f4a60bbab3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 Class Methods</h2></td></tr>
 <tr class="memitem:a345364dbcef1eeb7af13c1bfe117580e"><td class="memItemLeft" align="right" valign="top"><a id="a345364dbcef1eeb7af13c1bfe117580e"></a>
-(id)&#160;</td><td class="memItemRight" valign="bottom">+ <b>sharedInstance</b></td></tr>
+(id)&#160;</td><td class="memItemRight" valign="bottom">+ <a class="el" href="interface_n_f_l_o_g_request_manager.html#a345364dbcef1eeb7af13c1bfe117580e">sharedInstance</a></td></tr>
+<tr class="memdesc:a345364dbcef1eeb7af13c1bfe117580e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Singleton Object for the <a class="el" href="interface_n_f_l_o_g_request_manager.html" title="Singleton class that cares of thread management and timer for uploading. ">NFLOGRequestManager</a> We want only one single instance to take care of threading and logging events to database as per the event types. <br /></td></tr>
 <tr class="separator:a345364dbcef1eeb7af13c1bfe117580e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="properties"></a>
 Properties</h2></td></tr>
 <tr class="memitem:afa6110f250aa2488b759db1cd0cc3d10"><td class="memItemLeft" align="right" valign="top"><a id="afa6110f250aa2488b759db1cd0cc3d10"></a>
-NSInteger&#160;</td><td class="memItemRight" valign="bottom"><b>uploadInterval</b></td></tr>
+NSInteger&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_n_f_l_o_g_request_manager.html#afa6110f250aa2488b759db1cd0cc3d10">uploadInterval</a></td></tr>
+<tr class="memdesc:afa6110f250aa2488b759db1cd0cc3d10"><td class="mdescLeft">&#160;</td><td class="mdescRight">upload interval determines the time interval when the events should be uploaded. We have considered this to be in seconds, for convenince. <br /></td></tr>
 <tr class="separator:afa6110f250aa2488b759db1cd0cc3d10"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Method Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Singleton class that cares of thread management and timer for uploading. </p>
+<p>This class thus acts a Mediator between user api, database and networking. The class also acts as an observer for getting events like app goes foreground/background to start and stop timers </p>
+</div><h2 class="groupheader">Method Documentation</h2>
+<a id="a2c7a9f7fd9fb53d6a94a585274a6bc4f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2c7a9f7fd9fb53d6a94a585274a6bc4f">&#9670;&nbsp;</a></span>createTableforEventType:()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (void) createTableforEventType: </td>
+          <td></td>
+          <td class="paramtype">(NSString *)&#160;</td>
+          <td class="paramname"><em>eventType</em></td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Create Table for a particular event type. Note that we are creating two types of table: </p>
+<ol type="1">
+<li>Table for Storing Specific Time Events.</li>
+<li>Table for Storing events that span for a particular period , this events have start and end time associated with them. Table creation is also done in async thread, in serial queue. </li>
+</ol>
+
+</div>
+</div>
 <a id="aa134b2591aa16f5577724d26e53b3eb5"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aa134b2591aa16f5577724d26e53b3eb5">&#9670;&nbsp;</a></span>uploadAndDelete()</h2>
 
@@ -123,9 +162,14 @@ NSInteger&#160;</td><td class="memItemRight" valign="bottom"><b>uploadInterval</
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Method retrives all the entries from database, converts in suitable JSON format and uploads it. Note : Prefreable choice would be to use "sync" NSURLConnection, but since the API is deprecated, we are using NSURLSession. </p>
+<p>Note that "sync"-ronization care is taken through NFRequestManager's uploadAndDelete method while retrieving entries, and then the entries are send to NSURLSession's operation queue to upload. This is to make sure, proper order is ensured .</p>
+<p>The completion block implementation in method, makes sure, that we are sending the results in the serialQueue, which takes care of deleting the entries from the database.</p>
 <p>Note : Prefreable choice would be to use "sync" NSURLConnection, but since the API is deprecated, we are using NSURLSession.</p>
 <p>Note that "sync"-ronization care is taken through NFRequestManager's uploadAndDeleteMethod while retrieving entries, and then the entries are send to NSURLSession's operation queue to upload. This is to make sure, proper order is ensured .</p>
 <p>The completion block implementation in uploadAndDeleteAll method, makes sure, that we are sending the results in the serialQueue, which takes care of deleting the entries from the database. </p>
+<p>Currently we are checking for all type of network and uploading, Ideally, we should only upload on WIFI and not user's Mobile Data Plan's data.</p>
 <p>We have to make this "sync", since we want upload to happen only after all the entries are retrived, and a proper json is formed. "sync" dispatch will make sure, that network manager upload action happens only after sync thread is completely executed.</p>
 
 </div>

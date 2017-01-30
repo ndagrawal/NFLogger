@@ -7,10 +7,13 @@
 //
 
 #import "ViewController.h"
-#import "NFLog.h"
+#import "NFLogger.h"
 
 @interface ViewController ()
 @property (weak, nonatomic) IBOutlet UIButton *button1;
+@property (weak, nonatomic) IBOutlet UILabel *logEventLabel;
+@property (weak, nonatomic) IBOutlet UILabel *startEventLabel;
+@property (weak, nonatomic) IBOutlet UILabel *endEventLabel;
 
 @end
 
@@ -26,20 +29,69 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-- (IBAction)buttonClicked:(id)sender {
-    [NFLog logEvent:@"Sample Event"];
-    
-    NSDictionary *dictionary = [[NSDictionary alloc] initWithObjectsAndKeys:@"CarModel",@"Audi", nil];
-    [NFLog logEvent:@"Button Click" withParameters:dictionary];
-    
-    [NFLog logEvent:@"Sample Event 2" withParameters:nil completionBlock:^(NFLOGRecordStatus recordStatus) {
-       dispatch_async(dispatch_get_main_queue(), ^{
-          NSLog(@"Sucess Status Received in Main Queue");
-       });
-    }];
-    
+
+- (IBAction)logEvent:(id)sender {
+    [NFLogger logEvent:@"Add To Cart"];
 }
 
+- (IBAction)logEventWithParam:(id)sender {
+    NSDictionary *dictionary = [[NSDictionary alloc] initWithObjectsAndKeys:@"100.0",@"item1",@"200.0",@"item2",nil];
+    [NFLogger logEvent:@"Add To Cart With Items" withParameters:dictionary];
+}
+
+- (IBAction)logEventWithParamCompletionHandler:(id)sender {
+    NSDictionary *dictionary = [[NSDictionary alloc] initWithObjectsAndKeys:@"100.0",@"item1",@"200.0",@"item2",nil];
+    [NFLogger logEvent:@"Complete Transaction" withParameters:dictionary completionBlock:^(NFLOGRecordStatus recordStatus) {
+        dispatch_async(dispatch_get_main_queue(), ^{
+            if(recordStatus == NFLOGEventRecorded){
+                _logEventLabel.text = @"Recorded";
+            }else{
+                _logEventLabel.text = @"Not Recorded";
+            }
+        });
+    }];
+}
+
+- (IBAction)startActiveEvent:(id)sender {
+    [NFLogger startActiveEvent:@"StartTransaction"];
+}
+- (IBAction)endActiveEvent:(id)sender {
+    [NFLogger endActiveEvent:@"StartTransaction"];
+}
+
+- (IBAction)startActiveEventWithParam:(id)sender {
+    NSDictionary *dictionary = [[NSDictionary alloc] initWithObjectsAndKeys:@"100.0",@"item1",@"200.0",@"item2",nil];
+    [NFLogger startActiveEvent:@"StartAnotherTransaction" withParameters:dictionary];
+}
+- (IBAction)endActiveEventWithParam:(id)sender {
+ 
+     [NFLogger endActiveEvent:@"StartAnotherTransaction"];
+}
+
+- (IBAction)startActiveEventWithCompletionHandler:(id)sender {
+    NSDictionary *dictionary = [[NSDictionary alloc] initWithObjectsAndKeys:@"100.0",@"item1",@"200.0",@"item2",nil];
+    [NFLogger startActiveEvent:@"StartTransactionWithCompletion" withParameters:dictionary completionBlock:^(NFLOGRecordStatus recordStatus) {
+        dispatch_async(dispatch_get_main_queue(), ^{
+            if(recordStatus == NFLOGEventRecorded){
+                _startEventLabel.text = @"Recorded";
+            }else{
+                _startEventLabel.text = @"Not Recorded";
+            }
+        });
+    }];
+}
+
+- (IBAction)endActiveEventWithCompletionHandler:(id)sender {
+    [NFLogger endActiveEvent:@"StartTransactionWithCompletion" completionBlock:^(NFLOGRecordStatus recordStatus) {
+        dispatch_async(dispatch_get_main_queue(), ^{
+            if(recordStatus == NFLOGEventRecorded){
+                _endEventLabel.text = @"Recorded";
+            }else{
+                _endEventLabel.text = @"Not Recorded";
+            }
+            });
+        }];
+}
 
 
 @end

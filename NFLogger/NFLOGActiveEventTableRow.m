@@ -27,8 +27,13 @@
         self.eventName = [event eventName];
         self.eventType = [event eventType];
         self.eventParameters = [NFLOGUtility convertToString:[event eventParameters]];
-        self.startTimeStamp = [event timeStamp];
-        self.endTimeStamp = 0.0;
+        if([[event eventType] isEqualToString:NFLOG_START_ACTIVE_TIME_EVENT]){
+                self.endTimeStamp = 0.0;
+                self.startTimeStamp = [event timeStamp];
+        }else{
+              self.endTimeStamp = [event timeStamp];
+              self.startTimeStamp = 0.0;
+        }
     }
     return self;
 }

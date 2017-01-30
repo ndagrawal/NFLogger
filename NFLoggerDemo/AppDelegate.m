@@ -7,7 +7,7 @@
 //
 
 #import "AppDelegate.h"
-#import "NFLog.h"
+#import "NFLogger.h"
 
 @interface AppDelegate ()
 
@@ -18,8 +18,8 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
-    [NFLog initializeSDKWithMode:NFLOGManualCapture];
-    [NFLog setLogLevelOfNFLog:NFLOG_LEVEL_VERBOSE|NFLOG_LEVEL_DEBUG|NFLOG_LEVEL_ERROR];
+    [NFLogger initializeSDKWithMode:NFLOGManualCapture];
+    [NFLogger setLogLevelOfNFLog:NFLOG_LEVEL_VERBOSE|NFLOG_LEVEL_DEBUG|NFLOG_LEVEL_ERROR];
     return YES;
 }
 

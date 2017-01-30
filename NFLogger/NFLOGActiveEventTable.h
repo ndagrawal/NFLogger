@@ -9,8 +9,9 @@
 #import <Foundation/Foundation.h>
 #import "NFLOGEventTable.h"
 
+/*!
+  
+ */
 @interface NFLOGActiveEventTable : NSObject<NFLOGEventTable>
-
-
 
 @end
