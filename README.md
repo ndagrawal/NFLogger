@@ -21,7 +21,7 @@ Click Run (Build and Run). This will create NFLogger.framework in the project fo
     Add NFLogger.framework in “Embedded Binaries”  
 5. Refer  [Header File Documentation] (https://github.com/ndagrawal/NFLogger/blob/master/NFLogger/NFLogger.h) to initilizeSDK.    
 6. Navigate to App Delegate and import header file.  
-```#import <NFLogger/NFLogger.h>"
+```#import<NFLogger/NFLogger.h>
 
 -(BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {  
 // Override point for customization after application launch.  
