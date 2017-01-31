@@ -4,33 +4,37 @@
 
 Please refer [Header File Documentation] (https://github.com/ndagrawal/NFLogger/blob/master/NFLogger/NFLogger.h) to check the usage of APIs of the library. 
 
-Steps to build the library : 
+**Steps to build the library :** 
 Select the target scheme as “NFLoggerLib” and device as “General Device” 
 Click Run (Build and Run). This will create NFLogger.framework in the project folder. 
 
-Steps to Integrate the library with your application : 
-1. Drag and drop the NFLogger.framework in the frameworks folder. 
-    Select Following Options : 
-    Check : Copy Items if needed
-        Create Groups
-        Select Target 
-2. Add “libsqlite3.0.tbd” 
-    Navigate to Build Phases 
-    Navigate to Link to Binaries 
-    Add “libsqlite3.0.tbd
-4. Navigate to Target - Select General
-    Add NFLogger.framework in “Embedded Binaries”
-5. Refer  [Header File Documentation] (https://github.com/ndagrawal/NFLogger/blob/master/NFLogger/NFLogger.h) to initilizeSDK. 
-6. Navigate to App Delegate and import header file.
-#import <NFLogger/NFLogger.h>
+**Steps to Integrate the library with your application : **   
+1. Drag and drop the NFLogger.framework in the frameworks folder. Select Following Options :   
+            i. Check : Copy Items if needed  
+            ii. Create Groups  
+            iii. Select Target     
+2. Add “libsqlite3.0.tbd”   
+    i. Navigate to Build Phases   
+    ii. Navigate to Link to Binaries   
+    iii. Add “libsqlite3.0.tbd  
+4. Navigate to Target - Select General  
+    Add NFLogger.framework in “Embedded Binaries”  
+5. Refer  [Header File Documentation] (https://github.com/ndagrawal/NFLogger/blob/master/NFLogger/NFLogger.h) to initilizeSDK.    
+6. Navigate to App Delegate and import header file.  
+```#import <NFLogger/NFLogger.h>"
 
-- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-// Override point for customization after application launch.
-    [NFLogger initializeSDKWithMode:NFLOGManualCapture];
-    [NFLogger setLogLevelOfNFLog:NFLOG_LEVEL_VERBOSE|NFLOG_LEVEL_DEBUG|NFLOG_LEVEL_ERROR];
-    return YES;
-}
+-(BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {  
+// Override point for customization after application launch.  
+    [NFLogger initializeSDKWithMode:NFLOGManualCapture];  
+    [NFLogger setLogLevelOfNFLog:NFLOG_LEVEL_VERBOSE|NFLOG_LEVEL_DEBUG|NFLOG_LEVEL_ERROR];  
+    return YES;  
+}  
+```
 
+Author : Nilesh Agrawal
+For more questions please mail : nilesh.d.agrawal@gmail.com
+
+----
 
 MIT License
 
