@@ -4,11 +4,11 @@
 
 Please refer [Header File Documentation] (https://github.com/ndagrawal/NFLogger/blob/master/NFLogger/NFLogger.h) to check the usage of APIs of the library. 
 
-**Steps to build the library :** 
-Select the target scheme as “NFLoggerLib” and device as “General Device” 
-Click Run (Build and Run). This will create NFLogger.framework in the project folder. 
+**Steps to build the library :**   
+Select the target scheme as “NFLoggerLib” and device as “General Device”   
+Click Run (Build and Run). This will create NFLogger.framework in the project folder.   
 
-**Steps to Integrate the library with your application : **   
+**Steps to Integrate the library with your application:**   
 1. Drag and drop the NFLogger.framework in the frameworks folder. Select Following Options :   
             i. Check : Copy Items if needed  
             ii. Create Groups  
