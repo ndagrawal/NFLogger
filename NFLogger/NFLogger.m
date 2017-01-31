@@ -44,9 +44,8 @@ static NFLogger * sharedLog;
  Setting logBehaviour - user can set the behaviour in runtime, either through initialization api or in furture through downloaded policy. Temporarily, I have taken policy information from the user, while initializing, in future such information can be taken through a user defined policy which can be downloaded.
  */
 
-+(BOOL)initializeSDKWithMode:(NFLOGMODE)mode{
++(void)initializeSDKWithMode:(NFLOGMODE)mode{
     
-    __block BOOL successful = YES;
     //Create Tables.
     [[NFLOGRequestManager sharedInstance] createTableforEventType:NFLOG_SPECIFIC_TIME_EVENT];
     [[NFLOGRequestManager sharedInstance] createTableforEventType:NFLOG_START_ACTIVE_TIME_EVENT];
@@ -56,12 +55,12 @@ static NFLogger * sharedLog;
         [[self sharedInstance] setLogBehaviour:[[NFLOGAutoBehaviour alloc] init]];
     }else if(mode == NFLOGManualCapture){
         [[self sharedInstance] setLogBehaviour:[[NFLOGManualBehaviour alloc] init]];
+    }else {
+        [[self sharedInstance] setLogBehaviour:[[NFLOGDisabledBehaviour alloc] init]];
     }
     
     //Setting inital Logging Level.
     [[NFLOGLogger sharedInstance] setLogLevel:NFLOG_LEVEL_NONE];
-    
-    return successful;
 }
 
 +(void)setUploadInterval:(NSInteger)seconds{

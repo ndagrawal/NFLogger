@@ -76,7 +76,7 @@ typedef NS_ENUM(NSInteger, NFLogLevel) {
  *
  * @since 1.0.0
  */
-+(BOOL)initializeSDKWithMode:(NFLOGMODE)mode;
++(void)initializeSDKWithMode:(NFLOGMODE)mode;
 
 /*!
  * @brief Optinal Metod to set the time interval on which sdk should upload the collected metrics.

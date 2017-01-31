@@ -12,7 +12,7 @@ typedef void (^UploadCompletionBlock)(BOOL uploadSuccess);
 /*!
     @brief Class handles responsibility of handling network calls.
  */
-@interface NFNetworkManager : NSObject
+@interface NFLOGNetworkManager : NSObject
 /*!
     @brief UploadEvents
     @param data data to be uploaded in NSDictionary Format.. 

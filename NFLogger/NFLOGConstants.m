@@ -14,6 +14,11 @@
 NSString  * const NFLOG_SDK_VERSION                         = @"1.0.0";
 NSString  * const NFLOG_APP_KEY                             = @"app_id";
 NSString  * const NFLOG_DEVICE_ID_KEY                       = @"device_id";
+NSString  * const NFLOG_UPLOAD_URL                          =@"upload_url";
+
+#pragma mark - Configuration Parameters
+NSString  * const NFLOG_APP_KEY_VALUE                       =@"xyz@123";
+NSString  * const NFLOG_UPLOAD_URL_VALUE                    =@"http://httpbin.org/post/";
 
 #pragma mark - Event Table Names
 NSString  * const NFLOG_ACTIVE_EVENT_TABLE_NAME             = @"ActiveEventTable";
@@ -44,9 +49,12 @@ NSString * const NFLOG_ACTIVE_TIME_EVENT_END_TIME_COL       = @"active_event_end
 NSString * const NFLOG_JSON_KEY_EVENT_NAME                  = @"event";
 NSString * const NFLOG_JSON_KEY_EVENT_PARAMETERS            = @"parameters";
 NSString * const NFLOG_JSON_KEY_EVENT_TMESTAMP              = @"timestamp";
+NSString * const NFLOG_JSON_KEY_EVENT_TYPE                  = @"type";
 NSString * const NFLOG_JSON_KEY_EVENT_START_TIMESTAMP       = @"start_timestamp";
 NSString * const NFLOG_JSON_KEY_EVENT_TIME_SPENT            = @"time_spent";
 NSString * const NFLOG_JSON_KEY_HDR                         = @"hdr";
+NSString * const NFLOG_JSON_VALUE_SPECIFIC_EVENT_TYPE       = @"specific_event";
+NSString * const NFLOG_JSON_VALUE_ACTIVE_EVENT_TYPE         = @"active_event";
 NSString * const NFLOG_JSON_KEY_EVENTS                      = @"events";
 
 @end

@@ -17,6 +17,11 @@
 extern NSString  * const NFLOG_SDK_VERSION;
 extern NSString  * const NFLOG_APP_KEY;
 extern NSString  * const NFLOG_DEVICE_ID_KEY;
+extern NSString  * const NFLOG_UPLOAD_URL;
+
+#pragma mark - Configuration Parameters
+extern NSString  * const NFLOG_APP_KEY_VALUE ;
+extern NSString  * const NFLOG_UPLOAD_URL_VALUE;
 
 #pragma mark - Event Types
 extern NSString *  const NFLOG_SPECIFIC_TIME_EVENT ;
@@ -46,9 +51,14 @@ extern NSString * const NFLOG_ACTIVE_TIME_EVENT_END_TIME_COL;
 extern NSString * const NFLOG_JSON_KEY_EVENT_NAME ;
 extern NSString * const NFLOG_JSON_KEY_EVENT_PARAMETERS ;
 extern NSString * const NFLOG_JSON_KEY_EVENT_TMESTAMP ;
+extern NSString * const NFLOG_JSON_KEY_EVENT_TYPE      ;
 extern NSString * const NFLOG_JSON_KEY_EVENT_START_TIMESTAMP ;
 extern NSString * const NFLOG_JSON_KEY_EVENT_TIME_SPENT;
 extern NSString * const NFLOG_JSON_KEY_HDR;
 extern NSString * const NFLOG_JSON_KEY_EVENTS;
+
+extern NSString * const NFLOG_JSON_VALUE_SPECIFIC_EVENT_TYPE;
+extern NSString * const NFLOG_JSON_VALUE_ACTIVE_EVENT_TYPE;
+
 
 @end

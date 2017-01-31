@@ -52,8 +52,8 @@
 		C40174A41E39D508005BF015 /* NFLOGLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = C40174A21E39D508005BF015 /* NFLOGLogger.m */; };
 		C40174A71E3A60ED005BF015 /* NFLOGRequestManager.h in Headers */ = {isa = PBXBuildFile; fileRef = C40174A51E3A60ED005BF015 /* NFLOGRequestManager.h */; };
 		C40174A81E3A60ED005BF015 /* NFLOGRequestManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C40174A61E3A60ED005BF015 /* NFLOGRequestManager.m */; };
-		C40174CE1E3BD561005BF015 /* NFNetworkManager.h in Headers */ = {isa = PBXBuildFile; fileRef = C40174CC1E3BD561005BF015 /* NFNetworkManager.h */; };
-		C40174CF1E3BD561005BF015 /* NFNetworkManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C40174CD1E3BD561005BF015 /* NFNetworkManager.m */; };
+		C40174CE1E3BD561005BF015 /* NFLOGNetworkManager.h in Headers */ = {isa = PBXBuildFile; fileRef = C40174CC1E3BD561005BF015 /* NFLOGNetworkManager.h */; };
+		C40174CF1E3BD561005BF015 /* NFLOGNetworkManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C40174CD1E3BD561005BF015 /* NFLOGNetworkManager.m */; };
 		C40174D21E3C15A5005BF015 /* NFLOGBehaviour.h in Headers */ = {isa = PBXBuildFile; fileRef = C40174D01E3C15A5005BF015 /* NFLOGBehaviour.h */; };
 		C40174D71E3C16A1005BF015 /* NFLOGDisabledBehaviour.h in Headers */ = {isa = PBXBuildFile; fileRef = C40174D51E3C16A1005BF015 /* NFLOGDisabledBehaviour.h */; };
 		C40174D81E3C16A1005BF015 /* NFLOGDisabledBehaviour.m in Sources */ = {isa = PBXBuildFile; fileRef = C40174D61E3C16A1005BF015 /* NFLOGDisabledBehaviour.m */; };
@@ -67,7 +67,6 @@
 		C40175111E3C3CAE005BF015 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C401750F1E3C3CAE005BF015 /* Main.storyboard */; };
 		C40175131E3C3CAE005BF015 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C40175121E3C3CAE005BF015 /* Assets.xcassets */; };
 		C40175161E3C3CAE005BF015 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C40175141E3C3CAE005BF015 /* LaunchScreen.storyboard */; };
-		C401752C1E3C3CAE005BF015 /* NFLoggerDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = C401752B1E3C3CAE005BF015 /* NFLoggerDemoUITests.m */; };
 		C40175371E3C3CD2005BF015 /* NFLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = C40174641E3998C0005BF015 /* NFLogger.m */; };
 		C40175381E3C3CD2005BF015 /* NFLOGRequestManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C40174A61E3A60ED005BF015 /* NFLOGRequestManager.m */; };
 		C40175391E3C3CD2005BF015 /* NFLOGEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = C40174701E39A0FF005BF015 /* NFLOGEvent.m */; };
@@ -82,7 +81,7 @@
 		C40175421E3C3CD2005BF015 /* NFLOGUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = C40174581E39967A005BF015 /* NFLOGUtility.m */; };
 		C40175431E3C3CD2005BF015 /* NFLOGConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = C401745C1E399688005BF015 /* NFLOGConstants.m */; };
 		C40175441E3C3CD2005BF015 /* NFLOGLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = C40174A21E39D508005BF015 /* NFLOGLogger.m */; };
-		C40175451E3C3CD2005BF015 /* NFNetworkManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C40174CD1E3BD561005BF015 /* NFNetworkManager.m */; };
+		C40175451E3C3CD2005BF015 /* NFLOGNetworkManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C40174CD1E3BD561005BF015 /* NFLOGNetworkManager.m */; };
 		C40175461E3C3CD2005BF015 /* NFLOGDisabledBehaviour.m in Sources */ = {isa = PBXBuildFile; fileRef = C40174D61E3C16A1005BF015 /* NFLOGDisabledBehaviour.m */; };
 		C40175471E3C3CD2005BF015 /* NFLOGAutoBehaviour.m in Sources */ = {isa = PBXBuildFile; fileRef = C40174DA1E3C16FF005BF015 /* NFLOGAutoBehaviour.m */; };
 		C40175481E3C3CD2005BF015 /* NFLOGManualBehaviour.m in Sources */ = {isa = PBXBuildFile; fileRef = C40174DE1E3C1712005BF015 /* NFLOGManualBehaviour.m */; };
@@ -99,13 +98,6 @@
 
 /* Begin PBXContainerItemProxy section */
 		C401751D1E3C3CAE005BF015 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = C40174431E39961F005BF015 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = C40175031E3C3CAE005BF015;
-			remoteInfo = NFLoggerDemo;
-		};
-		C40175281E3C3CAE005BF015 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = C40174431E39961F005BF015 /* Project object */;
 			proxyType = 1;
@@ -148,8 +140,8 @@
 		C40174A21E39D508005BF015 /* NFLOGLogger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NFLOGLogger.m; sourceTree = "<group>"; };
 		C40174A51E3A60ED005BF015 /* NFLOGRequestManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NFLOGRequestManager.h; sourceTree = "<group>"; };
 		C40174A61E3A60ED005BF015 /* NFLOGRequestManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NFLOGRequestManager.m; sourceTree = "<group>"; };
-		C40174CC1E3BD561005BF015 /* NFNetworkManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NFNetworkManager.h; sourceTree = "<group>"; };
-		C40174CD1E3BD561005BF015 /* NFNetworkManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NFNetworkManager.m; sourceTree = "<group>"; };
+		C40174CC1E3BD561005BF015 /* NFLOGNetworkManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NFLOGNetworkManager.h; sourceTree = "<group>"; };
+		C40174CD1E3BD561005BF015 /* NFLOGNetworkManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NFLOGNetworkManager.m; sourceTree = "<group>"; };
 		C40174D01E3C15A5005BF015 /* NFLOGBehaviour.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NFLOGBehaviour.h; sourceTree = "<group>"; };
 		C40174D51E3C16A1005BF015 /* NFLOGDisabledBehaviour.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NFLOGDisabledBehaviour.h; sourceTree = "<group>"; };
 		C40174D61E3C16A1005BF015 /* NFLOGDisabledBehaviour.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NFLOGDisabledBehaviour.m; sourceTree = "<group>"; };
@@ -169,9 +161,6 @@
 		C40175171E3C3CAE005BF015 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C401751C1E3C3CAE005BF015 /* NFLoggerDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NFLoggerDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C40175221E3C3CAE005BF015 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		C40175271E3C3CAE005BF015 /* NFLoggerDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NFLoggerDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		C401752B1E3C3CAE005BF015 /* NFLoggerDemoUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NFLoggerDemoUITests.m; sourceTree = "<group>"; };
-		C401752D1E3C3CAE005BF015 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C43DA7DA1E3DA45F00396C7E /* NFSpecificEventTableTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NFSpecificEventTableTests.m; sourceTree = "<group>"; };
 		C43DA7DC1E3DB69400396C7E /* NFActiveEventTableTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NFActiveEventTableTests.m; sourceTree = "<group>"; };
 		C43DA7E01E3DBE3200396C7E /* NFLOGAutomaticModeTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NFLOGAutomaticModeTest.m; sourceTree = "<group>"; };
@@ -205,13 +194,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		C40175241E3C3CAE005BF015 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -221,7 +203,6 @@
 				C401744E1E39961F005BF015 /* NFLogger */,
 				C40175051E3C3CAE005BF015 /* NFLoggerDemo */,
 				C401751F1E3C3CAE005BF015 /* NFLoggerDemoTests */,
-				C401752A1E3C3CAE005BF015 /* NFLoggerDemoUITests */,
 				C401744D1E39961F005BF015 /* Products */,
 				C401749E1E39D007005BF015 /* Frameworks */,
 			);
@@ -233,7 +214,6 @@
 				C401744C1E39961F005BF015 /* NFLogger.framework */,
 				C40175041E3C3CAE005BF015 /* NFLoggerDemo.app */,
 				C401751C1E3C3CAE005BF015 /* NFLoggerDemoTests.xctest */,
-				C40175271E3C3CAE005BF015 /* NFLoggerDemoUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -385,15 +365,6 @@
 			path = NFLoggerDemoTests;
 			sourceTree = "<group>";
 		};
-		C401752A1E3C3CAE005BF015 /* NFLoggerDemoUITests */ = {
-			isa = PBXGroup;
-			children = (
-				C401752B1E3C3CAE005BF015 /* NFLoggerDemoUITests.m */,
-				C401752D1E3C3CAE005BF015 /* Info.plist */,
-			);
-			path = NFLoggerDemoUITests;
-			sourceTree = "<group>";
-		};
 		C43DA7D51E3C5B9300396C7E /* ThreadManagement */ = {
 			isa = PBXGroup;
 			children = (
@@ -406,8 +377,8 @@
 		C43DA7D61E3C5BA300396C7E /* NetworkManagement */ = {
 			isa = PBXGroup;
 			children = (
-				C40174CC1E3BD561005BF015 /* NFNetworkManager.h */,
-				C40174CD1E3BD561005BF015 /* NFNetworkManager.m */,
+				C40174CC1E3BD561005BF015 /* NFLOGNetworkManager.h */,
+				C40174CD1E3BD561005BF015 /* NFLOGNetworkManager.m */,
 			);
 			name = NetworkManagement;
 			sourceTree = "<group>";
@@ -444,7 +415,7 @@
 				C401747D1E39AE50005BF015 /* NFLOGTableFactory.h in Headers */,
 				C401745D1E399688005BF015 /* NFLOGConstants.h in Headers */,
 				C40174921E39B807005BF015 /* NFLOGDatabaseManager.h in Headers */,
-				C40174CE1E3BD561005BF015 /* NFNetworkManager.h in Headers */,
+				C40174CE1E3BD561005BF015 /* NFLOGNetworkManager.h in Headers */,
 				C43DA7EB1E3ED48200396C7E /* NFLOGReachability.h in Headers */,
 				C401748E1E39B7DC005BF015 /* NFLOGSqlParam.h in Headers */,
 				C40174D21E3C15A5005BF015 /* NFLOGBehaviour.h in Headers */,
@@ -509,24 +480,6 @@
 			productReference = C401751C1E3C3CAE005BF015 /* NFLoggerDemoTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		C40175261E3C3CAE005BF015 /* NFLoggerDemoUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = C40175341E3C3CAE005BF015 /* Build configuration list for PBXNativeTarget "NFLoggerDemoUITests" */;
-			buildPhases = (
-				C40175231E3C3CAE005BF015 /* Sources */,
-				C40175241E3C3CAE005BF015 /* Frameworks */,
-				C40175251E3C3CAE005BF015 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				C40175291E3C3CAE005BF015 /* PBXTargetDependency */,
-			);
-			name = NFLoggerDemoUITests;
-			productName = NFLoggerDemoUITests;
-			productReference = C40175271E3C3CAE005BF015 /* NFLoggerDemoUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -547,12 +500,6 @@
 						ProvisioningStyle = Automatic;
 					};
 					C401751B1E3C3CAE005BF015 = {
-						CreatedOnToolsVersion = 8.2.1;
-						DevelopmentTeam = K5XW29FQZ5;
-						ProvisioningStyle = Automatic;
-						TestTargetID = C40175031E3C3CAE005BF015;
-					};
-					C40175261E3C3CAE005BF015 = {
 						CreatedOnToolsVersion = 8.2.1;
 						DevelopmentTeam = K5XW29FQZ5;
 						ProvisioningStyle = Automatic;
@@ -580,7 +527,6 @@
 				C401744B1E39961F005BF015 /* NFLogger */,
 				C40175031E3C3CAE005BF015 /* NFLoggerDemo */,
 				C401751B1E3C3CAE005BF015 /* NFLoggerDemoTests */,
-				C40175261E3C3CAE005BF015 /* NFLoggerDemoUITests */,
 				C43A3FE51E3F202A00E0CA5D /* NFLoggerLib */,
 			);
 		};
@@ -605,13 +551,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		C401751A1E3C3CAE005BF015 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		C40175251E3C3CAE005BF015 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -650,7 +589,7 @@
 				C401748B1E39B7CF005BF015 /* NFLOGSqlite.m in Sources */,
 				C40174DC1E3C16FF005BF015 /* NFLOGAutoBehaviour.m in Sources */,
 				C40174D81E3C16A1005BF015 /* NFLOGDisabledBehaviour.m in Sources */,
-				C40174CF1E3BD561005BF015 /* NFNetworkManager.m in Sources */,
+				C40174CF1E3BD561005BF015 /* NFLOGNetworkManager.m in Sources */,
 				C43DA7EC1E3ED48200396C7E /* NFLOGReachability.m in Sources */,
 				C40174721E39A0FF005BF015 /* NFLOGEvent.m in Sources */,
 				C40174A81E3A60ED005BF015 /* NFLOGRequestManager.m in Sources */,
@@ -682,7 +621,7 @@
 				C40175421E3C3CD2005BF015 /* NFLOGUtility.m in Sources */,
 				C40175431E3C3CD2005BF015 /* NFLOGConstants.m in Sources */,
 				C40175441E3C3CD2005BF015 /* NFLOGLogger.m in Sources */,
-				C40175451E3C3CD2005BF015 /* NFNetworkManager.m in Sources */,
+				C40175451E3C3CD2005BF015 /* NFLOGNetworkManager.m in Sources */,
 				C40175461E3C3CD2005BF015 /* NFLOGDisabledBehaviour.m in Sources */,
 				C40175471E3C3CD2005BF015 /* NFLOGAutoBehaviour.m in Sources */,
 				C40175481E3C3CD2005BF015 /* NFLOGManualBehaviour.m in Sources */,
@@ -704,14 +643,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		C40175231E3C3CAE005BF015 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				C401752C1E3C3CAE005BF015 /* NFLoggerDemoUITests.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -719,11 +650,6 @@
 			isa = PBXTargetDependency;
 			target = C40175031E3C3CAE005BF015 /* NFLoggerDemo */;
 			targetProxy = C401751D1E3C3CAE005BF015 /* PBXContainerItemProxy */;
-		};
-		C40175291E3C3CAE005BF015 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = C40175031E3C3CAE005BF015 /* NFLoggerDemo */;
-			targetProxy = C40175281E3C3CAE005BF015 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -938,34 +864,6 @@
 			};
 			name = Release;
 		};
-		C40175351E3C3CAE005BF015 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = K5XW29FQZ5;
-				INFOPLIST_FILE = NFLoggerDemoUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.nileshagrawal.netflix.NFLoggerDemoUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_TARGET_NAME = NFLoggerDemo;
-			};
-			name = Debug;
-		};
-		C40175361E3C3CAE005BF015 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = K5XW29FQZ5;
-				INFOPLIST_FILE = NFLoggerDemoUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.nileshagrawal.netflix.NFLoggerDemoUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_TARGET_NAME = NFLoggerDemo;
-			};
-			name = Release;
-		};
 		C43A3FE61E3F202A00E0CA5D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -1019,15 +917,6 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		C40175341E3C3CAE005BF015 /* Build configuration list for PBXNativeTarget "NFLoggerDemoUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				C40175351E3C3CAE005BF015 /* Debug */,
-				C40175361E3C3CAE005BF015 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		C43A3FE81E3F202A00E0CA5D /* Build configuration list for PBXAggregateTarget "NFLoggerLib" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -1035,6 +924,7 @@
 				C43A3FE71E3F202A00E0CA5D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

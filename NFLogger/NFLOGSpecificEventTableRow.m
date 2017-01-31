@@ -70,8 +70,8 @@
         NSDictionary *paramDict = [NFLOGUtility convertToDictionary:_eventParameters];
         [dictionary setObject:paramDict forKey:NFLOG_JSON_KEY_EVENT_PARAMETERS];
     }
-    NFLogDebug(@"%@",dictionary);
-    
+    [dictionary setValue:NFLOG_JSON_VALUE_SPECIFIC_EVENT_TYPE forKey:NFLOG_JSON_KEY_EVENT_TYPE];
+    //NFLogDebug(@"%@",dictionary);
     return [dictionary copy];
 }
 

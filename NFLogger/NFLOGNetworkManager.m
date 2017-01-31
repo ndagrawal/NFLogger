@@ -6,10 +6,11 @@
 //  Copyright © 2017 Nilesh Agrawal. All rights reserved.
 //
 
-#import "NFNetworkManager.h"
+#import "NFLOGNetworkManager.h"
 #import "NFLOGLogger.h"
+#import "NFLOGConstants.h"
 
-@implementation NFNetworkManager
+@implementation NFLOGNetworkManager
 
 /**
  
@@ -29,7 +30,7 @@
 
 +(void)uploadAllEvents:(NSDictionary *) dictionary withCompletionBlock:(UploadCompletionBlock)completionBlock{
     
-    NSURL *url = [NSURL URLWithString:@"http://httpbin.org/post/"];
+    NSURL *url = [NSURL URLWithString:NFLOG_UPLOAD_URL_VALUE];
     NSURLSessionConfiguration *config = [NSURLSessionConfiguration defaultSessionConfiguration];
     NSURLSession *session = [NSURLSession sessionWithConfiguration:config];
     //2 JSON Serialization
@@ -42,6 +43,7 @@
     request.timeoutInterval = 10.0f;
     [request setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
     [request setValue:@"application/json" forHTTPHeaderField:@"Accept"];
+    [request setValue:NFLOG_APP_KEY_VALUE forHTTPHeaderField:NFLOG_APP_KEY];
     
     if (!error) {
         NSURLSessionDataTask *dataTask = [session dataTaskWithRequest:request completionHandler:^(NSData * data, NSURLResponse *response, NSError * error) {

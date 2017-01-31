@@ -73,6 +73,7 @@
         NSDictionary *paramDict = [NFLOGUtility convertToDictionary:_eventParameters];
         [dictionary setObject:paramDict forKey:NFLOG_JSON_KEY_EVENT_PARAMETERS];
     }
+    [dictionary setValue:NFLOG_JSON_VALUE_ACTIVE_EVENT_TYPE forKey:NFLOG_JSON_KEY_EVENT_TYPE];
     return [dictionary copy];
 }
 

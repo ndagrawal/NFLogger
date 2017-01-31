@@ -13,7 +13,7 @@
 #import "NFLOGTableFactory.h"
 #import "NFLOGConstants.h"
 #import "NFLOGActiveEventTableRow.h"
-#import "NFNetworkManager.h"
+#import "NFLOGNetworkManager.h"
 #import "NFLOGUtility.h"
 #import "NFLOGLogger.h"
 #import <UIKit/UIKit.h>
@@ -181,7 +181,7 @@ static dispatch_queue_t serialQueue;
     if(dictionary != nil){
         //NSURLSession and inside that create an async task for deleting all the data.
         NFLogDebug(@"Data to be uploaded %@",dictionary);
-        [NFNetworkManager uploadAllEvents:dictionary withCompletionBlock:^(BOOL uploadedSucess) {
+        [NFLOGNetworkManager uploadAllEvents:dictionary withCompletionBlock:^(BOOL uploadedSucess) {
             //TODO : REMOVING UPLOADSUCCESS TEMP AS DONT HAVE BACKEND FOR 200 STATUS.
             //if(uploadedSucess){
                 //Deletion only if upload is successful.
